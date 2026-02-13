@@ -1,0 +1,90 @@
+<?php
+
+namespace App\Repositories\Supplier;
+
+use App\Models\Supplier;
+use Illuminate\Support\Collection;
+
+class SupplierRepositories implements SupplierRepositoriesInterface
+{
+    public function all(): Collection
+    {
+        return Supplier::all();
+    }
+
+    public function Paginated(int $perPage = 15)
+    {
+        return Supplier::paginate($perPage);
+    }
+
+    public function paginatedBySort(array $params = [], int $perPage = 10)
+    {
+        $query = Supplier::query();
+
+        // Tambahkan filter perusahaan_id
+        if (! empty($params['perusahaan_id'])) {
+            $query->where('perusahaan_id', $params['perusahaan_id']);
+        }
+
+        if (! empty($params['search'])) {
+            $search = $params['search'];
+            $query->where(function ($q) use ($search) {
+                $q->where('name', 'like', "%$search%")
+                    ->orWhere('email', 'like', "%$search%")
+                    ->orWhere('company_name', 'like', "%$search%")
+                    ->orWhere('phone', 'like', "%$search%")
+                    ->orWhere('address', 'like', "%$search%");
+            });
+        }
+
+        $sortBy = $params['sort_by'] ?? 'name';
+        $sortDir = $params['sort_dir'] ?? 'desc';
+
+        $query->orderBy($sortBy, $sortDir);
+
+        return $query->paginate($perPage)->appends($params);
+    }
+
+    public function find(int $id): ?Supplier
+    {
+        return Supplier::findOrFail($id);
+    }
+
+    public function findByUuid(string $uuid): ?Supplier
+    {
+        return Supplier::where('uuid', $uuid)->first();
+    }
+
+    public function create(array $data): Supplier
+    {
+        return Supplier::create($data);
+    }
+
+    public function update(string $uuid, array $data): bool
+    {
+        $supplier = Supplier::where('uuid', $uuid)->firstOrFail();
+
+        return $supplier->update($data);
+    }
+
+    public function delete(int $id): bool
+    {
+        $supplier = Supplier::findOrFail($id);
+
+        return $supplier->delete();
+    }
+
+    public function softDelete(int $id): bool
+    {
+        $supplier = Supplier::findOrFail($id);
+
+        return $supplier->delete();
+    }
+
+    public function restore(int $id): bool
+    {
+        $supplier = Supplier::withTrashed()->findOrFail($id);
+
+        return $supplier->restore();
+    }
+}
