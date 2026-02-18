@@ -61,7 +61,7 @@
 
     <!-- Plugins js-->
     <script src="{{ asset('assets/libs/flatpickr/flatpickr.min.js') }}"></script>
-   <!--  <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script> -->
+    <!--  <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script> -->
     <script src="{{ asset('assets/libs/selectize/js/standalone/selectize.min.js') }}"></script>
     <script src="{{ asset('assets/libs/multiselect/js/jquery.multi-select.js') }}"></script>
     <script src="{{ asset('assets/libs/select2/js/select2.min.js') }}"></script>
@@ -77,7 +77,7 @@
     <!-- Tost-->
     <script src="{{ asset('assets/libs/jquery-toast-plugin/jquery.toast.min.js') }}"></script>
     <script src="{{ asset('assets/libs/dragula/dragula.min.js') }}"></script>
-  
+
     {{-- <script src="{{ asset('assets/libs/jquery-mockjax/jquery.mockjax.min.js') }}"></script> --}}
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> --}}
     <!-- SweetAlert2 JS -->
@@ -92,7 +92,7 @@
     <script src="{{ asset('assets/js/pages/toastr.init.js') }}"></script>
 
     @livewireScripts
-    {{-- @stack('scripts') --}}
+    @stack('scripts')
 </body>
 
 </html>

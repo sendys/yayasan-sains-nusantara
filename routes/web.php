@@ -5,15 +5,22 @@ use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-    /*  return redirect('/login'); */
-});
+/* langsung ke halaman login */
+/* Route::get('/', function () {
+     return redirect('/login');
+}); */
+
+/* frontend - web */
+Route::get('/', [App\Http\Controllers\Frontend\WelcomeController::class, 'welcome']);
 
 Route::get('/kebijakan', function () {
     return view('kebijakanprivasi');
 })->name('kebijakan');
 
+//Akses halaman depan Tentang Kami
+Route::get('/tentang', [App\Http\Controllers\Frontend\TentangController::class, 'tentang'])->name('tentang');
+
+// Register user
 Route::get('user/register', [App\Http\Controllers\UserController::class, 'register'])->name('user.register');
 Route::post('/user/daftar', [App\Http\Controllers\UserController::class, 'daftar'])
     ->middleware('throttle:registration')
@@ -188,4 +195,16 @@ Route::middleware([
     Route::put('/product/{product}', [App\Http\Controllers\ProductController::class, 'update'])->name('product.update');
     Route::delete('/product/{product}', [App\Http\Controllers\ProductController::class, 'destroy'])->name('product.destroy');
     Route::get('/products/search', [App\Http\Controllers\ProductController::class, 'select2Product'])->name('products.search');
+
+    // Admin Tentang Kami Routes
+    Route::get('/tentang-kami', [App\Http\Controllers\Backend\AdminTentangController::class, 'index'])->name('admin.tentang.index');
+    Route::get('/tentang/create', [App\Http\Controllers\Backend\AdminTentangController::class, 'create'])->name('admin.tentang.create');
+    Route::post('/tentang', [App\Http\Controllers\Backend\AdminTentangController::class, 'store'])->name('admin.tentang.store');
+    Route::get('/tentang/{id}', [App\Http\Controllers\Backend\AdminTentangController::class, 'show'])->name('admin.tentang.show');
+    Route::get('/tentang/{id}/edit', [App\Http\Controllers\Backend\AdminTentangController::class, 'edit'])->name('admin.tentang.edit');
+    Route::put('/tentang/{id}', [App\Http\Controllers\Backend\AdminTentangController::class, 'update'])->name('admin.tentang.update');
+    Route::get('/tentang/{id}/delete', [App\Http\Controllers\Backend\AdminTentangController::class, 'delete'])->name('tentang.delete');
+    Route::delete('/tentang/{id}', [App\Http\Controllers\Backend\AdminTentangController::class, 'destroy'])->name('admin.tentang.destroy');
+    Route::post('/tentang/{id}/logo', [App\Http\Controllers\Backend\AdminTentangController::class, 'uploadLogo'])->name('admin.tentang.upload-logo');
+
 });
