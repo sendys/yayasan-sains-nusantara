@@ -73,7 +73,7 @@
                                             <label for="deskripsi" class="form-label fw-semibold">
                                                 <i class="mdi mdi-text me-1"></i>Deskripsi
                                             </label>
-                                            <textarea class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi" rows="4"
+                                            <textarea class="form-control tinymce @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi" rows="4"
                                                 placeholder="Masukkan deskripsi organisasi...">{{ old('deskripsi', isset($tentang) ? $tentang->deskripsi : '') }}</textarea>
                                             @error('deskripsi')
                                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -217,6 +217,17 @@
 @endpush
 
 @push('scripts')
+    <script src="https://cdn.tiny.cloud/1/{{ config('tinymce.api_key') }}/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea.tinymce',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+            menubar: false,
+            height: 300,
+        });
+    </script>
+    
     <script>
         $(document).ready(function() {
             // Logo Preview
@@ -277,6 +288,11 @@
             // Form Submit with AJAX
             $('#tentangForm').on('submit', function(e) {
                 e.preventDefault();
+
+                // Sync TinyMCE content to textarea before submit
+                if (typeof tinymce !== 'undefined' && tinymce.get('deskripsi')) {
+                    tinymce.get('deskripsi').save();
+                }
 
                 const formData = new FormData(this);
                 const url = $(this).attr('action');

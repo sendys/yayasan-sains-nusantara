@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light p-0">
     <a class="navbar-brand" href="/">
-        <h3 class="text-white">SAINS NUSANTARA</h3>
+        <h2 class="text-white">Y . S . N</h2>
     </a>
     <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
         aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
