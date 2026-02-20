@@ -10,14 +10,26 @@ class TentangController extends Controller
     public function tentang()
     {
         $section = Cache::rememberForever(
-        \App\Models\frontend\TentangKami::CACHE_KEY,
-        function () {
-            return \App\Models\frontend\TentangKami::first();
-        }
-    );
+            \App\Models\frontend\TentangKami::CACHE_KEY,
+            function () {
+                return \App\Models\frontend\TentangKami::first();
+            }
+        );
 
-    return view('frontend.tentang', compact('section'));
+        return view('frontend.visi_misi', compact('section'));
 
     }
 
+    public function sejarah()
+    {
+        $section = Cache::rememberForever(
+            \App\Models\frontend\TentangKami::CACHE_KEY,
+            function () {
+                return \App\Models\frontend\TentangKami::first();
+            }
+        );
+
+        return view('frontend.sejarah', compact('section'));
+
+    }
 }

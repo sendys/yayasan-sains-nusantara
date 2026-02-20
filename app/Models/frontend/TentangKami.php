@@ -13,7 +13,7 @@ class TentangKami extends Model
 
     protected $table = 'tentang_kami';
 
-     protected $fillable = [
+    protected $fillable = [
         'logo',
         'deskripsi',
         'visi',
@@ -24,10 +24,10 @@ class TentangKami extends Model
         'misi' => 'array'
     ];
 
-   /*  public function timelines()
-    {
-        return $this->hasMany(Timeline::class)->orderBy('order');
-    } */
+    /*  public function timelines()
+     {
+         return $this->hasMany(Timeline::class)->orderBy('order');
+     } */
 
     const CACHE_KEY = 'tentang_section';
 
