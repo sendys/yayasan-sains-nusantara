@@ -20,6 +20,10 @@ Route::get('/kebijakan', function () {
 //Akses halaman depan Tentang Kami
 Route::get('/tentang', [App\Http\Controllers\Frontend\TentangController::class, 'tentang'])->name('tentang');
 Route::get('/sejarah', [App\Http\Controllers\Frontend\TentangController::class, 'sejarah'])->name('sejarah');
+Route::get('/pengurus', [App\Http\Controllers\Frontend\TentangController::class, 'pengurus'])->name('pengurus');
+Route::get('/donasi', function () {
+    return view('frontend.donasi');
+})->name('donasi');
 
 // Register user
 Route::get('user/register', [App\Http\Controllers\UserController::class, 'register'])->name('user.register');

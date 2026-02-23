@@ -70,6 +70,8 @@
     <script src="{{ asset('assets/fe/plugins/google-map/gmap.js') }}"></script>
     <script src="{{ asset('assets/fe/js/script.js') }}"></script>
 
+    @push('scripts')
+    
 </body>
 
 </html>

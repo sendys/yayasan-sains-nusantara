@@ -30,3 +30,5 @@
 <!--Favicon-->
 <link rel="shortcut icon" href="{{ asset('assets/fe/images/favicon.ico') }}" type="image/x-icon">
 <link rel="icon" href="{{ asset('assets/fe/images/favicon.ico') }}" type="image/x-icon">
+
+@stack('styles')

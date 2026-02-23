@@ -32,4 +32,17 @@ class TentangController extends Controller
         return view('frontend.sejarah', compact('section'));
 
     }
+
+    public function pengurus()
+    {
+        $section = Cache::rememberForever(
+            \App\Models\frontend\TentangKami::CACHE_KEY,
+            function () {
+                return \App\Models\frontend\TentangKami::first();
+            }
+        );
+
+        return view('frontend.pengurus', compact('section'));
+
+    }
 }

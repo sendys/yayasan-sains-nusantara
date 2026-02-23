@@ -10,7 +10,7 @@ class WelcomeController extends Controller
      public function welcome()
     {
         $ctaSubtitle = "Bersama Kita Wujudkan Perubahan Nyata";
-        $ctaTitle    = "Dukung Gerakan Kami Melalui Donasi";
+        $ctaTitle    = "Dukung Gerakan Kami";
         $ctaButton   = "Donasi Sekarang";
 
         return view('welcome', compact(

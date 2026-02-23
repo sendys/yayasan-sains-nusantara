@@ -15,7 +15,7 @@
                     berbagai tantangan strategis bangsa—mulai dari lingkungan dan perubahan iklim, ketahanan pangan,
                     pendidikan,
                     hingga pemberdayaan desa dan masyarakat adat.</p>
-                <a href="{{ route('tentang') }}" class="btn btn-primary-outline">Learn more</a>
+                <a href="{{ route('tentang') }}" class="btn btn-primary-outline">Selengkapnya</a>
             </div>
             <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
                 <img class="img-fluid w-90" src="{{ asset('assets/fe/images/about/about-us.png') }}" alt="about image">

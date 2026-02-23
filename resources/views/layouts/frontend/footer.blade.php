@@ -8,9 +8,9 @@
           <h4 class="text-white mb-4">YAYASAN SAINS NUSANTARA</h4>
         </a>
         <ul class="list-unstyled">
-          <li class="mb-2 text-white">Banda Aceh, Aceh</li>
-          <li class="mb-2 text-white">0651 - 00000</li>
-          <li class="mb-2 text-white">0651 - 11111</li>
+          <li class="mb-2 text-white">Jln. Prada Utama, No. 55, Lamgugop, Banda Aceh, Aceh</li>
+          <li class="mb-2 text-white">Telp. 0852 6000 0000</li>
+          <li class="mb-2 text-white">Kode Pos 23122</li>
           <li class="mb-2 text-white">contact@ysn.or.id</li>
         </ul>
       </div>
@@ -26,7 +26,7 @@
         </ul>
       </div>
       <!-- links -->
-      <!--  <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+       <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
             <h4 class="text-white mb-5">Link</h4>
             <ul class="list-unstyled">
               <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
@@ -34,9 +34,9 @@
               <li class="mb-3"><a class="text-color" href="gallary.html">Gallary</a></li>
               <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li>
             </ul>
-          </div> -->
+          </div>
       <!-- support -->
-      <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
             <h4 class="text-white mb-5">Support</h4>
             <ul class="list-unstyled">
               <li class="mb-3"><a class="text-color" href="#">Forums</a></li>
@@ -44,7 +44,7 @@
               <li class="mb-3"><a class="text-color" href="#">Language</a></li>
               <li class="mb-3"><a class="text-color" href="#">Release Status</a></li>
             </ul>
-          </div> -->
+          </div>
       <!-- support -->
       <!--  <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
         <h4 class="text-white mb-5">Rekomendasi</h4>
