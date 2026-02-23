@@ -21,6 +21,9 @@ Route::get('/kebijakan', function () {
 Route::get('/tentang', [App\Http\Controllers\Frontend\TentangController::class, 'tentang'])->name('tentang');
 Route::get('/sejarah', [App\Http\Controllers\Frontend\TentangController::class, 'sejarah'])->name('sejarah');
 Route::get('/pengurus', [App\Http\Controllers\Frontend\TentangController::class, 'pengurus'])->name('pengurus');
+Route::get('/partner', function () {
+    return view('frontend.partner');
+})->name('partner');
 Route::get('/donasi', function () {
     return view('frontend.donasi');
 })->name('donasi');

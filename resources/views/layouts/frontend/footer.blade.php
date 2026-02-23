@@ -26,25 +26,25 @@
         </ul>
       </div>
       <!-- links -->
-       <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-            <h4 class="text-white mb-5">Link</h4>
-            <ul class="list-unstyled">
-              <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
-              <li class="mb-3"><a class="text-color" href="event.html">Events</a></li>
-              <li class="mb-3"><a class="text-color" href="gallary.html">Gallary</a></li>
-              <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li>
-            </ul>
-          </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+        <h4 class="text-white mb-5">Link</h4>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
+          <li class="mb-3"><a class="text-color" href="event.html">Events</a></li>
+          <li class="mb-3"><a class="text-color" href="gallary.html">Gallary</a></li>
+          <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li>
+        </ul>
+      </div>
       <!-- support -->
       <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-            <h4 class="text-white mb-5">Support</h4>
-            <ul class="list-unstyled">
-              <li class="mb-3"><a class="text-color" href="#">Forums</a></li>
-              <li class="mb-3"><a class="text-color" href="#">Documentation</a></li>
-              <li class="mb-3"><a class="text-color" href="#">Language</a></li>
-              <li class="mb-3"><a class="text-color" href="#">Release Status</a></li>
-            </ul>
-          </div>
+        <h4 class="text-white mb-5">Support</h4>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-color" href="#">Forums</a></li>
+          <li class="mb-3"><a class="text-color" href="#">Documentation</a></li>
+          <li class="mb-3"><a class="text-color" href="#">Language</a></li>
+          <li class="mb-3"><a class="text-color" href="#">Release Status</a></li>
+        </ul>
+      </div>
       <!-- support -->
       <!--  <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
         <h4 class="text-white mb-5">Rekomendasi</h4>
@@ -72,17 +72,16 @@
       </div>
       <div class="col-sm-5 text-sm-right text-center">
         <ul class="list-inline">
-          <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.facebook.com/themefisher"><i
+          <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i
                 class="ti-facebook text-primary"></i></a></li>
-          <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.twitter.com/themefisher"><i
+          <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i
                 class="ti-twitter-alt text-primary"></i></a></li>
           <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i
                 class="ti-instagram text-primary"></i></a></li>
-          <li class="list-inline-item"><a class="d-inline-block p-2" href="https://dribbble.com/themefisher"><i
+          <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i
                 class="ti-dribbble text-primary"></i></a></li>
         </ul>
       </div>
     </div>
   </div>
 </div>
-</footer>

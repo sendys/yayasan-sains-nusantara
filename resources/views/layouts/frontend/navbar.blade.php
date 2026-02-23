@@ -19,7 +19,7 @@
                 <a class="nav-link" href="events.html">Publikasi</a>
             </li>
             <li class="nav-item @@blog">
-                <a class="nav-link" href="blog.html">Sainspedia</a>
+                <a class="nav-link" href="{{ route('partner') }}">Partner</a>
             </li>
             <li class="nav-item dropdown view">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
@@ -29,7 +29,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('sejarah') }}">Sejarah</a>
                     <a class="dropdown-item" href="{{ route('tentang') }}">Visi &amp; Misi</a>
-                    <a class="dropdown-item" href="{{ route('pengurus') }}">Struktur Pengurus</a>
+                    <a class="dropdown-item" href="{{ route('pengurus') }}">Kepengurusan</a>
                     <a class="dropdown-item" href="#">Legalitas</a>
                     <a class="dropdown-item" href="#">Kotak</a>
                 </div>
