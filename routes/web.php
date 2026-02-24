@@ -28,6 +28,8 @@ Route::get('/donasi', function () {
     return view('frontend.donasi');
 })->name('donasi');
 
+Route::get('/legalitas', [App\Http\Controllers\Frontend\TentangController::class, 'legalitas'])->name('legalitas');
+
 // Register user
 Route::get('user/register', [App\Http\Controllers\UserController::class, 'register'])->name('user.register');
 Route::post('/user/daftar', [App\Http\Controllers\UserController::class, 'daftar'])

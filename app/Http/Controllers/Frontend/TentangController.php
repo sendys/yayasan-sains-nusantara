@@ -45,4 +45,17 @@ class TentangController extends Controller
         return view('frontend.pengurus', compact('section'));
 
     }
+
+    public function legalitas()
+    {
+        $section = Cache::rememberForever(
+            \App\Models\frontend\TentangKami::CACHE_KEY,
+            function () {
+                return \App\Models\frontend\TentangKami::first();
+            }
+        );
+
+        return view('frontend.legalitas', compact('section'));
+
+    }
 }

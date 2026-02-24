@@ -27,7 +27,7 @@
     <!-- /hero slider -->
 
     <!-- banner-feature -->
-    @include('layouts.frontend.banner')
+    {{-- @include('layouts.frontend.banner') --}}
     <!-- /banner-feature -->
 
     <!-- about us -->
@@ -35,7 +35,7 @@
     <!-- /about us -->
 
     <!-- courses -->
-    @include('layouts.frontend.course')
+    @include('layouts.frontend.event')
     <!-- /courses -->
 
     <!-- cta -->
@@ -47,7 +47,7 @@
     <!-- /success story -->
 
     <!-- events -->
-    @include('layouts.frontend.event')
+    {{-- @include('layouts.frontend.event') --}}
     <!-- /events -->
 
     <!-- blog -->

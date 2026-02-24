@@ -30,7 +30,7 @@
                     <a class="dropdown-item" href="{{ route('sejarah') }}">Sejarah</a>
                     <a class="dropdown-item" href="{{ route('tentang') }}">Visi &amp; Misi</a>
                     <a class="dropdown-item" href="{{ route('pengurus') }}">Kepengurusan</a>
-                    <a class="dropdown-item" href="#">Legalitas</a>
+                    <a class="dropdown-item" href="{{ route('legalitas') }}">Legalitas</a>
                     <a class="dropdown-item" href="#">Kotak</a>
                 </div>
             </li>
