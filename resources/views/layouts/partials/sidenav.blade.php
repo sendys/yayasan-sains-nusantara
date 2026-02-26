@@ -380,6 +380,11 @@
                                 <span class="menu-text">Tantang Kami</span>
                             </a>
                         </li>
+                         <li class="menu-item">
+                            <a href="{{ route('admin.blog.index') }}" class="menu-link">
+                                <span class="menu-text">Artikel</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>

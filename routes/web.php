@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 /* frontend - web */
 Route::get('/', [App\Http\Controllers\Frontend\WelcomeController::class, 'welcome']);
 
+// Blog Routes (Frontend)
+Route::get('/blogs', [App\Http\Controllers\Frontend\BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'show'])->name('blog.show');
+
 Route::get('/kebijakan', function () {
     return view('kebijakanprivasi');
 })->name('kebijakan');
@@ -216,5 +220,14 @@ Route::middleware([
     Route::get('/tentang/{id}/delete', [App\Http\Controllers\Backend\AdminTentangController::class, 'delete'])->name('tentang.delete');
     Route::delete('/tentang/{id}', [App\Http\Controllers\Backend\AdminTentangController::class, 'destroy'])->name('admin.tentang.destroy');
     Route::post('/tentang/{id}/logo', [App\Http\Controllers\Backend\AdminTentangController::class, 'uploadLogo'])->name('admin.tentang.upload-logo');
+
+    // Blog Routes
+    Route::get('/blog', [App\Http\Controllers\Backend\BlogController::class, 'index'])->name('admin.blog.index');
+    Route::get('/blog/create', [App\Http\Controllers\Backend\BlogController::class, 'create'])->name('admin.blog.create');
+    Route::post('/blog', [App\Http\Controllers\Backend\BlogController::class, 'store'])->name('admin.blog.store');
+    Route::get('/blog/{uuid}', [App\Http\Controllers\Backend\BlogController::class, 'show'])->name('admin.blog.show');
+    Route::get('/blog/{uuid}/edit', [App\Http\Controllers\Backend\BlogController::class, 'edit'])->name('admin.blog.edit');
+    Route::put('/blog/{uuid}', [App\Http\Controllers\Backend\BlogController::class, 'update'])->name('admin.blog.update');
+    Route::delete('/blog/{uuid}', [App\Http\Controllers\Backend\BlogController::class, 'destroy'])->name('admin.blog.destroy');
 
 });
