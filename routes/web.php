@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\Frontend\WelcomeController::class, 'welcome']);
 
 // Blog Routes (Frontend)
-Route::get('/blogs', [App\Http\Controllers\Frontend\BlogController::class, 'index'])->name('blog.index');
-Route::get('/blog/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'show'])->name('blog.show');
+Route::get('/news', [App\Http\Controllers\Frontend\BlogController::class, 'index'])->name('frontend.blog.index');
+Route::get('/news/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'show'])->name('frontend.blog.show');
 
 Route::get('/kebijakan', function () {
     return view('kebijakanprivasi');
@@ -99,12 +99,6 @@ Route::middleware([
     Route::delete('/perusahaan/{perusahaan}', [App\Http\Controllers\PerusahaanController::class, 'destroy'])->name('perusahaan.destroy');
 });
 
-Route::middleware([
-    'auth',
-    'check.license', // Tambahkan middleware check.license
-])->group(function () {
-    // Semua routes yang memerlukan validasi lisensi...
-});
 
 Route::middleware([
     'auth',
@@ -166,10 +160,6 @@ Route::middleware([
     Route::put('/kategori/{kategori}', [App\Http\Controllers\KategoriController::class, 'update'])->name('kategori.update');
     Route::delete('/kategori/{kategori}', [App\Http\Controllers\KategoriController::class, 'destroy'])->name('kategori.destroy');
 
-    // satuan
-    Route::get('/satuan', [App\Http\Controllers\SatuanController::class, 'index'])->name('satuan.index');
-    Route::get('/satuan/create', [App\Http\Controllers\SatuanController::class, 'create'])->name('satuan.create');
-
     // Brand routes
     Route::prefix('brand')->name('brand.')->group(function () {
         // Routes statis harus ditempatkan SEBELUM routes dinamis
@@ -186,19 +176,7 @@ Route::middleware([
         Route::post('/{uuid}/upload-image', [BrandController::class, 'uploadImage'])->name('upload-image');
     });
 
-    // Bulk import routes (must be before dynamic routes)
-    Route::get('/satuan/bulk-import', [App\Http\Controllers\SatuanController::class, 'bulkImport'])->name('satuan.bulk-import');
-    Route::post('/satuan/process-bulk-import', [App\Http\Controllers\SatuanController::class, 'processBulkImport'])->name('satuan.process-bulk-import');
-    Route::get('/satuan/download-template', [App\Http\Controllers\SatuanController::class, 'downloadTemplate'])->name('satuan.download-template');
-    // Soft delete routes (must be before dynamic routes)
-    Route::get('/satuan/trashed', [App\Http\Controllers\SatuanController::class, 'trashed'])->name('satuan.trashed');
-    Route::patch('/satuan/restore/{id}', [App\Http\Controllers\SatuanController::class, 'restore'])->name('satuan.restore');
-    Route::delete('/satuan/force-delete/{id}', [App\Http\Controllers\SatuanController::class, 'forceDelete'])->name('satuan.force-delete');
-    Route::post('/satuan', [App\Http\Controllers\SatuanController::class, 'store'])->name('satuan.store');
-    Route::get('/satuan/{satuan}', [App\Http\Controllers\SatuanController::class, 'edit'])->name('satuan.edit');
-    Route::put('/satuan/{satuan}', [App\Http\Controllers\SatuanController::class, 'update'])->name('satuan.update');
-    Route::delete('/satuan/{satuan}', [App\Http\Controllers\SatuanController::class, 'destroy'])->name('satuan.destroy');
-
+    
     // product
     Route::get('/product/generate-barcode', [App\Http\Controllers\ProductController::class, 'generateBarcode'])->name('product.generate-barcode');
     Route::get('/product', [App\Http\Controllers\ProductController::class, 'index'])->name('product.index');
@@ -221,7 +199,6 @@ Route::middleware([
     Route::delete('/tentang/{id}', [App\Http\Controllers\Backend\AdminTentangController::class, 'destroy'])->name('admin.tentang.destroy');
     Route::post('/tentang/{id}/logo', [App\Http\Controllers\Backend\AdminTentangController::class, 'uploadLogo'])->name('admin.tentang.upload-logo');
 
-    // Blog Routes
     Route::get('/blog', [App\Http\Controllers\Backend\BlogController::class, 'index'])->name('admin.blog.index');
     Route::get('/blog/create', [App\Http\Controllers\Backend\BlogController::class, 'create'])->name('admin.blog.create');
     Route::post('/blog', [App\Http\Controllers\Backend\BlogController::class, 'store'])->name('admin.blog.store');
@@ -229,5 +206,4 @@ Route::middleware([
     Route::get('/blog/{uuid}/edit', [App\Http\Controllers\Backend\BlogController::class, 'edit'])->name('admin.blog.edit');
     Route::put('/blog/{uuid}', [App\Http\Controllers\Backend\BlogController::class, 'update'])->name('admin.blog.update');
     Route::delete('/blog/{uuid}', [App\Http\Controllers\Backend\BlogController::class, 'destroy'])->name('admin.blog.destroy');
-
 });

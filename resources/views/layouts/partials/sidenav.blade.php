@@ -370,11 +370,7 @@
                                 <span class="menu-text">Kategori</span>
                             </a>
                         </li>
-                        <li class="menu-item">
-                            <a href="{{ route('satuan.index') }}" class="menu-link">
-                                <span class="menu-text">Satuan</span>
-                            </a>
-                        </li>
+                        
                         <li class="menu-item">
                             <a href="{{ route('admin.tentang.index') }}" class="menu-link">
                                 <span class="menu-text">Tantang Kami</span>

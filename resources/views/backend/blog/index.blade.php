@@ -158,7 +158,7 @@
                             <h4 class="text-muted mt-3">No Records Found</h4>
                             <p class="text-muted">We couldn't find any blog records. Try adding some new blogs.</p>
                             <a href="{{ route('admin.blog.create') }}" class="btn btn-primary btn-sm mt-2">
-                                <i class="mdi mdi-plus me-1"></i> Add New Blog
+                                <i class="mdi mdi-plus me-1"></i> Tambah Blog
                             </a>
                         </div>
                     @endif

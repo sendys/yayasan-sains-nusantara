@@ -46,7 +46,7 @@
                                              class="img-fluid rounded" 
                                              style="width: 80px; height: 60px; object-fit: cover;">
                                         <div class="media-body">
-                                            <a href="{{ route('blog.show', $related->slug) }}">
+                                            <a href="{{ route('frontend.blog.show', $related->slug) }}">
                                                 <h5 class="h6 mb-1">{{ $related->title }}</h5>
                                             </a>
                                             <p class="text-muted small mb-0">

@@ -13,7 +13,7 @@
                 <a class="nav-link" href="/">Beranda</a>
             </li>
             <li class="nav-item @@events">
-                <a class="nav-link" href="{{ route('blog.index') }}">Berita</a>
+                <a class="nav-link" href="{{ route('frontend.blog.index') }}">Berita</a>
             </li>
             <li class="nav-item @@events">
                 <a class="nav-link" href="events.html">Publikasi</a>

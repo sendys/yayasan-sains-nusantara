@@ -32,7 +32,7 @@
                             </ul>
 
                             {{-- Title --}}
-                            <a href="{{ route('blog.show', $blog->slug) }}">
+                            <a href="{{ route('frontend.blog.show', $blog->slug) }}">
                                 <h4 class="card-title">
                                     {{ $blog->title }}
                                 </h4>
@@ -44,7 +44,7 @@
                             </p>
 
                             {{-- Button --}}
-                            <a href="{{ route('blog.show', $blog->slug) }}"
+                            <a href="{{ route('frontend.blog.show', $blog->slug) }}"
                                class="btn btn-primary btn-sm mt-auto">
                                 Read More
                             </a>
