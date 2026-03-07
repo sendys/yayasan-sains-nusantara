@@ -1,16 +1,4 @@
-@php use Illuminate\Support\Str; @endphp
-
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section-title">Latest News</h2>
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-
-            @forelse($blogs as $blog)
+@foreach($blogs as $blog)
                 <article class="col-lg-4 col-sm-6 mb-5">
                     <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow h-100">
 
@@ -52,12 +40,5 @@
                         </div>
                     </div>
                 </article>
-            @empty
-                <div class="col-12 text-center">
-                    <p>Belum ada berita terbaru.</p>
-                </div>
-            @endforelse
-
-        </div>
-    </div>
-</section>
+           
+            @endforeach
