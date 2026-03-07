@@ -9,6 +9,7 @@ VERSION:	Versoin Number
 -------------------------------------------------------------------*/
 /*  typography */
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+
 @font-face {
     font-family: "futura-bold";
     src: url("../fonts/Futura-Bold.woff") format("woff");
@@ -51,6 +52,7 @@ h1,
 }
 
 @media (max-width: 575px) {
+
     h1,
     .h1 {
         font-size: 45px;
@@ -63,6 +65,7 @@ h2,
 }
 
 @media (max-width: 575px) {
+
     h2,
     .h2 {
         font-size: 30px;
@@ -75,6 +78,7 @@ h3,
 }
 
 @media (max-width: 575px) {
+
     h3,
     .h3 {
         font-size: 20px;
@@ -87,6 +91,7 @@ h4,
 }
 
 @media (max-width: 575px) {
+
     h4,
     .h4 {
         font-size: 18px;
@@ -99,6 +104,7 @@ h5,
 }
 
 @media (max-width: 575px) {
+
     h5,
     .h5 {
         font-size: 16px;
@@ -111,6 +117,7 @@ h6,
 }
 
 @media (max-width: 575px) {
+
     h6,
     .h6 {
         font-size: 14px;
@@ -202,7 +209,7 @@ h6,
 
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
-.show > .btn-primary.dropdown-toggle {
+.show>.btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #1e7e34;
     border-color: #1e7e34;
@@ -570,11 +577,9 @@ textarea.form-control {
 
 @media (max-width: 575px) {
     .navigation {
-        background-image: linear-gradient(
-            to right,
-            transparent 70%,
-            #269c41 30%
-        );
+        background-image: linear-gradient(to right,
+                transparent 70%,
+                #269c41 30%);
     }
 }
 
@@ -640,10 +645,10 @@ link:focus,
     color: #fff;
 }
 
-.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show > .nav-link {
+.navbar-light .navbar-nav .show>.nav-link {
     color: #fff;
 }
 
@@ -834,6 +839,7 @@ link:focus,
         padding-left: 50px;
         padding-top: 30px;
     }
+
     .feature-blocks h3 {
         font-size: 20px;
     }
@@ -844,6 +850,7 @@ link:focus,
         margin-top: 0;
         padding: 50px;
     }
+
     .feature-blocks h3 {
         font-size: 25px;
     }
@@ -1048,6 +1055,12 @@ link:focus,
 
 .filter-controls li:hover {
     color: #269c41;
+}
+
+.logo-ysn {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

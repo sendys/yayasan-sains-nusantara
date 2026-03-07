@@ -17,6 +17,10 @@ Route::get('/kebijakan', function () {
     return view('kebijakanprivasi');
 })->name('kebijakan');
 
+Route::get('/kontak', function () {
+    return view('kontak');
+})->name('kontak');
+
 //Akses halaman depan Tentang Kami
 Route::get('/tentang', [App\Http\Controllers\Frontend\TentangController::class, 'tentang'])->name('tentang');
 Route::get('/sejarah', [App\Http\Controllers\Frontend\TentangController::class, 'sejarah'])->name('sejarah');

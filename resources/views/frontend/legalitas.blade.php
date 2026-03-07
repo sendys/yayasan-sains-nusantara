@@ -167,7 +167,7 @@
                     </div>
 
                     <!-- Info Card -->
-                    <div class="card border-0 shadow-sm bg-primary text-white">
+                    <div class="card border-0 shadow-sm text-white">
                         <div class="card-body">
                             <h5 class="card-title"><i class="ti-check-box mr-2"></i>Terverifikasi</h5>
                             <p class="card-text">
