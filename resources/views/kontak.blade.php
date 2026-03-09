@@ -90,38 +90,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Jam Operasional -->
-            <div class="row mt-5">
-                <div class="col-12">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="row align-items-center">
-                                <div class="col-md-4 text-center mb-3 mb-md-0">
-                                    <i class="bi bi-clock-fill text-primary" style="font-size: 2rem;"></i>
-                                    <h5 class="font-weight-bold mt-2">Jam Operasional</h5>
-                                </div>
-                                <div class="col-md-8">
-                                    <ul class="list-unstyled mb-0">
-                                        <li class="d-flex justify-content-between py-2 border-bottom">
-                                            <span class="text-muted">Senin - Jumat</span>
-                                            <span class="font-weight-bold">08:00 - 17:00 WIB</span>
-                                        </li>
-                                        <li class="d-flex justify-content-between py-2 border-bottom">
-                                            <span class="text-muted">Sabtu</span>
-                                            <span class="font-weight-bold">08:00 - 12:00 WIB</span>
-                                        </li>
-                                        <li class="d-flex justify-content-between py-2">
-                                            <span class="text-muted">Minggu & Hari Libur</span>
-                                            <span class="font-weight-bold">Tutup</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <!-- /contact -->

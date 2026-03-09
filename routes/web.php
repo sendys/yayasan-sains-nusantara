@@ -180,7 +180,7 @@ Route::middleware([
         Route::post('/{uuid}/upload-image', [BrandController::class, 'uploadImage'])->name('upload-image');
     });
 
-    
+
     // product
     Route::get('/product/generate-barcode', [App\Http\Controllers\ProductController::class, 'generateBarcode'])->name('product.generate-barcode');
     Route::get('/product', [App\Http\Controllers\ProductController::class, 'index'])->name('product.index');
