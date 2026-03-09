@@ -26,7 +26,8 @@
                                         <option value="10" {{ request('per_page') == 10 ? 'selected' : '' }}>10</option>
                                         <option value="20" {{ request('per_page') == 20 ? 'selected' : '' }}>20</option>
                                         <option value="50" {{ request('per_page') == 50 ? 'selected' : '' }}>50</option>
-                                        <option value="100" {{ request('per_page') == 100 ? 'selected' : '' }}>100</option>
+                                        <option value="100" {{ request('per_page') == 100 ? 'selected' : '' }}>100
+                                        </option>
                                     </select>
                                 </div>
 
@@ -34,9 +35,12 @@
                                 <div class="me-1">
                                     <select class="form-select my-1 my-lg-0" name="status" onchange="this.form.submit()">
                                         <option value="">Semua</option>
-                                        <option value="draft" {{ request('status') == 'draft' ? 'selected' : '' }}>Draft</option>
-                                        <option value="published" {{ request('status') == 'published' ? 'selected' : '' }}>Published</option>
-                                        <option value="archived" {{ request('status') == 'archived' ? 'selected' : '' }}>Archived</option>
+                                        <option value="draft" {{ request('status') == 'draft' ? 'selected' : '' }}>Draft
+                                        </option>
+                                        <option value="published" {{ request('status') == 'published' ? 'selected' : '' }}>
+                                            Published</option>
+                                        <option value="archived" {{ request('status') == 'archived' ? 'selected' : '' }}>
+                                            Archived</option>
                                     </select>
                                 </div>
 
@@ -46,8 +50,10 @@
                                             style="top: 50%; transform: translateY(-50%);"></i>
                                         <select class="form-select my-1 my-lg-0 ps-4" name="sort_dir"
                                             onchange="this.form.submit()">
-                                            <option value="asc" {{ request('sort_dir') == 'asc' ? 'selected' : '' }}>Asc</option>
-                                            <option value="desc" {{ request('sort_dir') == 'desc' ? 'selected' : '' }}>Desc</option>
+                                            <option value="asc" {{ request('sort_dir') == 'asc' ? 'selected' : '' }}>Asc
+                                            </option>
+                                            <option value="desc" {{ request('sort_dir') == 'desc' ? 'selected' : '' }}>
+                                                Desc</option>
                                         </select>
                                     </div>
                                 </div>
@@ -65,7 +71,8 @@
                         </div>
                         <div class="col-auto">
                             <div class="text-lg-end my-1 my-lg-0">
-                                <a href="{{ route('admin.blog.create') }}" class="btn btn-primary waves-effect waves-light mb-2">
+                                <a href="{{ route('admin.blog.create') }}"
+                                    class="btn btn-primary waves-effect waves-light mb-2">
                                     <i class="mdi mdi-plus me-1"></i>Tambah Blog
                                 </a>
                             </div>
@@ -100,18 +107,23 @@
 
                                     @foreach ($blogs as $blog)
                                         <tr class="data-row d-none">
-                                            <td>{{ $loop->iteration + ($blogs->currentPage() - 1) * $blogs->perPage() }}</td>
+                                            <td>{{ $loop->iteration + ($blogs->currentPage() - 1) * $blogs->perPage() }}
+                                            </td>
                                             <td>
                                                 @if ($blog->image)
-                                                    <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}"
-                                                        class="rounded" style="width: 50px; height: 50px; object-fit: cover;">
+                                                    <img src="{{ asset('storage/' . $blog->image) }}"
+                                                        alt="{{ $blog->title }}" class="rounded"
+                                                        style="width: 50px; height: 50px; object-fit: cover;">
                                                 @else
-                                                    <img src="{{ asset('assets/fe/images/blog/post-1.jpg') }}" alt="No Image"
-                                                        class="rounded" style="width: 50px; height: 50px; object-fit: cover;">
+                                                    <img src="{{ asset('assets/fe/images/blog/post-1.jpg') }}"
+                                                        alt="No Image" class="rounded"
+                                                        style="width: 50px; height: 50px; object-fit: cover;">
                                                 @endif
                                             </td>
-                                            <td>{{ $blog->title }}</td>
-                                            <td>{{ Str::limit($blog->excerpt, 50) }}</td>
+                                            <td style="max-width:250px; white-space:normal; word-break:break-word;">
+                                                {{ $blog->title }}</td>
+                                            <td style="max-width:250px; white-space:normal; word-break:break-word;">
+                                                {{ Str::limit($blog->excerpt, 50) }}</td>
                                             <td>{{ $blog->author ?? '-' }}</td>
                                             <td>
                                                 @if ($blog->status === 'published')
@@ -122,19 +134,22 @@
                                                     <span class="badge bg-secondary">Archived</span>
                                                 @endif
                                             </td>
-                                            <td>{{ $blog->published_at ? $blog->published_at->format('d/m/Y H:i') : '-' }}</td>
+                                            <td>{{ $blog->published_at ? $blog->published_at->format('d/m/Y H:i') : '-' }}
+                                            </td>
                                             <td>{{ $blog->updated_at->format('d/m/Y H:i') }}</td>
                                             <td>
-                                                <a href="{{ route('admin.blog.show', $blog->uuid) }}" class="btn btn-sm btn-info me-1" title="Lihat">
+                                                <a href="{{ route('admin.blog.show', $blog->uuid) }}"
+                                                    class="btn btn-sm btn-info me-1" title="Lihat">
                                                     <i class="mdi mdi-eye"></i>
                                                 </a>
 
-                                                <a href="{{ route('admin.blog.edit', $blog->uuid) }}" class="btn btn-sm btn-warning me-1" title="Edit">
+                                                <a href="{{ route('admin.blog.edit', $blog->uuid) }}"
+                                                    class="btn btn-sm btn-warning me-1" title="Edit">
                                                     <i class="mdi mdi-square-edit-outline"></i>
                                                 </a>
 
-                                                <form action="{{ route('admin.blog.destroy', $blog->uuid) }}" method="POST"
-                                                    class="delete-blog-form d-inline">
+                                                <form action="{{ route('admin.blog.destroy', $blog->uuid) }}"
+                                                    method="POST" class="delete-blog-form d-inline">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="button" class="btn btn-sm btn-danger btn-delete-blog"

@@ -1,0 +1,33 @@
+.partner-slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.partner-track {
+    display: flex;
+    flex-wrap: nowrap; /* penting supaya tidak turun */
+    align-items: center;
+    animation: scrollPartner 20s linear infinite;
+}
+
+.partner-item {
+    flex: 0 0 auto; /* supaya tidak mengecil */
+    padding: 20px 40px;
+}
+
+.partner-item img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+/* animasi slider */
+@keyframes scrollPartner {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
