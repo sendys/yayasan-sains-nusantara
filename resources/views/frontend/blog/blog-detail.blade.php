@@ -2,6 +2,16 @@
 
 @section('content')
 
+<style>
+   .blog-content{
+    font-family: 'Poppins', sans-serif;
+    font-size:15px;
+    line-height:1.9;
+    color:#555;
+    text-align:justify;
+}
+</style>
+
 <!-- Page Title -->
 <section class="page-title-section overlay"
     data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
@@ -60,7 +70,7 @@
                     @endif
 
                     <div class="blog-content">
-                        {!! $blog->content !!}
+                       {!! nl2br(e($blog->content)) !!}
                     </div>
 
                 </div>
