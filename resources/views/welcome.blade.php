@@ -54,8 +54,6 @@
     @include('layouts.frontend.blog')
     <!-- /blog -->
 
-    @include('layouts.frontend.mitra')
-
     <!-- footer -->
     @include('layouts.frontend.footer')
     <!-- /footer -->

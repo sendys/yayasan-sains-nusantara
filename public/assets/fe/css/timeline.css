@@ -151,3 +151,35 @@
     }
 
 }
+
+.about-ysn .section-title{
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.about-item{
+    border-bottom:1px solid #e5e5e5;
+    padding-bottom:15px;
+}
+
+.about-item h5{
+    font-weight:600;
+    color:#0c6b43;
+    margin-bottom:8px;
+}
+
+.about-item h5 a{
+    color:#0c6b43;
+    text-decoration:none;
+}
+
+.about-item h5 a:hover{
+    text-decoration:underline;
+}
+
+.about-item p{
+    font-size:15px;
+    color:#555;
+    line-height:1.7;
+}

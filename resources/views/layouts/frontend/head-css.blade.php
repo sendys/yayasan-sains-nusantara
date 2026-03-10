@@ -23,7 +23,6 @@
 <link rel="stylesheet" href="{{ asset('assets/fe/plugins/venobox/venobox.css') }}">
 
 <link rel="stylesheet" href="{{ asset('assets/fe/css/timeline.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/fe/css/slider.css') }}">
 
 <!-- Main Stylesheet -->
 <link href="{{ asset('assets/fe/css/style.css') }}" rel="stylesheet">
