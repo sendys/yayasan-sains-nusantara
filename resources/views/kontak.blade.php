@@ -38,7 +38,7 @@
                                     <i class="bi bi-geo-alt-fill text-primary mr-2"></i>
                                     Alamat Kantor
                                 </h5>
-                                <p class="text-muted mb-4">
+                                <p class="text-justify mb-4">
                                     Jln. Prada Utama, No. 55<br>
                                     Lamgugop, Banda Aceh<br>
                                     Aceh, Kode Pos 23122
@@ -46,18 +46,18 @@
 
                                 <h5 class="font-weight-bold mb-3">
                                     <i class="bi bi-telephone-fill text-primary mr-2"></i>
-                                    Telepon
+                                    Telp./WhatsApp
                                 </h5>
-                                <p class="text-muted mb-4">
-                                    0852 6000 0000
+                                <p class="text-justify mb-4">
+                                    +62 852-7739-0360
                                 </p>
 
                                 <h5 class="font-weight-bold mb-3">
                                     <i class="bi bi-envelope-fill text-primary mr-2"></i>
                                     Email
                                 </h5>
-                                <p class="text-muted mb-0">
-                                    contact@ysn.or.id
+                                <p class="text-justify mb-0">
+                                    support@ysn.or.id
                                 </p>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                         <a href="https://www.google.com/maps/search/?api=1&query=5.5483,95.3196" target="_blank"
                             class="btn btn-primary">
                             <i class="bi bi-box-arrow-up-right mr-2"></i>
-                            Buka di Google Maps
+                            Google Maps
                         </a>
                     </div>
                 </div>

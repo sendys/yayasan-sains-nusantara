@@ -9,7 +9,7 @@
                 </a>
                 <ul class="list-unstyled">
                     <li class="mb-2 text-white">Jln. Prada Utama, No. 55, Lamgugop, Banda Aceh, Aceh</li>
-                    <li class="mb-2 text-white">Telp. 0852 6000 0000</li>
+                    <li class="mb-2 text-white">Telp./WhatsApp : +62 852-7739-0360</li>
                     <li class="mb-2 text-white">Kode Pos 23122</li>
                     <li class="mb-2 text-white">support@ysn.or.id</li>
                 </ul>
@@ -19,10 +19,10 @@
             <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0 ml-auto">
                 <h4 class="text-white mb-5">Sitemap</h4>
                 <ul class="list-unstyled">
-                    <li class="mb-3"><a class="text-white" href="about.html">Berita</a></li>
-                    <li class="mb-3"><a class="text-white" href="teacher.html">Publikasi</a></li>
-                    <li class="mb-3"><a class="text-white" href="contact.html">Sainspedia</a></li>
-                    <li class="mb-3"><a class="text-white" href="blog.html">Tentang Kami</a></li>
+                    <li class="mb-3"><a class="text-white" href="">Berita</a></li>
+                    <li class="mb-3"><a class="text-white" href="">Publikasi</a></li>
+                    <li class="mb-3"><a class="text-white" href="">Sainspedia</a></li>
+                    <li class="mb-3"><a class="text-white" href="">Tentang Kami</a></li>
                     <li class="mb-3"><a class="text-white" href="{{ route('kontak') }}">Kontak</a></li>
                 </ul>
             </div>
@@ -30,20 +30,20 @@
             <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
                 <h4 class="text-white mb-5">Link</h4>
                 <ul class="list-unstyled">
-                    <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
+                    {{--  <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
                     <li class="mb-3"><a class="text-color" href="event.html">Events</a></li>
                     <li class="mb-3"><a class="text-color" href="gallary.html">Gallary</a></li>
-                    <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li>
+                    <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li> --}}
                 </ul>
             </div>
             <!-- support -->
             <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
                 <h4 class="text-white mb-5">Support</h4>
                 <ul class="list-unstyled">
-                    <li class="mb-3"><a class="text-color" href="#">Forums</a></li>
+                    {{--  <li class="mb-3"><a class="text-color" href="#">Forums</a></li>
                     <li class="mb-3"><a class="text-color" href="#">Documentation</a></li>
                     <li class="mb-3"><a class="text-color" href="#">Language</a></li>
-                    <li class="mb-3"><a class="text-color" href="#">Release Status</a></li>
+                    <li class="mb-3"><a class="text-color" href="#">Release Status</a></li> --}}
                 </ul>
             </div>
             <!-- support -->
@@ -69,7 +69,8 @@
                         var CurrentYear = new Date().getFullYear()
                         document.write(CurrentYear)
                     </script>
-                    © Design By <a href="fintekindonesia.com">Fintek Indonesia</a> All Rights Reserved.
+                    © <a href="https://fintekindonesia.web.id" target="_blank" rel="noopener noreferrer">Fintek
+                        Indonesia</a> All Rights Reserved.
             </div>
             <div class="col-sm-5 text-sm-right text-center">
                 <ul class="list-inline">

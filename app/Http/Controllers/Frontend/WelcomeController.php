@@ -12,7 +12,7 @@ class WelcomeController extends Controller
     {
         $ctaSubtitle = "Bersama Kita Wujudkan Perubahan Nyata";
         $ctaTitle    = "Dukung Gerakan Kami";
-        $ctaButton   = "Donasi Sekarang";
+        $ctaButton   = "Donasi";
 
         // Get latest published blogs for homepage
         $blogs = Blog::published()
