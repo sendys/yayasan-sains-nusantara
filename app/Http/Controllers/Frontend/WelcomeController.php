@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Event;
 use Illuminate\View\View;
 
 class WelcomeController extends Controller
@@ -20,11 +21,18 @@ class WelcomeController extends Controller
                    ->take(3)
                    ->get();
 
+        // Get upcoming events for homepage (show 3)
+        $events = Event::upcoming()
+                     ->latest('event_date')  
+                     ->take(3)
+                     ->get();
+
         return view('welcome', compact(
             'ctaSubtitle',
             'ctaTitle',
             'ctaButton',
-            'blogs'
+            'blogs',
+            'events'
         ));
     }
 }

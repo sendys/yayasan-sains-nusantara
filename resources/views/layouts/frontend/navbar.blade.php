@@ -54,7 +54,7 @@
                 <a class="nav-link" href="{{ route('frontend.blog.index') }}">Berita</a>
             </li>
             <li class="nav-item @@events">
-                <a class="nav-link" href="events.html">Publikasi</a>
+                <a class="nav-link" href="{{ route('frontend.event.index') }}">Publikasi</a>
             </li>
             <li class="nav-item @@blog">
                 <a class="nav-link" href="{{ route('partner') }}">Partner</a>

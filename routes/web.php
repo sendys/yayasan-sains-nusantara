@@ -17,6 +17,11 @@ Route::get('/', [App\Http\Controllers\Frontend\WelcomeController::class, 'welcom
 Route::get('/news', [App\Http\Controllers\Frontend\BlogController::class, 'index'])->name('frontend.blog.index');
 Route::get('/news/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'show'])->name('frontend.blog.show');
 
+// Event Routes (Frontend)
+Route::get('/events', [App\Http\Controllers\Frontend\EventController::class, 'index'])->name('frontend.event.index');
+Route::get('/events/all', [App\Http\Controllers\Frontend\EventController::class, 'all'])->name('frontend.event.all');
+Route::get('/events/{uuid}', [App\Http\Controllers\Frontend\EventController::class, 'show'])->name('frontend.event.show');
+
 Route::get('/kebijakan', function () {
     return view('kebijakanprivasi');
 })->name('kebijakan');
@@ -210,4 +215,13 @@ Route::middleware([
     Route::get('/blog/{uuid}/edit', [App\Http\Controllers\Backend\BlogController::class, 'edit'])->name('admin.blog.edit');
     Route::put('/blog/{uuid}', [App\Http\Controllers\Backend\BlogController::class, 'update'])->name('admin.blog.update');
     Route::delete('/blog/{uuid}', [App\Http\Controllers\Backend\BlogController::class, 'destroy'])->name('admin.blog.destroy');
+
+    // Event Routes (Backend/Admin)
+    Route::get('/event', [App\Http\Controllers\Backend\EventController::class, 'index'])->name('admin.event.index');
+    Route::get('/event/create', [App\Http\Controllers\Backend\EventController::class, 'create'])->name('admin.event.create');
+    Route::post('/event', [App\Http\Controllers\Backend\EventController::class, 'store'])->name('admin.event.store');
+    Route::get('/event/{uuid}', [App\Http\Controllers\Backend\EventController::class, 'show'])->name('admin.event.show');
+    Route::get('/event/{uuid}/edit', [App\Http\Controllers\Backend\EventController::class, 'edit'])->name('admin.event.edit');
+    Route::put('/event/{uuid}', [App\Http\Controllers\Backend\EventController::class, 'update'])->name('admin.event.update');
+    Route::delete('/event/{uuid}', [App\Http\Controllers\Backend\EventController::class, 'destroy'])->name('admin.event.destroy');
 });

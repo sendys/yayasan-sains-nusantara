@@ -366,6 +366,11 @@
                                 <span class="menu-text">Artikel</span>
                             </a>
                         </li>
+                        <li class="menu-item">
+                            <a href="{{ route('admin.event.index') }}" class="menu-link">
+                                <span class="menu-text">Event</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>
