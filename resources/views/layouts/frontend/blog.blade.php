@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="section-title">Latest News</h2>
+                <h2 class="section-title">Artikel Terkini</h2>
             </div>
         </div>
 

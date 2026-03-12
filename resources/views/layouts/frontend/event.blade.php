@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="d-flex align-items-center section-title justify-content-between">
-                    <h2 class="mb-0 text-nowrap mr-3">Upcoming Events</h2>
+                    <h2 class="mb-0 text-nowrap mr-3">Publikasi</h2>
                     <div class="border-top w-100 border-primary d-none d-sm-block"></div>
                     <div>
                         <a href="{{ route('frontend.event.index') }}" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            @forelse($events as $event)
+            {{-- @forelse($events as $event)
             <!-- event -->
             <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
                 <div class="card border-0 rounded-0 hover-shadow">
@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </div>
-            @empty
+            @empty --}}
             <!-- event (static fallback if no events) -->
             <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
                 <div class="card border-0 rounded-0 hover-shadow">
@@ -86,7 +86,7 @@
                     </div>
                 </div>
             </div>
-            @endforelse
+           {{--  @endforelse --}}
         </div>
         <!-- mobile see all button -->
         <div class="row">

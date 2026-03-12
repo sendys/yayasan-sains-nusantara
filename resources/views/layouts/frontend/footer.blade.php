@@ -86,4 +86,15 @@
             </div>
         </div>
     </div>
+
+    <!-- Back To Top Premium -->
+<button id="backToTop" class="back-to-top">
+    <svg class="progress-circle" width="48" height="48">
+        <circle cx="24" cy="24" r="20"></circle>
+    </svg>
+    <i class="ti-angle-up"></i>
+</button>
+
 </div>
+
+

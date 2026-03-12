@@ -1,28 +1,64 @@
- <div class="top-header py-2 bg-white">
-     <div class="container">
-         <div class="row no-gutters">
-             <div class="col-lg-4 text-center text-lg-left">
-                 <a class="text-color mr-3" href="callto:+443003030266"><strong>TELP : </strong> (0651 -23212)</a>
-                 <ul class="list-inline d-inline">
-                     <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i
-                                 class="ti-facebook"></i></a></li>
-                     <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i
-                                 class="ti-twitter-alt"></i></a></li>
-                     <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i
-                                 class="ti-linkedin"></i></a></li>
-                     <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color"
-                             href="https://www.instagram.com/yayasansainsnusantara/"><i class="ti-instagram"></i></a>
-                     </li>
-                 </ul>
-             </div>
-             {{-- <div class="col-lg-8 text-center text-lg-right">
-                 <ul class="list-inline">
-                     <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
-                             href="research.html">research</a></li> <li class="list-inline-item"><a
-                                 class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
-                                 href="{{ route('login') }}">login</a></li>
-                 </ul>
-             </div> --}}
-         </div>
-     </div>
- </div>
+<div class="top-header py-2 bg-white">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT -->
+            <div class="col-lg-6 text-center text-lg-left">
+
+                <a class="text-color mr-3" href="tel:+6265123212">
+                    <strong>TELP :</strong> +62 852-7739-0360
+                </a>
+
+                <ul class="list-inline d-inline mb-0">
+
+                    <li class="list-inline-item mx-0">
+                        <a class="d-inline-block p-2 text-color" href="#">
+                            <i class="ti-facebook"></i>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item mx-0">
+                        <a class="d-inline-block p-2 text-color" href="#">
+                            <i class="ti-twitter-alt"></i>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item mx-0">
+                        <a class="d-inline-block p-2 text-color" href="#">
+                            <i class="ti-linkedin"></i>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item mx-0">
+                        <a class="d-inline-block p-2 text-color"
+                           href="https://www.instagram.com/yayasansainsnusantara/"
+                           target="_blank">
+                            <i class="ti-instagram"></i>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="col-lg-6 text-center text-lg-right">
+
+                <span class="language-switch">
+
+                    <i class="ti-world"></i>
+
+                    <a href="#" class="text-color active ml-1">Indonesia</a> |
+                    <a href="#" class="text-color active ml-1">English</a>
+
+                </span>
+
+                <button onclick="window.location.href='/donasi'" class="btn btn-primary btn-xs ml-2">
+                    DONASI
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>

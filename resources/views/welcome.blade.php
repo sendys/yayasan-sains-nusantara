@@ -210,6 +210,47 @@
     <script src="{{ asset('assets/fe/plugins/google-map/gmap.js') }}"></script>
     <script src="{{ asset('assets/fe/js/script.js') }}"></script>
 
+    <script>
+        const backToTop = document.getElementById("backToTop");
+        const progressCircle = document.querySelector(".progress-circle circle");
+
+        const radius = progressCircle.r.baseVal.value;
+        const circumference = 2 * Math.PI * radius;
+
+        progressCircle.style.strokeDasharray = circumference;
+        progressCircle.style.strokeDashoffset = circumference;
+
+        window.addEventListener("scroll", () => {
+
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = scrollTop / docHeight;
+
+        const offset = circumference - scrollPercent * circumference;
+        progressCircle.style.strokeDashoffset = offset;
+
+        /* show button */
+
+        if(scrollTop > 300){
+        backToTop.classList.add("show");
+        }else{
+        backToTop.classList.remove("show");
+        }
+
+        });
+
+        /* smooth scroll */
+
+        backToTop.addEventListener("click", () => {
+
+        window.scrollTo({
+        top:0,
+        behavior:"smooth"
+        });
+
+        });
+    </script>
+
     @push('scripts')
 
     </body>

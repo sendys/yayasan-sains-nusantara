@@ -43,37 +43,37 @@
 
                             <div class="col-md-6 col-lg-3 mb-4">
                                 <div class="struktur-card text-center">
-                                    <img src="{{ asset('assets/fe/images/struktur/person-m-5.webp') }}" class="struktur-img"
+                                    <img src="{{ asset('assets/fe/images/struktur/Mustanir.png') }}" class="struktur-img"
                                         alt="Prof. Dr. Mustanir">
                                     <h6 class="mt-3 mb-1">Prof. Dr. Mustanir, M.Sc</h6>
-                                    <small class="text-muted">Pembina</small>
+                                    <small class="text-color">Ketua Pembina</small>
                                 </div>
                             </div>
 
                             <div class="col-md-6 col-lg-3 mb-4">
                                 <div class="struktur-card text-center">
-                                    <img src="{{ asset('assets/fe/images/struktur/person-m-7.webp') }}" class="struktur-img"
+                                    <img src="{{ asset('assets/fe/images/struktur/Ismail.png') }}" class="struktur-img"
                                         alt="Prof. Dr. Ismail">
                                     <h6 class="mt-3 mb-1">Prof. Dr. Ismail, M.Sc</h6>
-                                    <small class="text-muted">Pembina</small>
+                                    <small class="text-color">Anggota Pembina</small>
                                 </div>
                             </div>
 
                             <div class="col-md-6 col-lg-3 mb-4">
                                 <div class="struktur-card text-center">
-                                    <img src="{{ asset('assets/fe/images/struktur/person-m-8.webp') }}" class="struktur-img"
+                                    <img src="{{ asset('assets/fe/images/struktur/Firdus.png') }}" class="struktur-img"
                                         alt="Dr. Firdus">
                                     <h6 class="mt-3 mb-1">Dr. Firdus, M.Si</h6>
-                                    <small class="text-muted">Pembina</small>
+                                    <small class="text-color">Anggota Pembina</small>
                                 </div>
                             </div>
 
                             <div class="col-md-6 col-lg-3 mb-4">
                                 <div class="struktur-card text-center">
-                                    <img src="{{ asset('assets/fe/images/struktur/person-m-13.webp') }}"
+                                    <img src="{{ asset('assets/fe/images/struktur/Elly.jpg') }}" class="struktur-img"
                                         class="struktur-img" alt="Dr. Elly Sufriadi">
                                     <h6 class="mt-3 mb-1">Dr. Elly Sufriadi, M.Si</h6>
-                                    <small class="text-muted">Pembina</small>
+                                    <small class="text-color">Anggota Pembina</small>
                                 </div>
                             </div>
 
@@ -87,28 +87,28 @@
 
                             <div class="col-md-4 mb-4">
                                 <div class="struktur-card text-center">
-                                    <img src="{{ asset('assets/fe/images/struktur/person-m-8.webp') }}" class="struktur-img"
+                                    <img src="{{ asset('assets/fe/images/struktur/yansya.jpeg') }}" class="struktur-img"
                                         alt="Dedy Yansyah">
                                     <h6 class="mt-3 mb-1">Dedy Yansyah, S.Si</h6>
-                                    <small class="text-muted">Pengawas</small>
+                                    <small class="text-color">Ketua Pengawas</small>
                                 </div>
                             </div>
 
                             <div class="col-md-4 mb-4">
                                 <div class="struktur-card text-center">
-                                    <img src="{{ asset('assets/fe/images/struktur/person-m-7.webp') }}" class="struktur-img"
+                                    <img src="{{ asset('assets/fe/images/struktur/Muslim.png') }}" class="struktur-img"
                                         alt="Dr. Muslim">
                                     <h6 class="mt-3 mb-1">Dr. Muslim, M.Info.Tech.</h6>
-                                    <small class="text-muted">Pengawas</small>
+                                    <small class="text-color">Anggota Pengawas</small>
                                 </div>
                             </div>
 
                             <div class="col-md-4 mb-4">
                                 <div class="struktur-card text-center">
-                                    <img src="{{ asset('assets/fe/images/struktur/person-m-5.webp') }}" class="struktur-img"
+                                    <img src="{{ asset('assets/fe/images/struktur/Ardiansyah.png') }}" class="struktur-img"
                                         alt="Dr. Ardiansyah">
                                     <h6 class="mt-3 mb-1">Dr. Ardiansyah, B.Sc.Elect.Eng.</h6>
-                                    <small class="text-muted">Pengawas</small>
+                                    <small class="text-color">Anggota Pengawas</small>
                                 </div>
                             </div>
 
@@ -122,28 +122,28 @@
 
                             <div class="col-md-4 mb-4">
                                 <div class="struktur-card text-center">
-                                    <img src="{{ asset('assets/fe/images/struktur/person-m-7.webp') }}" class="struktur-img"
+                                    <img src="{{ asset('assets/fe/images/struktur/Kholil.jpeg') }}" class="struktur-img"
                                         alt="Kholil Yusra">
                                     <h6 class="mt-3 mb-1">Kholil Yusra, S.Si., M.Si.</h6>
-                                    <small class="text-muted">Ketua</small>
+                                    <small class="text-color">Ketua</small>
                                 </div>
                             </div>
 
                             <div class="col-md-4 mb-4">
                                 <div class="struktur-card text-center">
-                                    <img src="{{ asset('assets/fe/images/struktur/3.jpg') }}" class="struktur-img"
+                                    <img src="{{ asset('assets/fe/images/struktur/Dedy.jpeg') }}" class="struktur-img"
                                         alt="Dedy Safran">
                                     <h6 class="mt-3 mb-1">Dedy Safran, S.Si</h6>
-                                    <small class="text-muted">Sekretaris</small>
+                                    <small class="text-color">Sekretaris</small>
                                 </div>
                             </div>
 
                             <div class="col-md-4 mb-4">
                                 <div class="struktur-card text-center">
-                                    <img src="{{ asset('assets/fe/images/struktur/person-f-7.webp') }}" class="struktur-img"
+                                    <img src="{{ asset('assets/fe/images/struktur/Ruhaya.jpeg') }}" class="struktur-img"
                                         alt="Ruhaya">
                                     <h6 class="mt-3 mb-1">Ruhaya, S.Si., M.Ling.</h6>
-                                    <small class="text-muted">Bendahara</small>
+                                    <small class="text-color">Bendahara</small>
                                 </div>
                             </div>
 

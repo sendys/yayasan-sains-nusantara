@@ -183,3 +183,64 @@
     color:#555;
     line-height:1.7;
 }
+
+/* =============================== */
+/* BACK TO TOP PREMIUM */
+/* =============================== */
+
+.back-to-top{
+position: fixed;
+right: 25px;
+bottom: 25px;
+width: 48px;
+height: 48px;
+border: none;
+background: #2ecc71;
+color: #fff;
+border-radius: 50%;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+opacity: 0;
+visibility: hidden;
+transition: all .3s ease;
+z-index: 9999;
+}
+
+.back-to-top i{
+font-size:18px;
+position: relative;
+z-index:2;
+}
+
+.back-to-top:hover{
+transform: translateY(-4px);
+background:#27ae60;
+}
+
+/* show button */
+
+.back-to-top.show{
+opacity:1;
+visibility:visible;
+}
+
+/* progress circle */
+
+.progress-circle{
+position:absolute;
+top:0;
+left:0;
+transform: rotate(-90deg);
+}
+
+.progress-circle circle{
+fill:none;
+stroke:#fff;
+stroke-width:3;
+stroke-dasharray:126;
+stroke-dashoffset:126;
+transition: stroke-dashoffset .2s linear;
+}

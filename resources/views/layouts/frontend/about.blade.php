@@ -53,8 +53,7 @@
                                 </a>
                             </h5>
                             <p>
-                                Yayasan Sains Nusantara adalah lembaga nirlaba yang bergerak di bidang penelitian, pengembangan ilmu pengetahuan, pelatihan, dan rekayasa teknologi terapan. Kami hadir sebagai wadah kolaborasi antara akademisi, peneliti, praktisi, dan masyarakat untuk menghadirkan solusi berbasis sains 
-                                dalam menjawab berbagai tantangan pembangunan.
+                                Yayasan Sains Nusantara adalah lembaga nirlaba yang bergerak di bidang penelitian, pengembangan ilmu pengetahuan, pelatihan, dan rekayasa teknologi terapan.
                             </p>
                         </div>
                     </div>
@@ -68,7 +67,7 @@
                             </h5>
                             <p>
                                 Kami mengembangkan berbagai program penelitian, pelatihan, dan inovasi teknologi yang berfokus pada peningkatan kapasitas masyarakat, penguatan ekonomi lokal, 
-                                pendidikan, serta pemanfaatan ilmu pengetahuan untuk pembangunan berkelanjutan.
+                                pendidikan.
                             </p>
                         </div>
                     </div>
@@ -81,8 +80,7 @@
                                 </a>
                             </h5>
                             <p>
-                                Yayasan Sains Nusantara bekerja bersama berbagai mitra di tingkat lokal, nasional, dan internasional untuk mendorong pengembangan masyarakat 
-                                berbasis pengetahuan, riset, serta inovasi teknologi yang berdampak nyata.
+                                Yayasan Sains Nusantara bekerja bersama berbagai mitra di tingkat lokal, nasional, dan internasional.
                             </p>
                         </div>
                     </div>
@@ -95,8 +93,7 @@
                                 </a>
                             </h5>
                             <p>
-                                Dukungan dari berbagai pihak sangat penting dalam memperkuat gerakan kolaboratif berbasis sains dan teknologi. Bersama, kita dapat menciptakan inovasi, 
-                                memperluas manfaat penelitian, dan menghadirkan solusi nyata bagi masyarakat.
+                                Dukungan dari berbagai pihak sangat penting dalam memperkuat gerakan kolaboratif berbasis sains dan teknologi.
                             </p>
                         </div>
                     </div>
