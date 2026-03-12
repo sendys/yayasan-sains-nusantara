@@ -1,10 +1,8 @@
 @extends('layouts.frontend')
 
 @section('content')
-
     <!-- page title -->
-    <section class="page-title-section overlay"
-        data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
+    <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -159,69 +157,12 @@
                                 <h5 class="card-title">Mari Berdonasi</h5>
                                 <p class="card-text">Dukungan Anda sangat berarti untuk kelanjutan program-program kami.</p>
                                 <a href="{{ route('donasi') }}" class="btn btn-primary">
-                                    Donasi Sekarang
+                                    Donasi
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Blog Section (Max 4) -->
-                    <!--  <div class="mb-4">
-                                <div class="text-center mb-4">
-                                    <h3>Blog Terbaru</h3>
-                                    <div class="divider mx-auto mb-4"></div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                        <div class="card h-100 border-0 shadow-sm">
-                                            <img src="path/to/blog1.jpg" class="card-img-top" alt="Blog 1"
-                                                style="height: 150px; object-fit: cover;">
-                                            <div class="card-body">
-                                                <h6 class="card-title">Judul Blog 1</h6>
-                                                <p class="card-text small">Ringkasan singkat dari artikel blog...</p>
-                                                <a href="#" class="btn btn-sm btn-outline-primary">Baca Selengkapnya</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-4">
-                                        <div class="card h-100 border-0 shadow-sm">
-                                            <img src="path/to/blog2.jpg" class="card-img-top" alt="Blog 2"
-                                                style="height: 150px; object-fit: cover;">
-                                            <div class="card-body">
-                                                <h6 class="card-title">Judul Blog 2</h6>
-                                                <p class="card-text small">Ringkasan singkat dari artikel blog...</p>
-                                                <a href="#" class="btn btn-sm btn-outline-primary">Baca Selengkapnya</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-4">
-                                        <div class="card h-100 border-0 shadow-sm">
-                                            <img src="path/to/blog3.jpg" class="card-img-top" alt="Blog 3"
-                                                style="height: 150px; object-fit: cover;">
-                                            <div class="card-body">
-                                                <h6 class="card-title">Judul Blog 3</h6>
-                                                <p class="card-text small">Ringkasan singkat dari artikel blog...</p>
-                                                <a href="#" class="btn btn-sm btn-outline-primary">Baca Selengkapnya</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-4">
-                                        <div class="card h-100 border-0 shadow-sm">
-                                            <img src="path/to/blog4.jpg" class="card-img-top" alt="Blog 4"
-                                                style="height: 150px; object-fit: cover;">
-                                            <div class="card-body">
-                                                <h6 class="card-title">Judul Blog 4</h6>
-                                                <p class="card-text small">Ringkasan singkat dari artikel blog...</p>
-                                                <a href="#" class="btn btn-sm btn-outline-primary">Baca Selengkapnya</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
                 </div>
             </div>
         </div>
