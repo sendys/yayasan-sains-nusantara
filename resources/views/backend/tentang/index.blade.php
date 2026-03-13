@@ -81,7 +81,7 @@
                                         </div>
 
                                         <!-- Visi -->
-                                        <div class="mb-4">
+                                        {{-- <div class="mb-4">
                                             <label for="visi" class="form-label fw-semibold">
                                                 <i class="mdi mdi-eye me-1"></i>Visi
                                             </label>
@@ -90,10 +90,10 @@
                                             @error('visi')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
-                                        </div>
+                                        </div> --}}
 
                                         <!-- Misi -->
-                                        <div class="mb-3">
+                                        {{-- <div class="mb-3">
                                             <label class="form-label fw-semibold">
                                                 <i class="mdi mdi-bullseye me-1"></i>Misi
                                             </label>
@@ -134,7 +134,7 @@
                                             @error('misi')
                                                 <div class="text-danger small mt-1">{{ $message }}</div>
                                             @enderror
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>

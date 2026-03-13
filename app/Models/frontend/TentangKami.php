@@ -16,8 +16,6 @@ class TentangKami extends Model
     protected $fillable = [
         'logo',
         'deskripsi',
-        'visi',
-        'misi'
     ];
 
     protected $casts = [

@@ -43,10 +43,19 @@
 
                             <div class="col-md-6 col-lg-3 mb-4">
                                 <div class="struktur-card text-center">
+                                    <img src="{{ asset('assets/fe/images/struktur/Firdus.png') }}" class="struktur-img"
+                                        alt="Dr. Firdus">
+                                    <h6 class="mt-3 mb-1">Dr. Firdus, M.Si</h6>
+                                    <small class="text-color">Ketua Pembina</small>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-3 mb-4">
+                                <div class="struktur-card text-center">
                                     <img src="{{ asset('assets/fe/images/struktur/Mustanir.png') }}" class="struktur-img"
                                         alt="Prof. Dr. Mustanir">
                                     <h6 class="mt-3 mb-1">Prof. Dr. Mustanir, M.Sc</h6>
-                                    <small class="text-color">Ketua Pembina</small>
+                                    <small class="text-color">Anggota Pembina</small>
                                 </div>
                             </div>
 
@@ -55,15 +64,6 @@
                                     <img src="{{ asset('assets/fe/images/struktur/Ismail.png') }}" class="struktur-img"
                                         alt="Prof. Dr. Ismail">
                                     <h6 class="mt-3 mb-1">Prof. Dr. Ismail, M.Sc</h6>
-                                    <small class="text-color">Anggota Pembina</small>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-lg-3 mb-4">
-                                <div class="struktur-card text-center">
-                                    <img src="{{ asset('assets/fe/images/struktur/Firdus.png') }}" class="struktur-img"
-                                        alt="Dr. Firdus">
-                                    <h6 class="mt-3 mb-1">Dr. Firdus, M.Si</h6>
                                     <small class="text-color">Anggota Pembina</small>
                                 </div>
                             </div>
