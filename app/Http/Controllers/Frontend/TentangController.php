@@ -21,7 +21,7 @@ class TentangController extends Controller
     }
 
 
-    /* public function pengurus()
+    public function pengurus()
     {
         $section = Cache::rememberForever(
             \App\Models\frontend\TentangKami::CACHE_KEY,
@@ -32,9 +32,9 @@ class TentangController extends Controller
 
         return view('frontend.pengurus', compact('section'));
 
-    } */
+    }
 
-    /* public function legalitas()
+    public function legalitas()
     {
         $section = Cache::rememberForever(
             \App\Models\frontend\TentangKami::CACHE_KEY,
@@ -45,5 +45,5 @@ class TentangController extends Controller
 
         return view('frontend.legalitas', compact('section'));
 
-    } */
+    }
 }

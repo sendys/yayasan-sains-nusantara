@@ -75,8 +75,7 @@
                     <p style="margin:0; font-size:13px; color:#c0c0d0; line-height:1.5;">
                         Kami menggunakan cookie untuk membantu meningkatkan pengalaman Anda di situs ini dan memastikan
                         informasi tentang program kami tersampaikan dengan baik. Dengan mengklik “Terima Semua Cookie”,
-                        Anda membantu kami terus menyempurnakan layanan dan
-                        dampak yang kami hadirkan. Anda dapat mengatur preferensi melalui “Pengaturan Cookie” atau
+                        Anda membantu kami terus menyempurnakan layanan. Anda dapat mengatur preferensi melalui “Pengaturan Cookie” atau
                         membaca lebih lanjut di
                         <a href="{{ route('kebijakan') }}" style="color:#93c5fd; text-decoration:underline;">Pernyataan
                             Privasi</a> kami.

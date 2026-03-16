@@ -34,7 +34,7 @@
 
         <!-- Nama Yayasan -->
         <h3 class="mb-0 text-white font-weight-bold d-none d-lg-block">
-            YAYASAN SAINS NUSANTRA
+            YAYASAN SAINS NUSANTARA
         </h3>
         <h5 class="mb-0 text-white font-weight-bold d-lg-none">
             YSN

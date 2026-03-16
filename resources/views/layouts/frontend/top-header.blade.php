@@ -6,7 +6,7 @@
             <div class="col-lg-6 text-center text-lg-left">
 
                 <a class="text-color mr-3" href="tel:+6265123212">
-                    <strong>TELP :</strong> +62 852-7739-0360
+                    <strong>TELP :</strong> +62 852-7739-0360 | +62 852-9740-1122
                 </a>
 
                 <ul class="list-inline d-inline mb-0">

@@ -49,7 +49,7 @@
                                     Telp./WhatsApp
                                 </h5>
                                 <p class="text-justify mb-4">
-                                    +62 852-7739-0360
+                                    +62 852-7739-0360 | +62 852-9740-1122
                                 </p>
 
                                 <h5 class="font-weight-bold mb-3">
