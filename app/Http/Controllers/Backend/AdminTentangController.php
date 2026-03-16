@@ -41,18 +41,11 @@ class AdminTentangController extends Controller
         $validator = Validator::make($request->all(), [
             'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'deskripsi' => 'nullable|string',
-           /*  'visi' => 'nullable|string',
-            'misi' => 'nullable|array',
-            'misi.*' => 'string|max:500', */
         ], [
             'logo.image' => 'File harus berupa gambar',
             'logo.mimes' => 'Format gambar harus jpeg, png, jpg, atau gif',
             'logo.max' => 'Ukuran gambar maksimal 2MB',
             'deskripsi.string' => 'Deskripsi harus berupa teks',
-           /*  'visi.string' => 'Visi harus berupa teks',
-            'misi.array' => 'Misi harus berupa array',
-            'misi.*.string' => 'Setiap misi harus berupa teks',
-            'misi.*.max' => 'Setiap misi maksimal 500 karakter', */
         ]);
 
         if ($validator->fails()) {
@@ -68,16 +61,6 @@ class AdminTentangController extends Controller
 
         try {
             $data = $validator->validated();
-
-            // Filter out empty misi values
-            /* if (isset($data['misi']) && is_array($data['misi'])) {
-                $data['misi'] = array_values(array_filter($data['misi'], function($value) {
-                    return !empty(trim($value));
-                }));
-                if (empty($data['misi'])) {
-                    $data['misi'] = null;
-                }
-            } */
 
             // Handle logo upload
             if ($request->hasFile('logo')) {
@@ -147,18 +130,12 @@ class AdminTentangController extends Controller
         $validator = Validator::make($request->all(), [
             'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'deskripsi' => 'nullable|string',
-            /* 'visi' => 'nullable|string',
-            'misi' => 'nullable|array',
-            'misi.*' => 'string|max:500', */
         ], [
             'logo.image' => 'File harus berupa gambar',
             'logo.mimes' => 'Format gambar harus jpeg, png, jpg, atau gif',
             'logo.max' => 'Ukuran gambar maksimal 2MB',
             'deskripsi.string' => 'Deskripsi harus berupa teks',
-           /*  'visi.string' => 'Visi harus berupa teks',
-            'misi.array' => 'Misi harus berupa array',
-            'misi.*.string' => 'Setiap misi harus berupa teks',
-            'misi.*.max' => 'Setiap misi maksimal 500 karakter', */
+
         ]);
 
         if ($validator->fails()) {
@@ -174,16 +151,6 @@ class AdminTentangController extends Controller
 
         try {
             $data = $validator->validated();
-
-            // Filter out empty misi values
-            /* if (isset($data['misi']) && is_array($data['misi'])) {
-                $data['misi'] = array_values(array_filter($data['misi'], function($value) {
-                    return !empty(trim($value));
-                }));
-                if (empty($data['misi'])) {
-                    $data['misi'] = null;
-                }
-            } */
 
             // Handle logo upload
             if ($request->hasFile('logo')) {

@@ -38,6 +38,17 @@ class Event extends Model
         'current_participants' => 'integer',
     ];
 
+    protected $appends = [
+        'image_url',
+        'formatted_date',
+        'formatted_time',
+        'formatted_event_date',
+        'available_slots',
+        'is_full',
+        'is_upcoming',
+        'is_published',
+    ];
+
     protected static function booted()
     {
         static::creating(function ($model) {
@@ -69,21 +80,25 @@ class Event extends Model
 
     public function getImageUrlAttribute()
     {
-        if ($this->image) {
+        if ($this->image && Storage::disk('public')->exists($this->image)) {
             return asset('storage/' . $this->image);
         }
-
-        return asset('assets/fe/images/courses/course-1.jpg');
+        return asset('assets/fe/images/events/default-event.jpg');
     }
 
     public function getFormattedDateAttribute()
     {
-        return \Carbon\Carbon::parse($this->event_date)->format('d-m-Y');
+        return $this->event_date ? $this->event_date->format('d-m-Y') : null;
     }
 
     public function getFormattedTimeAttribute()
     {
-        return \Carbon\Carbon::parse($this->event_date)->format('H:i');
+        return $this->event_date ? $this->event_date->format('H:i') : null;
+    }
+
+    public function getFormattedEventDateAttribute()
+    {
+        return $this->event_date ? $this->event_date->format('d M Y H:i') : null;
     }
 
     public function getAvailableSlotsAttribute()
@@ -91,7 +106,7 @@ class Event extends Model
         if (!$this->max_participants) {
             return null;
         }
-        return $this->max_participants - $this->current_participants;
+        return max(0, $this->max_participants - $this->current_participants);
     }
 
     public function getIsFullAttribute()
@@ -100,6 +115,18 @@ class Event extends Model
             return false;
         }
         return $this->current_participants >= $this->max_participants;
+    }
+
+    public function getIsUpcomingAttribute()
+    {
+        return $this->event_date && $this->event_date > now();
+    }
+
+    public function getIsPublishedAttribute()
+    {
+        return $this->status === 'published'
+            && $this->published_at !== null
+            && $this->published_at <= now();
     }
 
     public function scopePublished($query)
@@ -119,5 +146,41 @@ class Event extends Model
     public function scopeLatest($query)
     {
         return $query->orderBy('event_date', 'desc');
+    }
+
+    /**
+     * Scope: Search events by title, description, location, or category
+     */
+    public function scopeSearch($query, $search)
+    {
+        if (!$search) {
+            return $query;
+        }
+        return $query->where('title', 'like', "%{$search}%")
+                     ->orWhere('description', 'like', "%{$search}%")
+                     ->orWhere('location', 'like', "%{$search}%")
+                     ->orWhere('category', 'like', "%{$search}%");
+    }
+
+    /**
+     * Scope: Filter by status
+     */
+    public function scopeByStatus($query, $status)
+    {
+        if ($status) {
+            return $query->where('status', $status);
+        }
+        return $query;
+    }
+
+    /**
+     * Scope: Filter by category
+     */
+    public function scopeByCategory($query, $category)
+    {
+        if ($category) {
+            return $query->where('category', $category);
+        }
+        return $query;
     }
 }

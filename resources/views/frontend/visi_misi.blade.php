@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row mb-5">
                 <!-- Kolom Kiri: Sejarah -->
-                <div class="col-lg-7">
+                <div class="col-lg-8">
                     <div class="text-center mb-4">
                         <h3></h3>
                         <div class="divider mx-auto mb-4"></div>
@@ -40,21 +40,20 @@
                 </div>
 
                 <!-- Kolom Kanan: Donasi & Blog -->
-                <div class="col-lg-5">
+                <div class="col-lg-4">
                     <!-- Image Donasi -->
-                    <div class="mb-5">
+                    <div class="mb-4">
                         <div class="text-center mb-4">
                             <h3></h3>
                             <div class="divider mx-auto mb-4"></div>
                         </div>
                         <div class="card border-0 shadow-sm">
                             <img src="{{ asset('assets/fe/images/about/donasi.png') }}" alt="Donasi" class="card-img-top"
-                                style="height: 400px; object-fit: cover;">
+                                style="height: 300px; with:100px;">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Mari Berdonasi</h5>
                                 <p class="card-text">Dukungan Anda sangat berarti untuk kelanjutan program-program kami.</p>
                                 <a href="{{ route('donasi') }}" class="btn btn-primary">
-                                    Donasi
+                                    Donasi Sekarang
                                 </a>
                             </div>
                         </div>

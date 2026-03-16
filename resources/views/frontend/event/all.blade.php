@@ -1,10 +1,8 @@
 @extends('layouts.frontend')
 
 @section('content')
-
     <!-- page title -->
-    <section class="page-title-section overlay"
-        data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
+    <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -27,7 +25,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="d-flex align-items-center section-title justify-content-between">
-                        <h2 class="mb-0 text-nowrap mr-3">Semua Events</h2>
+                        <h2 class="mb-0 text-nowrap mr-3">Semua Publikasi</h2>
                         <div class="border-top w-100 border-primary d-none d-sm-block"></div>
                     </div>
                 </div>
@@ -38,8 +36,7 @@
                     <!-- event item -->
                     <div class="col-lg-4 col-sm-6 mb-5">
                         <div class="card p-0 border-primary rounded-0 hover-shadow">
-                            <img class="card-img-top rounded-0" src="{{ $event->image_url }}"
-                                alt="{{ e($event->title) }}">
+                            <img class="card-img-top rounded-0" src="{{ $event->image_url }}" alt="{{ e($event->title) }}">
                             <div class="card-body">
                                 <ul class="list-inline mb-2">
                                     <li class="list-inline-item">
@@ -51,13 +48,13 @@
                                         {{ $event->event_date ? $event->event_date->format('H:i') : '' }}
                                     </li>
                                 </ul>
-                                @if($event->category)
+                                @if ($event->category)
                                     <span class="badge bg-primary mb-2">{{ $event->category }}</span>
                                 @endif
                                 <a href="{{ route('frontend.event.show', $event->uuid) }}">
                                     <h4 class="card-title">{{ $event->title }}</h4>
                                 </a>
-                                @if($event->location)
+                                @if ($event->location)
                                     <p class="mb-2">
                                         <i class="ti-location-pin text-primary mr-1"></i>
                                         {{ e($event->location) }}
@@ -66,10 +63,12 @@
                                 <p class="card-text mb-4">
                                     {{ $event->description ? Str::limit($event->description, 100) : 'Deskripsi belum tersedia' }}
                                 </p>
-                                @if($event->registration_link)
-                                    <a href="{{ $event->registration_link }}" target="_blank" class="btn btn-primary btn-sm">Register Now</a>
+                                @if ($event->registration_link)
+                                    <a href="{{ $event->registration_link }}" target="_blank"
+                                        class="btn btn-primary btn-sm">Register Now</a>
                                 @else
-                                    <a href="{{ route('frontend.event.show', $event->uuid) }}" class="btn btn-primary btn-sm">View Details</a>
+                                    <a href="{{ route('frontend.event.show', $event->uuid) }}"
+                                        class="btn btn-primary btn-sm">View Details</a>
                                 @endif
                             </div>
                         </div>
@@ -78,7 +77,7 @@
                     <div class="col-12 text-center">
                         <div class="py-5">
                             <img src="{{ asset('assets/images/empty.png') }}" height="150" alt="No events">
-                            <h4 class="text-muted mt-3">No Events</h4>
+                            <h4 class="text-muted mt-3">Tidak ada data</h4>
                             <p class="text-muted">Belum ada acara yang tersedia.</p>
                         </div>
                     </div>
@@ -86,16 +85,15 @@
             </div>
             <!-- /event list -->
 
-            @if($events->hasPages())
-            <div class="row">
-                <div class="col-12 text-center">
-                    <nav class="mt-4">
-                        {{ $events->links('pagination::bootstrap-4') }}
-                    </nav>
+            @if ($events->hasPages())
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <nav class="mt-4">
+                            {{ $events->links('pagination::bootstrap-4') }}
+                        </nav>
+                    </div>
                 </div>
-            </div>
             @endif
         </div>
     </section>
-
 @endsection

@@ -32,7 +32,7 @@ Route::get('/kontak', function () {
 
 //Akses halaman depan Tentang Kami
 Route::get('/tentang', [App\Http\Controllers\Frontend\TentangController::class, 'tentang'])->name('tentang');
-Route::get('/sejarah', [App\Http\Controllers\Frontend\TentangController::class, 'sejarah'])->name('sejarah');
+Route::get('/sejarah', [App\Http\Controllers\Frontend\SejarahController::class, 'sejarah'])->name('sejarah');
 Route::get('/pengurus', [App\Http\Controllers\Frontend\TentangController::class, 'pengurus'])->name('pengurus');
 Route::get('/partner', function () {
     return view('frontend.partner');
@@ -208,6 +208,16 @@ Route::middleware([
     Route::delete('/tentang/{id}', [App\Http\Controllers\Backend\AdminTentangController::class, 'destroy'])->name('admin.tentang.destroy');
     Route::post('/tentang/{id}/logo', [App\Http\Controllers\Backend\AdminTentangController::class, 'uploadLogo'])->name('admin.tentang.upload-logo');
 
+    // Admin Sejarah Routes
+    Route::get('/sejarah-kami', [App\Http\Controllers\Backend\SejarahController::class, 'index'])->name('admin.sejarah.index');
+    Route::get('/sejarah-kami/create', [App\Http\Controllers\Backend\SejarahController::class, 'create'])->name('admin.sejarah.create');
+    Route::post('/sejarah-kami', [App\Http\Controllers\Backend\SejarahController::class, 'store'])->name('admin.sejarah.store');
+    Route::get('/sejarah-kami/{id}', [App\Http\Controllers\Backend\SejarahController::class, 'show'])->name('admin.sejarah.show');
+    Route::get('/sejarah-kami/{id}/edit', [App\Http\Controllers\Backend\SejarahController::class, 'edit'])->name('admin.sejarah.edit');
+    Route::put('/sejarah-kami/{id}', [App\Http\Controllers\Backend\SejarahController::class, 'update'])->name('admin.sejarah.update');
+    Route::delete('/sejarah-kami/{id}', [App\Http\Controllers\Backend\SejarahController::class, 'destroy'])->name('admin.sejarah.destroy');
+
+    //Admin Blog Routes
     Route::get('/blog', [App\Http\Controllers\Backend\BlogController::class, 'index'])->name('admin.blog.index');
     Route::get('/blog/create', [App\Http\Controllers\Backend\BlogController::class, 'create'])->name('admin.blog.create');
     Route::post('/blog', [App\Http\Controllers\Backend\BlogController::class, 'store'])->name('admin.blog.store');

@@ -1,16 +1,14 @@
 @extends('layouts.frontend')
 
 @section('content')
-
     <!-- page title -->
-    <section class="page-title-section overlay"
-        data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
+    <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb">
                         <li class="list-inline-item">
-                            <a class="h3 text-white font-secondary" href="{{ route('frontend.event.index') }}">Upcoming Events</a>
+                            <a class="h3 text-white font-secondary" href="{{ route('frontend.event.index') }}">Publikasi</a>
                         </li>
                     </ul>
                     <p class="text-lighten">
@@ -27,10 +25,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="d-flex align-items-center section-title justify-content-between">
-                        <h2 class="mb-0 text-nowrap mr-3">Upcoming Events</h2>
+                        <h2 class="mb-0 text-nowrap mr-3">Publikasi</h2>
                         <div class="border-top w-100 border-primary d-none d-sm-block"></div>
                         <div>
-                            <a href="{{ route('frontend.event.all') }}" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see
+                            <a href="{{ route('frontend.event.all') }}"
+                                class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see
                                 all</a>
                         </div>
                     </div>
@@ -42,8 +41,7 @@
                     <!-- event item -->
                     <div class="col-lg-4 col-sm-6 mb-5">
                         <div class="card p-0 border-primary rounded-0 hover-shadow">
-                            <img class="card-img-top rounded-0" src="{{ $event->image_url }}"
-                                alt="{{ e($event->title) }}">
+                            <img class="card-img-top rounded-0" src="{{ $event->image_url }}" alt="{{ e($event->title) }}">
                             <div class="card-body">
                                 <ul class="list-inline mb-2">
                                     <li class="list-inline-item">
@@ -55,13 +53,13 @@
                                         {{ $event->event_date ? $event->event_date->format('H:i') : '' }}
                                     </li>
                                 </ul>
-                                @if($event->category)
+                                @if ($event->category)
                                     <span class="badge bg-primary mb-2">{{ $event->category }}</span>
                                 @endif
                                 <a href="{{ route('frontend.event.show', $event->uuid) }}">
                                     <h4 class="card-title">{{ $event->title }}</h4>
                                 </a>
-                                @if($event->location)
+                                @if ($event->location)
                                     <p class="mb-2">
                                         <i class="ti-location-pin text-primary mr-1"></i>
                                         {{ e($event->location) }}
@@ -70,10 +68,12 @@
                                 <p class="card-text mb-4">
                                     {{ $event->description ? Str::limit($event->description, 100) : 'Deskripsi belum tersedia' }}
                                 </p>
-                                @if($event->registration_link)
-                                    <a href="{{ $event->registration_link }}" target="_blank" class="btn btn-primary btn-sm">Register Now</a>
+                                @if ($event->registration_link)
+                                    <a href="{{ $event->registration_link }}" target="_blank"
+                                        class="btn btn-primary btn-sm">Register Now</a>
                                 @else
-                                    <a href="{{ route('frontend.event.show', $event->uuid) }}" class="btn btn-primary btn-sm">View Details</a>
+                                    <a href="{{ route('frontend.event.show', $event->uuid) }}"
+                                        class="btn btn-primary btn-sm">View Details</a>
                                 @endif
                             </div>
                         </div>
@@ -90,15 +90,15 @@
             </div>
             <!-- /event list -->
 
-            @if($events->hasMorePages())
-            <div class="row">
-                <div class="col-12 text-center">
-                    <a href="{{ route('frontend.event.all') }}" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">see
-                        all</a>
+            @if ($events->hasMorePages())
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <a href="{{ route('frontend.event.all') }}"
+                            class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">see
+                            all</a>
+                    </div>
                 </div>
-            </div>
             @endif
         </div>
     </section>
-
 @endsection

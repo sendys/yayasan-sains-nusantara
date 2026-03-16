@@ -12,17 +12,17 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="header-title">Manage Data Events</h4>
-                    <p class="sub-header">
-                        Kelola data acara upcoming events dengan mudah
-                    </p>
+                    <p class="sub-header">Kelola data acara upcoming events dengan mudah</p>
 
-                    <div class="row justify-content-between">
+                    <div class="row justify-content-between mb-3">
                         <div class="col-auto">
                             <form method="GET" action="{{ route('admin.event.index') }}"
-                                class="d-flex flex-wrap align-items-center">
-                                <label for="status-select" class="me-1">Showing</label>
-                                <div class="me-1">
-                                    <select class="form-select my-0" name="1 my-lg-per_page" onchange="this.form.submit()">
+                                class="d-flex flex-wrap align-items-center gap-2">
+                                <!-- Items Per Page -->
+                                <div class="d-flex align-items-center">
+                                    <label for="per-page" class="me-2 text-nowrap">Showing</label>
+                                    <select class="form-select form-select-sm" id="per-page" name="per_page"
+                                        onchange="this.form.submit()">
                                         <option value="10" {{ request('per_page') == 10 ? 'selected' : '' }}>10</option>
                                         <option value="20" {{ request('per_page') == 20 ? 'selected' : '' }}>20</option>
                                         <option value="50" {{ request('per_page') == 50 ? 'selected' : '' }}>50</option>
@@ -31,10 +31,12 @@
                                     </select>
                                 </div>
 
-                                <label for="status-select" class="me-1">Status</label>
-                                <div class="me-1">
-                                    <select class="form-select my-1 my-lg-0" name="status" onchange="this.form.submit()">
-                                        <option value="">Semua</option>
+                                <!-- Status Filter -->
+                                <div class="d-flex align-items-center">
+                                    <label for="status" class="me-2 text-nowrap">Status</label>
+                                    <select class="form-select form-select-sm" id="status" name="status"
+                                        onchange="this.form.submit()">
+                                        <option value="">All</option>
                                         <option value="draft" {{ request('status') == 'draft' ? 'selected' : '' }}>Draft
                                         </option>
                                         <option value="published" {{ request('status') == 'published' ? 'selected' : '' }}>
@@ -46,60 +48,56 @@
                                     </select>
                                 </div>
 
-                                <div class="me-1">
-                                    <div class="position-relative">
-                                        <i class="mdi mdi-filter position-absolute ms-2"
-                                            style="top: 50%; transform: translateY(-50%);"></i>
-                                        <select class="form-select my-1 my-lg-0 ps-4" name="sort_dir"
-                                            onchange="this.form.submit()">
-                                            <option value="asc" {{ request('sort_dir') == 'asc' ? 'selected' : '' }}>Asc
-                                            </option>
-                                            <option value="desc" {{ request('sort_dir') == 'desc' ? 'selected' : '' }}>
-                                                Desc</option>
-                                        </select>
-                                    </div>
+                                <!-- Sort Direction -->
+                                <div class="d-flex align-items-center">
+                                    <label for="sort-dir" class="me-2 text-nowrap">Sort</label>
+                                    <select class="form-select form-select-sm" id="sort-dir" name="sort_dir"
+                                        onchange="this.form.submit()">
+                                        <option value="desc" {{ request('sort_dir') == 'desc' ? 'selected' : '' }}>Newest
+                                        </option>
+                                        <option value="asc" {{ request('sort_dir') == 'asc' ? 'selected' : '' }}>Oldest
+                                        </option>
+                                    </select>
                                 </div>
 
-                                <div class="me-1">
-                                    <div class="position-relative">
-                                        <i class="mdi mdi-magnify position-absolute ms-2"
-                                            style="top: 50%; transform: translateY(-50%);"></i>
-                                        <input type="search" name="search" class="form-control my-1 my-lg-0 ps-4"
-                                            placeholder="Search..." value="{{ request('search') }}"
-                                            onkeyup="if(this.value.length === 0) this.form.submit()" autofocus>
+                                <!-- Search -->
+                                <div style="min-width: 200px; flex: 1;">
+                                    <div class="input-group input-group-sm">
+                                        <span class="input-group-text">
+                                            <i class="mdi mdi-magnify"></i>
+                                        </span>
+                                        <input type="search" name="search" class="form-control"
+                                            placeholder="Search events..." value="{{ request('search') }}"
+                                            onkeyup="if(this.value.length === 0) this.form.submit()">
                                     </div>
                                 </div>
                             </form>
                         </div>
                         <div class="col-auto">
-                            <div class="text-lg-end my-1 my-lg-0">
-                                <a href="{{ route('admin.event.create') }}"
-                                    class="btn btn-primary waves-effect waves-light mb-2">
-                                    <i class="mdi mdi-plus me-1"></i>Tambah Event
-                                </a>
-                            </div>
+                            <a href="{{ route('admin.event.create') }}" class="btn btn-primary btn-sm">
+                                <i class="mdi mdi-plus me-1"></i>Tambah Event
+                            </a>
                         </div>
                     </div>
-                    <br>
 
                     @if (isset($events) && $events->count() > 0)
                         <div class="table-responsive">
-                            <table class="table table-centered table-nowrap table-hover table-sm mb-0" id="eventsTable">
+                            <table class="table table-centered table-nowrap table-hover table-sm mb-0">
                                 <thead>
                                     <tr>
-                                        <th style="width: 80px;">No.</th>
-                                        <th style="width: 100px;">Gambar</th>
-                                        <th>Judul</th>
-                                        <th>Tanggal</th>
-                                        <th>Lokasi</th>
+                                        <th style="width: 50px;">No.</th>
+                                        <th style="width: 80px;">Image</th>
+                                        <th>Title</th>
+                                        <th style="width: 150px;">Event Date</th>
+                                        <th style="width: 120px;">Location</th>
                                         <th style="width: 100px;">Status</th>
-                                        <th style="width: 150px;">Published</th>
-                                        <th style="width: 200px;">Pembaharuan</th>
-                                        <th style="width: 150px;">Aksi</th>
+                                        <th style="width: 130px;">Published</th>
+                                        <th style="width: 130px;">Updated</th>
+                                        <th style="width: 120px;">Actions</th>
                                     </tr>
                                 </thead>
 
-                                <tbody id="data-tbody">
+                                <tbody>
                                     <tr id="loading-row">
                                         <td colspan="9" class="text-center">
                                             <div class="spinner-border text-primary m-2" role="status"></div>
