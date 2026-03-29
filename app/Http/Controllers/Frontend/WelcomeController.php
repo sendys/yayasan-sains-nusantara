@@ -22,8 +22,8 @@ class WelcomeController extends Controller
                    ->get();
 
         // Get upcoming events for homepage (show 3)
-        $events = Event::upcoming()
-                     ->latest('event_date')  
+        $events = Event::published()
+                     ->latest()  
                      ->take(3)
                      ->get();
 

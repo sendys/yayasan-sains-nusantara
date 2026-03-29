@@ -25,137 +25,119 @@
     <section class="section bg-light py-5">
         <div class="container">
             <div class="row mb-5">
-                <!-- Kolom Kiri: Legalitas -->
-                <div class="col-lg-7">
-                    <div class="text-center mb-4">
-                        <h3></h3>
-                        <div class="divider mx-auto mb-4"></div>
-                    </div>
+               <!-- Kolom Kiri: Profil Lembaga -->
+<div class="col-lg-8">
 
-                    <div class="mx-auto text-justify" style="max-width:800px;">
-                        <hr class="my-2">
-                        <br>
+    <div class="text-center mb-5">
+        <div class="divider mx-auto"></div>
+    </div>
 
-                        <h5 class="fw-bold">I. Akta Pendirian</h5>
+    <div class="mx-auto" style="max-width:850px;">
 
-                        <p>
-                            Yayasan Sains Nusantara (YSN) didirikan secara resmi dengan akta pendirian yang telah
-                            disahkan oleh notaris. Berikut adalah detail akta pendirian yayasan:
-                        </p>
+        <!-- PROFIL LEMBAGA -->
+        <div class="card shadow-sm border-0 mb-4 legalitas-modern">
+            <div class="card-body p-4">
 
-                        <div class="legalitas-card">
-                            <table class="table table-borderless">
-                                <tr>
-                                    <td width="150"><strong>Tanggal</strong></td>
-                                    <td>: 30 Juni 2005</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Nomor Akta</strong></td>
-                                    <td>: 26</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Notaris</strong></td>
-                                    <td>: Ali Gunawan Istio, SH.</td>
-                                </tr>
-                            </table>
-                        </div>
+                <h5 class="fw-bold mb-3">
+                    <i class="ti-home text-primary mr-2"></i>
+                    Profil Lembaga
+                </h5>
 
-                        <br>
+                <p class="text-black">
+                    Yayasan Sains Nusantara merupakan lembaga yang bergerak di bidang penelitian,
+                    pengembangan ilmu pengetahuan, serta kegiatan pendidikan dan pengabdian kepada
+                    masyarakat. Yayasan ini berkomitmen untuk mendukung kemajuan ilmu pengetahuan
+                    dan teknologi serta memberikan kontribusi bagi pembangunan nasional.
+                </p>
 
-                        <h5 class="fw-bold">II. Akta Perubahan</h5>
+                <table class="table table-borderless mt-3">
+                    <tr>
+                        <td width="200"><strong>Nama Lembaga</strong></td>
+                        <td>: Yayasan Sains Nusantara</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alamat</strong></td>
+                        <td>: Jl. Prada Utama No. 55, Lamgugob, Syiah Kuala, Banda Aceh</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email</strong></td>
+                        <td>: support@ysn.ac.id</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tahun Berdiri</strong></td>
+                        <td>: 30 Juni 2005</td>
+                    </tr>
+                </table>
 
-                        <p>
-                            Seiring dengan perkembangan organisasi, YSN telah melakukan perubahan anggaran dasar
-                            yang tertuang dalam akta perubahan sebagai berikut:
-                        </p>
+            </div>
+        </div>
 
-                        <div class="legalitas-card">
-                            <table class="table table-borderless">
-                                <tr>
-                                    <td width="150"><strong>Tanggal</strong></td>
-                                    <td>: 30 Maret 2023</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Nomor Akta</strong></td>
-                                    <td>: 09</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Notaris</strong></td>
-                                    <td>: Nida Desianti, M.KN</td>
-                                </tr>
-                            </table>
-                        </div>
+        <!-- BIDANG KEGIATAN -->
+        <div class="card shadow-sm border-0 mb-4 legalitas-modern">
+            <div class="card-body p-4">
 
-                        <br>
+                <h5 class="fw-bold mb-3">
+                    <i class="ti-light-bulb text-primary mr-2"></i>
+                    Bidang Usaha / Kegiatan
+                </h5>
 
-                        <h5 class="fw-bold">III. Nomor Induk Berusaha (NIB)</h5>
+                <p class="text-black">
+                    Yayasan Sains Nusantara menjalankan berbagai kegiatan penelitian dan
+                    pengembangan ilmu pengetahuan serta inovasi teknologi untuk mendukung
+                    pembangunan berkelanjutan dan penguatan kapasitas sumber daya manusia.
+                </p>
 
-                        <p>
-                            Yayasan Sains Nusantara telah terdaftar dalam sistem OSS (Online Single Submission)
-                            dengan Nomor Induk Berusaha sebagai berikut:
-                        </p>
+                <table class="table table-borderless mt-3">
+                    <tr>
+                        <td width="200"><strong>KBLI</strong></td>
+                        <td>: 72109</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bidang Kegiatan</strong></td>
+                        <td>: Penelitian dan Pengembangan Ilmu Pengetahuan Alam dan Teknologi Rekayasa Lainnya</td>
+                    </tr>
+                </table>
 
-                        <div class="legalitas-card">
-                            <table class="table table-borderless">
-                                <tr>
-                                    <td width="150"><strong>NIB</strong></td>
-                                    <td>: 2605230014371</td>
-                                </tr>
-                            </table>
-                        </div>
+            </div>
+        </div>
 
-                        <br>
+        <!-- LEGALITAS -->
+        <div class="card shadow-sm border-0 mb-4 legalitas-modern">
+            <div class="card-body p-4">
 
-                        <h5 class="fw-bold">IV. NPWP</h5>
+                <h5 class="fw-bold mb-3">
+                    <i class="ti-id-badge text-primary mr-2"></i>
+                    Legalitas Lembaga
+                </h5>
 
-                        <p>
-                            Nomor Pokok Wajib Pajak (NPWP) Yayasan Sains Nusantara:
-                        </p>
+                <table class="table table-borderless">
+                    <tr>
+                        <td width="200"><strong>NIB</strong></td>
+                        <td>: 2605230014371</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NPWP</strong></td>
+                        <td>: 01.688.968.3-101.000</td>
+                    </tr>
+                </table>
 
-                        <div class="legalitas-card">
-                            <table class="table table-borderless">
-                                <tr>
-                                    <td width="150"><strong>NPWP</strong></td>
-                                    <td>: 01.688.968.3-101.000</td>
-                                </tr>
-                            </table>
-                        </div>
+            </div>
+        </div>
+    </div>
 
-                        <br>
-
-                        <h5 class="fw-bold">V. Surat Izin Usaha Perdagangan (SIUP)</h5>
-
-                        <p>
-                            YSN memiliki Surat Izin Usaha Perdagangan (SIUP) dengan rincian sebagai berikut:
-                        </p>
-
-                        <div class="legalitas-card">
-                            <table class="table table-borderless">
-                                <tr>
-                                    <td width="150"><strong>Kode</strong></td>
-                                    <td>: 72109</td>
-                                </tr>
-                                <tr>
-                                    <td valign="top"><strong>Bidang Usaha</strong></td>
-                                    <td>: Penelitian dan Pengembangan Ilmu Pengetahuan Alam dan Teknologi Rekayasa Lainnya</td>
-                                </tr>
-                            </table>
-                        </div>
-
-                    </div>
-                </div>
+</div>
 
                 <!-- Kolom Kanan: Donasi & Info -->
-                <div class="col-lg-5">
+                <div class="col-lg-4">
                     <!-- Image Donasi -->
-                    <div class="mb-5">
+                    <div class="mb-4">
                         <div class="text-center mb-4">
                             <h3></h3>
                             <div class="divider mx-auto mb-4"></div>
                         </div>
                         <div class="card border-0 shadow-sm">
-                            <img src="{{ asset('assets/fe/images/about/donasi.png') }}" alt="Donasi" class="card-img-top"
-                                style="height: 400px; object-fit: cover;">
+                           <img src="{{ asset('assets/fe/images/about/donasi.png') }}" alt="Donasi" class="card-img-top"
+                                style="height: 300px; with:100px;">
                             <div class="card-body text-center">
                                 <h5 class="card-title">Mari Berdonasi</h5>
                                 <p class="card-text">Dukungan Anda sangat berarti untuk kelanjutan program-program kami.</p>
@@ -166,16 +148,7 @@
                         </div>
                     </div>
 
-                    <!-- Info Card -->
-                    <div class="card border-0 shadow-sm text-white">
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="ti-check-box mr-2"></i>Terverifikasi</h5>
-                            <p class="card-text">
-                                Semua dokumen legalitas Yayasan Sains Nusantara telah terverifikasi dan
-                                terdaftar secara resmi di instansi pemerintah yang berwenang.
-                            </p>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>

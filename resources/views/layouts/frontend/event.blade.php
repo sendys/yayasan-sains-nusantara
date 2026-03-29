@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            @forelse($events as $event)
+            @forelse($events ?? [] as $event)
                 <!-- event -->
                 <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
                     <div class="card border-0 rounded-0 hover-shadow">

@@ -34,15 +34,16 @@
                         <hr class="my-2">
                         <!-- tonggak perjalanan -->
                         <br>
-
-                        @if (!empty($section?->deskripsi))
-                            {!! $section->deskripsi !!}
-                        @else
-                            <div class="text-muted fst-italic">
-                                Belum ada deskripsi tersedia.
-                            </div>
-                        @endif
-
+                        
+                            <div class="editor-content">
+                            @if (!empty($section?->deskripsi))
+                                {!! $section->deskripsi !!}
+                            @else
+                                <div class="text-muted fst-italic">
+                                    Belum ada deskripsi tersedia.
+                                </div>
+                            @endif
+                        </div>
                     </div>
                 </div>
 
