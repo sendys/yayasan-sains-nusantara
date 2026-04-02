@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="section-title">Artikel Terkini</h2>
+                <h2 class="section-title">Artikel</h2>
             </div>
         </div>
 
@@ -12,12 +12,12 @@
 
             @forelse($blogs as $blog)
                 <article class="col-lg-4 col-sm-6 mb-5">
-                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow h-100">
+                    <div
+                        class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow h-100">
 
                         {{-- Image --}}
-                        <img class="card-img-top rounded-0"
-                             src="{{ $blog->image_url }}"
-                             alt="{{ $blog->title }}">
+                        <img class="card-img-top rounded-0" src="{{ $blog->image_url }}" loading="lazy"
+                            alt="{{ $blog->title }}">
 
                         <div class="card-body d-flex flex-column">
 
@@ -44,8 +44,7 @@
                             </p>
 
                             {{-- Button --}}
-                            <a href="{{ route('frontend.blog.show', $blog->slug) }}"
-                               class="btn btn-primary btn-sm mt-auto">
+                            <a href="{{ route('frontend.blog.show', $blog->slug) }}" class="btn btn-primary btn-sm mt-auto">
                                 Read More
                             </a>
 

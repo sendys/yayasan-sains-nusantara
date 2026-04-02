@@ -34,10 +34,10 @@
 
         <!-- Nama Yayasan -->
         <h3 class="mb-0 text-white font-weight-bold d-none d-lg-block">
-            YAYASAN SAINS NUSANTARA
+            Yayasan Sains Nusantara
         </h3>
         <h5 class="mb-0 text-white font-weight-bold d-lg-none">
-            YSN
+            Sains Nusantara
         </h5>
     </a>
     <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
@@ -48,26 +48,50 @@
     <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav ml-auto text-center">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Beranda</a>
+                <a class="nav-link" href="/">
+                    <i class="ti-home"></i>
+                </a>
             </li>
             <li class="nav-item @@events">
                 <a class="nav-link" href="{{ route('frontend.blog.index') }}">Artikel</a>
             </li>
-            <li class="nav-item @@events">
-                <a class="nav-link" href="{{ route('frontend.event.index') }}">Publikasi</a>
+
+            <li class="nav-item dropdown view">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Devisi
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Environmental Service Project (ESP)</a>
+                    <a class="dropdown-item" href="#">Social Study</a>
+                    <a class="dropdown-item" href="#">Education</a>
+                </div>
             </li>
+
+            <li class="nav-item dropdown view">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Publikasi
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('frontend.event.all') }}">Laporan Kegiatan</a>
+                    <a class="dropdown-item" href="#">Buku</a>
+                    <a class="dropdown-item" href="#">Sainspedia</a>
+                </div>
+            </li>
+
             <li class="nav-item @@blog">
-                <a class="nav-link" href="{{ route('partner') }}">Partner</a>
+                <a class="nav-link" href="{{ route('partner') }}">Partnership</a>
             </li>
             <li class="nav-item dropdown view">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     Tentang Kami
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('sejarah') }}">Sejarah</a>
                     <a class="dropdown-item" href="{{ route('tentang') }}">Visi &amp; Misi</a>
-                    <a class="dropdown-item" href="{{ route('pengurus') }}">Kepengurusan</a>
+                    <a class="dropdown-item" href="{{ route('pengurus') }}">Tim YSN</a>
                     <a class="dropdown-item" href="{{ route('legalitas') }}">Legalitas</a>
                     <a class="dropdown-item" href="{{ route('kontak') }}">Kontak</a>
 

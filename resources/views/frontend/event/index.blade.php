@@ -2,17 +2,19 @@
 
 @section('content')
     <!-- page title -->
-    <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
+    <section class="page-title-section overlay"
+        data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb">
                         <li class="list-inline-item">
-                            <a class="h3 text-white font-secondary" href="{{ route('frontend.event.index') }}">Publikasi</a>
+                            <a class="h3 text-white font-secondary" href="{{ route('frontend.event.index') }}">Laporan
+                                Kegiatan</a>
                         </li>
                     </ul>
                     <p class="text-lighten">
-                        Ikuti berbagai acara menarik dari Yayasan Sains Nusantara (YSN).
+                        Laporan kegiatan Yayasan Sains Nusantara (YSN).
                     </p>
                 </div>
             </div>
@@ -25,7 +27,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="d-flex align-items-center section-title justify-content-between">
-                        <h2 class="mb-0 text-nowrap mr-3">Publikasi</h2>
+                        <h2 class="mb-0 text-nowrap mr-3">Laporan Kegiatan</h2>
                         <div class="border-top w-100 border-primary d-none d-sm-block"></div>
                         <div>
                             <a href="{{ route('frontend.event.all') }}"
@@ -72,8 +74,8 @@
                                     <a href="{{ $event->registration_link }}" target="_blank"
                                         class="btn btn-primary btn-sm">Register Now</a>
                                 @else
-                                    <a href="{{ route('frontend.event.show', $event->uuid) }}"
-                                        class="btn btn-primary btn-sm">View Details</a>
+                                    <a href="{{ route('frontend.event.show', $event->uuid) }}" class="btn btn-primary btn-sm">View
+                                        Details</a>
                                 @endif
                             </div>
                         </div>
@@ -82,8 +84,8 @@
                     <div class="col-12 text-center">
                         <div class="py-5">
                             <img src="{{ asset('assets/images/empty.png') }}" height="150" alt="No events">
-                            <h4 class="text-muted mt-3">No Upcoming Events</h4>
-                            <p class="text-muted">Belum ada acara yang dijadwalkan. Silakan cek kembali nanti.</p>
+                            <h4 class="text-muted mt-3">Belum ada data</h4>
+                            <p class="text-muted">Belum ada laporan kegiatan. Silakan cek kembali nanti.</p>
                         </div>
                     </div>
                 @endforelse

@@ -1,12 +1,13 @@
-<section class="hero-section overlay bg-cover" data-background="{{ asset('assets/fe/images/banner/banner-1.jpg') }}">
+<section class="hero-section overlay bg-cover" data-background="{{ asset('assets/fe/images/banner/banner-1.webp') }}"
+    loading="lazy">
     <div class="container">
         <div class="hero-slider">
             <!-- slider item -->
             <div class="hero-slider-item">
                 <div class="row">
                     <div class="col-md-8">
-                        <h3 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3"
-                            data-animation-in="fadeInLeft" data-delay-in=".1">Isu Strategis
+                        <h3 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Isu Strategis
                         </h3>
                         <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
                             data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Lingkungan &

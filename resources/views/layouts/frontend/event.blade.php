@@ -6,7 +6,7 @@
                     <h2 class="mb-0 text-nowrap mr-3">Publikasi</h2>
                     <div class="border-top w-100 border-primary d-none d-sm-block"></div>
                     <div>
-                        <a href="{{ route('frontend.event.index') }}"
+                        <a href="{{ route('frontend.event.all') }}"
                             class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see
                             all</a>
                     </div>
@@ -19,7 +19,7 @@
                 <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
                     <div class="card border-0 rounded-0 hover-shadow">
                         <div class="card-img position-relative">
-                            <img class="card-img-top rounded-0" src="{{ $event->image_url }}"
+                            <img class="card-img-top rounded-0" src="{{ $event->image_url }}" loading="lazy"
                                 alt="{{ e($event->title) }}">
                             <div class="card-date">
                                 <span>{{ $event->event_date ? $event->event_date->format('d') : '' }}</span><br>
@@ -57,8 +57,8 @@
                 <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
                     <div class="card border-0 rounded-0 hover-shadow">
                         <div class="card-img position-relative">
-                            <img class="card-img-top rounded-0"
-                                src="{{ asset('assets/fe/images/events/event-2.jpg') }}" alt="event thumb">
+                            <img class="card-img-top rounded-0" src="{{ asset('assets/fe/images/events/event-2.jpg') }}"
+                                alt="event thumb">
                             <div class="card-date"><span>21</span><br>December</div>
                         </div>
                         <div class="card-body">
@@ -74,8 +74,8 @@
                 <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
                     <div class="card border-0 rounded-0 hover-shadow">
                         <div class="card-img position-relative">
-                            <img class="card-img-top rounded-0"
-                                src="{{ asset('assets/fe/images/events/event-3.jpg') }}" alt="event thumb">
+                            <img class="card-img-top rounded-0" src="{{ asset('assets/fe/images/events/event-3.jpg') }}"
+                                alt="event thumb">
                             <div class="card-date"><span>23</span><br>December</div>
                         </div>
                         <div class="card-body">
@@ -92,7 +92,7 @@
         <!-- mobile see all button -->
         <div class="row">
             <div class="col-12 text-center">
-                <a href="{{ route('frontend.event.index') }}"
+                <a href="{{ route('frontend.event.all') }}"
                     class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">Lihat semua</a>
             </div>
         </div>

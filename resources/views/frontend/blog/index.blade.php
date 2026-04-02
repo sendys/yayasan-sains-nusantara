@@ -3,8 +3,8 @@
 @section('content')
 
     <!-- page title -->
-    <section class="page-title-section overlay"
-        data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
+    <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}"
+        loading="lazy">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -41,71 +41,71 @@
                         </div>
 
                         @if ($blogs->hasMorePages())
-                        <div class="text-center mt-4">
-                            <button class="btn btn-primary btn-sm mt-auto" id="load-more">
-                                <span id="load-more-text">Load More</span>
+                            <div class="text-center mt-4">
+                                <button class="btn btn-primary btn-sm mt-auto" id="load-more">
+                                    <span id="load-more-text">Load More</span>
 
-                                <span id="load-more-spinner" class="spinner-border spinner-border-sm ms-2 d-none"
-                                    role="status"></span>
-                            </button>
-                        </div>
+                                    <span id="load-more-spinner" class="spinner-border spinner-border-sm ms-2 d-none"
+                                        role="status"></span>
+                                </button>
+                            </div>
                         @endif
 
                     </div>
                 </div>
 
-              
+
             </div>
         </div>
-</section>
+    </section>
 
-<script>
-let page = 2;
-const loadMoreBtn = document.getElementById('load-more');
-const spinner = document.getElementById('load-more-spinner');
-const buttonText = document.getElementById('load-more-text');
+    <script>
+        let page = 2;
+        const loadMoreBtn = document.getElementById('load-more');
+        const spinner = document.getElementById('load-more-spinner');
+        const buttonText = document.getElementById('load-more-text');
 
-loadMoreBtn?.addEventListener('click', function() {
+        loadMoreBtn?.addEventListener('click', function () {
 
-    // Disable button
-    loadMoreBtn.disabled = true;
+            // Disable button
+            loadMoreBtn.disabled = true;
 
-    // Show spinner
-    spinner.classList.remove('d-none');
-    buttonText.innerText = "Loading...";
+            // Show spinner
+            spinner.classList.remove('d-none');
+            buttonText.innerText = "Loading...";
 
-    fetch("?page=" + page, {
-        headers: {
-            'X-Requested-With': 'XMLHttpRequest'
-        }
-    })
-    .then(response => response.text())
-    .then(data => {
+            fetch("?page=" + page, {
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+                .then(response => response.text())
+                .then(data => {
 
-        if(data.trim() === '') {
-            loadMoreBtn.remove();
-            return;
-        }
+                    if (data.trim() === '') {
+                        loadMoreBtn.remove();
+                        return;
+                    }
 
-        document.getElementById('blog-container')
-            .insertAdjacentHTML('beforeend', data);
+                    document.getElementById('blog-container')
+                        .insertAdjacentHTML('beforeend', data);
 
-        page++;
+                    page++;
 
-        // Enable button again
-        loadMoreBtn.disabled = false;
-        spinner.classList.add('d-none');
-        buttonText.innerText = "Load More";
+                    // Enable button again
+                    loadMoreBtn.disabled = false;
+                    spinner.classList.add('d-none');
+                    buttonText.innerText = "Load More";
 
-    })
-    .catch(() => {
-        loadMoreBtn.disabled = false;
-        spinner.classList.add('d-none');
-        buttonText.innerText = "Load More";
-        alert("Terjadi kesalahan, coba lagi.");
-    });
+                })
+                .catch(() => {
+                    loadMoreBtn.disabled = false;
+                    spinner.classList.add('d-none');
+                    buttonText.innerText = "Load More";
+                    alert("Terjadi kesalahan, coba lagi.");
+                });
 
-});
-</script>
+        });
+    </script>
 
 @endsection
