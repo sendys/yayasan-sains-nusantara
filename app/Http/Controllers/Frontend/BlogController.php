@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
-use Illuminate\Http\Request;    
+use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
@@ -16,7 +16,7 @@ class BlogController extends Controller
     $blogs = Blog::published()
         ->latest()
         ->paginate($request->query('per_page', 12))->withQueryString()->fragment('blog')->onEachSide(12)->withPath('blog');
-   
+
     if ($request->ajax()) {
         return view('frontend.blog.partials.blog-items', compact('blogs'))->render();
     }

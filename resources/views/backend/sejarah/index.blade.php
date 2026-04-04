@@ -31,7 +31,7 @@
 
                         <div class="row">
                             <!-- Form Fields Section -->
-                            <div class="col-md-8 mb-4">
+                            <div class="col-12">
                                 <div class="card border-light">
                                     <div class="card-header bg-light">
                                         <h5 class="mb-0"><i class="mdi mdi-information me-2"></i>Informasi Sejarah YSN

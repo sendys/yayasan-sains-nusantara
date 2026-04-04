@@ -1,11 +1,10 @@
 <div class="footer bg-footer section border-bottom">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
-                <!-- logo -->
-                <!--  <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/logo.png" alt="logo"></a> -->
+            <!-- Kolom 1: Info Yayasan -->
+            <div class="col-md-6 mb-5">
                 <a class="logo-footer" href="index.html">
-                    <h4 class="text-white mb-4">YAYASAN SAINS NUSANTARA</h4>
+                    <h4 class="text-white mb-4">Yayasan Sains Nusantara</h4>
                 </a>
                 <ul class="list-unstyled">
                     <li class="mb-2 text-white">Jln. Prada Utama, No. 55, Lamgugop, Banda Aceh, Aceh</li>
@@ -15,9 +14,9 @@
                 </ul>
             </div>
 
-            <!-- sitemap -->
-            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0 ml-auto">
-                <h4 class="text-white mb-5">Sitemap</h4>
+            <!-- Kolom 2: Sitemap -->
+            <div class="col-md-6 mb-5">
+                <h4 class="text-white mb-4">Sitemap</h4>
                 <ul class="list-unstyled">
                     <li class="mb-3"><a class="text-white" href="">Berita</a></li>
                     <li class="mb-3"><a class="text-white" href="">Publikasi</a></li>
@@ -26,36 +25,6 @@
                     <li class="mb-3"><a class="text-white" href="{{ route('kontak') }}">Kontak</a></li>
                 </ul>
             </div>
-            <!-- links -->
-            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-                <h4 class="text-white mb-5">Link</h4>
-                <ul class="list-unstyled">
-                    {{--  <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
-                    <li class="mb-3"><a class="text-color" href="event.html">Events</a></li>
-                    <li class="mb-3"><a class="text-color" href="gallary.html">Gallary</a></li>
-                    <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li> --}}
-                </ul>
-            </div>
-            <!-- support -->
-            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-                <h4 class="text-white mb-5">Support</h4>
-                <ul class="list-unstyled">
-                    {{--  <li class="mb-3"><a class="text-color" href="#">Forums</a></li>
-                    <li class="mb-3"><a class="text-color" href="#">Documentation</a></li>
-                    <li class="mb-3"><a class="text-color" href="#">Language</a></li>
-                    <li class="mb-3"><a class="text-color" href="#">Release Status</a></li> --}}
-                </ul>
-            </div>
-            <!-- support -->
-            <!--  <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-        <h4 class="text-white mb-5">Rekomendasi</h4>
-        <ul class="list-unstyled">
-          <li class="mb-3"><a class="text-color" href="#">WordPress</a></li>
-          <li class="mb-3"><a class="text-color" href="#">LearnPress</a></li>
-          <li class="mb-3"><a class="text-color" href="#">WooCommerce</a></li>
-          <li class="mb-3"><a class="text-color" href="#">bbPress</a></li>
-        </ul>
-      </div> -->
         </div>
     </div>
 </div>
@@ -88,13 +57,11 @@
     </div>
 
     <!-- Back To Top Premium -->
-<button id="backToTop" class="back-to-top">
-    <svg class="progress-circle" width="48" height="48">
-        <circle cx="24" cy="24" r="20"></circle>
-    </svg>
-    <i class="ti-angle-up"></i>
-</button>
+    <button id="backToTop" class="back-to-top">
+        <svg class="progress-circle" width="48" height="48">
+            <circle cx="24" cy="24" r="20"></circle>
+        </svg>
+        <i class="ti-angle-up"></i>
+    </button>
 
 </div>
-
-

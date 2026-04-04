@@ -23,8 +23,8 @@ class WelcomeController extends Controller
 
         // Get upcoming events for homepage (show 3)
         $events = Event::published()
-                     ->latest()  
-                     ->take(3)
+                     ->latest()
+                     ->take(6)
                      ->get();
 
         return view('welcome', compact(

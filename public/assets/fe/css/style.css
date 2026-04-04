@@ -52,7 +52,6 @@ h1,
 }
 
 @media (max-width: 575px) {
-
     h1,
     .h1 {
         font-size: 45px;
@@ -65,7 +64,6 @@ h2,
 }
 
 @media (max-width: 575px) {
-
     h2,
     .h2 {
         font-size: 30px;
@@ -78,7 +76,6 @@ h3,
 }
 
 @media (max-width: 575px) {
-
     h3,
     .h3 {
         font-size: 20px;
@@ -91,7 +88,6 @@ h4,
 }
 
 @media (max-width: 575px) {
-
     h4,
     .h4 {
         font-size: 18px;
@@ -104,7 +100,6 @@ h5,
 }
 
 @media (max-width: 575px) {
-
     h5,
     .h5 {
         font-size: 16px;
@@ -117,7 +112,6 @@ h6,
 }
 
 @media (max-width: 575px) {
-
     h6,
     .h6 {
         font-size: 14px;
@@ -209,7 +203,7 @@ h6,
 
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
-.show>.btn-primary.dropdown-toggle {
+.show > .btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #1e7e34;
     border-color: #1e7e34;
@@ -577,9 +571,11 @@ textarea.form-control {
 
 @media (max-width: 575px) {
     .navigation {
-        background-image: linear-gradient(to right,
-                transparent 70%,
-                #269c41 30%);
+        background-image: linear-gradient(
+            to right,
+            transparent 70%,
+            #269c41 30%
+        );
     }
 }
 
@@ -644,10 +640,10 @@ link:focus,
     color: #fff;
 }
 
-.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .show > .nav-link {
     color: #fff;
 }
 
@@ -1061,4 +1057,65 @@ link:focus,
     width: 50px;
     object-fit: contain;
 }
+
 /*# sourceMappingURL=maps/style.css.map */
+
+/* tambahan CSS */
+/* CARD FLEX */
+.news-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* IMAGE FIX */
+.card-img-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* DATE BADGE */
+.card-date {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #28a745;
+    color: #fff;
+    padding: 6px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* TITLE FIX (ANTI LONCAT) */
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* max 3 baris */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    min-height: 70px;
+}
+
+/* BODY FLEX */
+.card-body {
+    flex-grow: 1;
+}
+
+/* HOVER EFFECT */
+.news-card img {
+    transition: 0.3s;
+}
+
+.news-card:hover img {
+    transform: scale(1.05);
+}

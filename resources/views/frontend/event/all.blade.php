@@ -2,8 +2,7 @@
 
 @section('content')
     <!-- page title -->
-    <section class="page-title-section overlay"
-        data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
+    <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -27,7 +26,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="d-flex align-items-center section-title justify-content-between">
-                        <h2 class="mb-0 text-nowrap mr-3">Semua Data</h2>
+                        <h2 class="mb-0 text-nowrap mr-3">Semua publikasi</h2>
                         <div class="border-top w-100 border-primary d-none d-sm-block"></div>
                     </div>
                 </div>
@@ -70,7 +69,8 @@
                                     <a href="{{ $event->registration_link }}" target="_blank"
                                         class="btn btn-primary btn-sm">Register Now</a>
                                 @else
-                                    <a href="{{ route('frontend.event.show', $event->uuid) }}" class="btn btn-primary btn-sm">View
+                                    <a href="{{ route('frontend.event.show', $event->uuid) }}"
+                                        class="btn btn-primary btn-sm">View
                                         Details</a>
                                 @endif
                             </div>

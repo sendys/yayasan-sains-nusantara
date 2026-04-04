@@ -1,7 +1,6 @@
 @extends('layouts.frontend')
 
 @section('content')
-
     <!-- page title -->
     <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}"
         loading="lazy">
@@ -14,7 +13,7 @@
                         </li>
                     </ul>
                     <p class="text-lighten">
-                        Dukungan Anda sangat berarti bagi Yayasan Sains Nusantara (YSN).
+                        Artikel/Blog Yayasan Sains Nusantara (YSN).
                     </p>
                 </div>
             </div>
@@ -65,7 +64,7 @@
         const spinner = document.getElementById('load-more-spinner');
         const buttonText = document.getElementById('load-more-text');
 
-        loadMoreBtn?.addEventListener('click', function () {
+        loadMoreBtn?.addEventListener('click', function() {
 
             // Disable button
             loadMoreBtn.disabled = true;
@@ -75,10 +74,10 @@
             buttonText.innerText = "Loading...";
 
             fetch("?page=" + page, {
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest'
-                }
-            })
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
                 .then(response => response.text())
                 .then(data => {
 
@@ -107,5 +106,4 @@
 
         });
     </script>
-
 @endsection

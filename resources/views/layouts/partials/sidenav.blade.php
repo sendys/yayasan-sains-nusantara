@@ -304,59 +304,6 @@
                 <div class="collapse" id="menuContacts">
                     <ul class="sub-menu">
                         <li class="menu-item">
-                            <a href="{{ route('product.index') }}" class="menu-link">
-                                <span class="menu-text">Produk</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="{{ route('brand.index') }}" class="menu-link">
-                                <span class="menu-text">Brand</span>
-                            </a>
-                        </li>
-
-                        <li class="menu-item">
-                            <a href="{{ route('customer.index') }}" class="menu-link">
-                                <span class="menu-text">Customer</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="{{ route('supplier.index') }}" class="menu-link">
-                                <span class="menu-text">Supplier</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="{{ route('akun.kasbank') }}" class="menu-link">
-                                <span class="menu-text">Kas/Bank</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            {{-- purchasing.index --}}
-                            <a href="{{ route('purchasing.pembelian') }}" class="menu-link">
-                                <span class="menu-text">Pembelian</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="{{ route('akun.pos') }}" class="menu-link">
-                                <span class="menu-text">POS</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="{{ route('akun.index') }}" class="menu-link">
-                                <span class="menu-text">Akun</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="{{ route('gudang.index') }}" class="menu-link">
-                                <span class="menu-text">Gudang</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="{{ route('kategori.index') }}" class="menu-link">
-                                <span class="menu-text">Kategori</span>
-                            </a>
-                        </li>
-
-                        <li class="menu-item">
                             <a href="{{ route('admin.sejarah.index') }}" class="menu-link">
                                 <span class="menu-text">Sejarah YSN</span>
                             </a>
@@ -374,7 +321,7 @@
                         </li>
                         <li class="menu-item">
                             <a href="{{ route('admin.event.index') }}" class="menu-link">
-                                <span class="menu-text">Event</span>
+                                <span class="menu-text">Publikasi</span>
                             </a>
                         </li>
                     </ul>
