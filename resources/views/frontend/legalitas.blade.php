@@ -10,11 +10,11 @@
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb">
                         <li class="list-inline-item">
-                            <a class="h3 text-white font-secondary" href="#">Legalitas</a>
+                            <a class="h3 text-white font-secondary" href="#">{{ __('legalitas.page_title') }}</a>
                         </li>
                     </ul>
                     <p class="text-lighten">
-                        Dokumen Legal Yayasan Sains Nusantara (YSN).
+                        {{ __('legalitas.page_description') }}
                     </p>
                 </div>
             </div>
@@ -40,31 +40,28 @@
 
                 <h5 class="fw-bold mb-3">
                     <i class="ti-home text-primary mr-2"></i>
-                    Profil Lembaga
+                    {{ __('legalitas.institution_profile') }}
                 </h5>
 
                 <p class="text-black">
-                    Yayasan Sains Nusantara merupakan lembaga yang bergerak di bidang penelitian,
-                    pengembangan ilmu pengetahuan, serta kegiatan pendidikan dan pengabdian kepada
-                    masyarakat. Yayasan ini berkomitmen untuk mendukung kemajuan ilmu pengetahuan
-                    dan teknologi serta memberikan kontribusi bagi pembangunan nasional.
+                    {{ __('legalitas.institution_description') }}
                 </p>
 
                 <table class="table table-borderless mt-3">
                     <tr>
-                        <td width="200"><strong>Nama Lembaga</strong></td>
+                        <td width="200"><strong>{{ __('legalitas.institution_name') }}</strong></td>
                         <td>: Yayasan Sains Nusantara</td>
                     </tr>
                     <tr>
-                        <td><strong>Alamat</strong></td>
+                        <td><strong>{{ __('legalitas.address') }}</strong></td>
                         <td>: Jl. Prada Utama No. 55, Lamgugob, Syiah Kuala, Banda Aceh</td>
                     </tr>
                     <tr>
-                        <td><strong>Email</strong></td>
+                        <td><strong>{{ __('legalitas.email') }}</strong></td>
                         <td>: support@ysn.ac.id</td>
                     </tr>
                     <tr>
-                        <td><strong>Tahun Berdiri</strong></td>
+                        <td><strong>{{ __('legalitas.founded_year') }}</strong></td>
                         <td>: 30 Juni 2005</td>
                     </tr>
                 </table>
@@ -78,23 +75,21 @@
 
                 <h5 class="fw-bold mb-3">
                     <i class="ti-light-bulb text-primary mr-2"></i>
-                    Bidang Usaha / Kegiatan
+                    {{ __('legalitas.business_field') }}
                 </h5>
 
                 <p class="text-black">
-                    Yayasan Sains Nusantara menjalankan berbagai kegiatan penelitian dan
-                    pengembangan ilmu pengetahuan serta inovasi teknologi untuk mendukung
-                    pembangunan berkelanjutan dan penguatan kapasitas sumber daya manusia.
+                    {{ __('legalitas.business_description') }}
                 </p>
 
                 <table class="table table-borderless mt-3">
                     <tr>
-                        <td width="200"><strong>KBLI</strong></td>
+                        <td width="200"><strong>{{ __('legalitas.kbli') }}</strong></td>
                         <td>: 72109</td>
                     </tr>
                     <tr>
-                        <td><strong>Bidang Kegiatan</strong></td>
-                        <td>: Penelitian dan Pengembangan Ilmu Pengetahuan Alam dan Teknologi Rekayasa Lainnya</td>
+                        <td><strong>{{ __('legalitas.activity_field') }}</strong></td>
+                        <td>: {{ __('legalitas.activity_description') }}</td>
                     </tr>
                 </table>
 
@@ -107,16 +102,16 @@
 
                 <h5 class="fw-bold mb-3">
                     <i class="ti-id-badge text-primary mr-2"></i>
-                    Legalitas Lembaga
+                    {{ __('legalitas.legality') }}
                 </h5>
 
                 <table class="table table-borderless">
                     <tr>
-                        <td width="200"><strong>NIB</strong></td>
+                        <td width="200"><strong>{{ __('legalitas.nib') }}</strong></td>
                         <td>: 2605230014371</td>
                     </tr>
                     <tr>
-                        <td><strong>NPWP</strong></td>
+                        <td><strong>{{ __('legalitas.npwp') }}</strong></td>
                         <td>: 01.688.968.3-101.000</td>
                     </tr>
                 </table>
@@ -132,17 +127,17 @@
                     <!-- Image Donasi -->
                     <div class="mb-4">
                         <div class="text-center mb-4">
-                            <h3></h3>
+                            <h3>{{ __('legalitas.donation_title') }}</h3>
                             <div class="divider mx-auto mb-4"></div>
                         </div>
                         <div class="card border-0 shadow-sm">
                            <img src="{{ asset('assets/fe/images/about/donasi.png') }}" alt="Donasi" class="card-img-top"
                                 style="height: 300px; with:100px;">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Mari Berdonasi</h5>
-                                <p class="card-text">Dukungan Anda sangat berarti untuk kelanjutan program-program kami.</p>
+                                <h5 class="card-title">{{ __('legalitas.donation_title') }}</h5>
+                                <p class="card-text">{{ __('legalitas.donation_description') }}</p>
                                 <a href="{{ route('donasi') }}" class="btn btn-primary">
-                                    Donasi Sekarang
+                                    {{ __('legalitas.donation_button') }}
                                 </a>
                             </div>
                         </div>

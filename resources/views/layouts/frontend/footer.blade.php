@@ -4,25 +4,25 @@
             <!-- Kolom 1: Info Yayasan -->
             <div class="col-md-6 mb-5">
                 <a class="logo-footer" href="index.html">
-                    <h4 class="text-white mb-4">Yayasan Sains Nusantara</h4>
+                    <h4 class="text-white mb-4">{{ __('footer.organization_name') }}</h4>
                 </a>
                 <ul class="list-unstyled">
-                    <li class="mb-2 text-white">Jln. Prada Utama, No. 55, Lamgugop, Banda Aceh, Aceh</li>
-                    <li class="mb-2 text-white">Telp./WhatsApp : +62 852-7739-0360</li>
-                    <li class="mb-2 text-white">Kode Pos 23122</li>
-                    <li class="mb-2 text-white">support@ysn.or.id</li>
+                    <li class="mb-2 text-white">{{ __('footer.address') }}</li>
+                    <li class="mb-2 text-white">{{ __('footer.phone') }}</li>
+                    <li class="mb-2 text-white">{{ __('footer.postal_code') }}</li>
+                    <li class="mb-2 text-white">{{ __('footer.email') }}</li>
                 </ul>
             </div>
 
             <!-- Kolom 2: Sitemap -->
             <div class="col-md-6 mb-5">
-                <h4 class="text-white mb-4">Sitemap</h4>
+                <h4 class="text-white mb-4">{{ __('footer.sitemap') }}</h4>
                 <ul class="list-unstyled">
-                    <li class="mb-3"><a class="text-white" href="">Berita</a></li>
-                    <li class="mb-3"><a class="text-white" href="">Publikasi</a></li>
-                    <li class="mb-3"><a class="text-white" href="">Sainspedia</a></li>
-                    <li class="mb-3"><a class="text-white" href="">Tentang Kami</a></li>
-                    <li class="mb-3"><a class="text-white" href="{{ route('kontak') }}">Kontak</a></li>
+                    <li class="mb-3"><a class="text-white" href="">{{ __('footer.news') }}</a></li>
+                    <li class="mb-3"><a class="text-white" href="">{{ __('footer.publications') }}</a></li>
+                    <li class="mb-3"><a class="text-white" href="">{{ __('footer.sainspedia') }}</a></li>
+                    <li class="mb-3"><a class="text-white" href="">{{ __('footer.about_us') }}</a></li>
+                    <li class="mb-3"><a class="text-white" href="{{ route('kontak') }}">{{ __('footer.contact') }}</a></li>
                 </ul>
             </div>
         </div>
@@ -33,13 +33,13 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-7 text-sm-left text-center">
-                <p class="mb-0 text-white">Copyright
+                <p class="mb-0 text-white">{{ __('footer.copyright') }}
                     <script>
                         var CurrentYear = new Date().getFullYear()
                         document.write(CurrentYear)
                     </script>
                     © <a href="https://fintekindonesia.web.id" target="_blank" rel="noopener noreferrer">Fintek
-                        Indonesia</a> All Rights Reserved.
+                        Indonesia</a> {{ __('footer.all_rights_reserved') }}
             </div>
             <div class="col-sm-5 text-sm-right text-center">
                 <ul class="list-inline">

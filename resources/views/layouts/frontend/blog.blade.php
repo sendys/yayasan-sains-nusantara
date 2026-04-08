@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="section-title">Artikel</h2>
+                <h2 class="section-title">{{ __('blog.title') }}</h2>
             </div>
         </div>
 
@@ -27,7 +27,7 @@
                                     {{ $blog->published_at->format('F d, Y') }}
                                 </li>
                                 <li class="list-inline-item mr-3 ml-0">
-                                    By {{ $blog->author ?? 'Admin' }}
+                                    {{ __('blog.by') }} {{ $blog->author ?? 'Admin' }}
                                 </li>
                             </ul>
 
@@ -45,7 +45,7 @@
 
                             {{-- Button --}}
                             <a href="{{ route('frontend.blog.show', $blog->slug) }}" class="btn btn-primary btn-sm mt-auto">
-                                Read More
+                                {{ __('blog.read_more') }}
                             </a>
 
                         </div>

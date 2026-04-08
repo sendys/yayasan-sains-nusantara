@@ -48,13 +48,13 @@
 
                     <i class="ti-world"></i>
 
-                    <a href="#" class="text-color active ml-1">Indonesia</a> |
-                    <a href="#" class="text-color active ml-1">English</a>
+                    <a href="{{ route('lang.switch', 'id') }}" class="text-color ml-1 {{ app()->getLocale() === 'id' ? 'active' : '' }}">{{ __('navbar.language_indonesia') }}</a> |
+                    <a href="{{ route('lang.switch', 'en') }}" class="text-color ml-1 {{ app()->getLocale() === 'en' ? 'active' : '' }}">{{ __('navbar.language_english') }}</a>
 
                 </span>
 
                 <button onclick="window.location.href='/donasi'" class="btn btn-primary btn-xs ml-2">
-                    DONASI
+                    {{ __('navbar.donate') }}
                 </button>
 
             </div>

@@ -14,6 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
         // Apply SecurityHeaders middleware to all web requests
         $middleware->web(append: [
             \App\Http\Middleware\SecurityHeaders::class,
+            \App\Http\Middleware\SetLocale::class,
         ]);
 
         $middleware->alias([

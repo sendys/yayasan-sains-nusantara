@@ -11,9 +11,9 @@ class WelcomeController extends Controller
 {
      public function welcome()
     {
-        $ctaSubtitle = "Bersama Kita Wujudkan Perubahan Nyata";
-        $ctaTitle    = "Dukung Gerakan Kami";
-        $ctaButton   = "Donasi";
+        $ctaSubtitle = __('cta.subtitle');
+        $ctaTitle    = __('cta.title');
+        $ctaButton   = __('cta.button');
 
         // Get latest published blogs for homepage
         $blogs = Blog::published()

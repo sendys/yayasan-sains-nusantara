@@ -53,13 +53,13 @@
                 </a>
             </li>
             <li class="nav-item @@events">
-                <a class="nav-link" href="{{ route('frontend.blog.index') }}">Artikel</a>
+                <a class="nav-link" href="{{ route('frontend.blog.index') }}">{{ __('navbar.articles') }}</a>
             </li>
 
             <li class="nav-item dropdown view">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Devisi
+                    {{ __('navbar.division') }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Environmental Service Project (ESP)</a>
@@ -69,31 +69,31 @@
             </li>
 
             <li class="nav-item dropdown view">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Publikasi
+                    {{ __('navbar.publications') }}
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('frontend.event.all') }}">Laporan Kegiatan</a>
-                    <a class="dropdown-item" href="#">Buku</a>
-                    <a class="dropdown-item" href="#">Sainspedia</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <a class="dropdown-item" href="{{ route('frontend.event.all') }}">{{ __('navbar.reports') }}</a>
+                    <a class="dropdown-item" href="#">{{ __('navbar.books') }}</a>
+                    <a class="dropdown-item" href="#">{{ __('navbar.sainspedia') }}</a>
                 </div>
             </li>
 
             <li class="nav-item @@blog">
-                <a class="nav-link" href="{{ route('partner') }}">Partnership</a>
+                <a class="nav-link" href="{{ route('partner') }}">{{ __('navbar.partnership') }}</a>
             </li>
             <li class="nav-item dropdown view">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Tentang Kami
+                    {{ __('navbar.about_us') }}
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('sejarah') }}">Sejarah</a>
-                    <a class="dropdown-item" href="{{ route('tentang') }}">Visi &amp; Misi</a>
-                    <a class="dropdown-item" href="{{ route('pengurus') }}">Tim YSN</a>
-                    <a class="dropdown-item" href="{{ route('legalitas') }}">Legalitas</a>
-                    <a class="dropdown-item" href="{{ route('kontak') }}">Kontak</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                    <a class="dropdown-item" href="{{ route('sejarah') }}">{{ __('navbar.history') }}</a>
+                    <a class="dropdown-item" href="{{ route('tentang') }}">{{ __('navbar.vision_mission') }}</a>
+                    <a class="dropdown-item" href="{{ route('pengurus') }}">{{ __('navbar.team') }}</a>
+                    <a class="dropdown-item" href="{{ route('legalitas') }}">{{ __('navbar.legality') }}</a>
+                    <a class="dropdown-item" href="{{ route('kontak') }}">{{ __('navbar.contact') }}</a>
 
                 </div>
             </li>

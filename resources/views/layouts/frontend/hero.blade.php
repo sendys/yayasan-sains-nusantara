@@ -7,20 +7,15 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h3 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Isu Strategis
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.strategic_issue') }}
                         </h3>
                         <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Lingkungan &
-                            Perubahan Iklim</h1>
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.environment_climate') }}</h1>
                         <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">Melalui
-                            kolaborasi multipihak dan pemberdayaan
-                            masyarakat, kami mendorong solusi nyata untuk menciptakan lingkungan yang lestari,
-                            tangguh, dan
-                            berkeadilan bagi generasi kini dan mendatang.</p>
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">{{ __('hero.environment_climate_desc') }}</p>
                         <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight"
                             data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft"
-                            data-delay-in=".7">Detail</a>
+                            data-delay-in=".7">{{ __('hero.detail') }}</a>
                     </div>
                 </div>
             </div>
@@ -29,19 +24,14 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h3 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Isu Strategis
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.strategic_issue') }}
                         </h3>
                         <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Penanggulangan
-                            Bencana</h1>
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.disaster_management') }}</h1>
                         <p class="text-muted mb-4" data-animation-out="fadeOutUp" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".4">Melalui
-                            kolaborasi dan aksi kemanusiaan yang
-                            terkoordinasi, kami berkomitmen mendukung masyarakat agar lebih siap, tangguh, dan mampu
-                            bangkit dari
-                            setiap bencana.</p>
+                            data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".4">{{ __('hero.disaster_management_desc') }}</p>
                         <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Detail</a>
+                            data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">{{ __('hero.detail') }}</a>
                     </div>
                 </div>
             </div>
@@ -50,20 +40,15 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h3 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Isu Strategis
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.strategic_issue') }}
                         </h3>
                         <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Ekonomi
-                            Kemasyarakatan</h1>
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.community_economy') }}</h1>
                         <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Melalui
-                            pemberdayaan ekonomi berbasis komunitas, kami
-                            mendorong kemandirian, inovasi, dan pertumbuhan ekonomi yang adil serta berdampak
-                            langsung bagi
-                            masyarakat.</p>
+                            data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">{{ __('hero.community_economy_desc') }}</p>
                         <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown"
                             data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn"
-                            data-delay-in=".7">Detail</a>
+                            data-delay-in=".7">{{ __('hero.detail') }}</a>
                     </div>
                 </div>
             </div>
@@ -72,18 +57,15 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h3 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Isu Strategis
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.strategic_issue') }}
                         </h3>
                         <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Pendidikan &
-                            Vokasi</h1>
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.education_vocation') }}</h1>
                         <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Melalui program
-                            pendidikan dan vokasi, kami mendorong
-                            lahirnya generasi yang kompeten, mandiri, dan siap menghadapi dinamika masa depan.</p>
+                            data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">{{ __('hero.education_vocation_desc') }}</p>
                         <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown"
                             data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn"
-                            data-delay-in=".7">Detail</a>
+                            data-delay-in=".7">{{ __('hero.detail') }}</a>
                     </div>
                 </div>
             </div>
@@ -92,20 +74,16 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h3 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Isu Strategis
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.strategic_issue') }}
                         </h3>
                         <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Pemberdayaan
-                            Desa</h1>
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.village_empowerment') }}</h1>
                         <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Melalui
-                            pendekatan kolaboratif dan berbasis potensi
-                            lokal, kami mendukung desa agar tumbuh mandiri, tangguh, dan mampu meningkatkan
-                            kesejahteraan warganya.
+                            data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">{{ __('hero.village_empowerment_desc') }}
                         </p>
                         <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown"
                             data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn"
-                            data-delay-in=".7">Detail</a>
+                            data-delay-in=".7">{{ __('hero.detail') }}</a>
                     </div>
                 </div>
             </div>
@@ -114,20 +92,15 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h3 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Isu Strategis
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.strategic_issue') }}
                         </h3>
                         <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Pertanian &
-                            Pangan</h1>
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.agriculture_food') }}</h1>
                         <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Melalui
-                            pendekatan berbasis komunitas dan teknologi
-                            tepat guna, kami mendorong sistem pertanian yang produktif, ramah lingkungan, dan mampu
-                            menjamin
-                            ketahanan pangan bagi generasi mendatang.</p>
+                            data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">{{ __('hero.agriculture_food_desc') }}</p>
                         <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown"
                             data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn"
-                            data-delay-in=".7">Detail</a>
+                            data-delay-in=".7">{{ __('hero.detail') }}</a>
                     </div>
                 </div>
             </div>
@@ -136,20 +109,15 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h3 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Isu Strategis
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.strategic_issue') }}
                         </h3>
                         <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Energi &
-                            Transportasi</h1>
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.energy_transportation') }}</h1>
                         <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Melalui
-                            inovasi, kolaborasi, dan pendekatan berbasis
-                            kebutuhan masyarakat, kami mendukung terwujudnya sistem energi dan transportasi yang
-                            inklusif, bersih,
-                            dan berkelanjutan.</p>
+                            data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">{{ __('hero.energy_transportation_desc') }}</p>
                         <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown"
                             data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn"
-                            data-delay-in=".7">Detail</a>
+                            data-delay-in=".7">{{ __('hero.detail') }}</a>
                     </div>
                 </div>
             </div>
@@ -158,20 +126,15 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h3 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Isu Strategis
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.strategic_issue') }}
                         </h3>
                         <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Pemberdayaan
-                            Masyarakat Adat</h1>
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.indigenous_empowerment') }}</h1>
                         <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5"
-                            data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Melalui
-                            pendekatan yang inklusif dan menghormati nilai
-                            budaya, kami berkomitmen mendukung kemandirian serta keberlanjutan kehidupan masyarakat
-                            adat secara adil
-                            dan bermartabat.</p>
+                            data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">{{ __('hero.indigenous_empowerment_desc') }}</p>
                         <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown"
                             data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn"
-                            data-delay-in=".7">Detail</a>
+                            data-delay-in=".7">{{ __('hero.detail') }}</a>
                     </div>
                 </div>
             </div>

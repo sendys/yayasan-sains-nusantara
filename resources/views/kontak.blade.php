@@ -8,11 +8,11 @@
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb">
                         <li class="list-inline-item">
-                            <a class="h3 text-white font-secondary" href="#">Kontak Kami</a>
+                            <a class="h3 text-white font-secondary" href="#">{{ __('kontak.page_title') }}</a>
                         </li>
                     </ul>
                     <p class="text-lighten">
-                        Hubungi kami untuk informasi lebih lanjut tentang Yayasan Sains Nusantara.
+                        {{ __('kontak.page_description') }}
                     </p>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 <!-- Kolom Kiri: Informasi Kontak -->
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <div class="text-center mb-4">
-                        <h3 class="font-weight-bold">Hubungi Kami</h3>
+                        <h3 class="font-weight-bold">{{ __('kontak.contact_us') }}</h3>
                         <div class="divider mx-auto mb-4"></div>
                     </div>
 
@@ -36,7 +36,7 @@
                             <div class="card-body p-4">
                                 <h5 class="font-weight-bold mb-3">
                                     <i class="bi bi-geo-alt-fill text-primary mr-2"></i>
-                                    Alamat Kantor
+                                    {{ __('kontak.office_address') }}
                                 </h5>
                                 <p class="text-justify mb-4">
                                     Jln. Prada Utama, No. 55<br>
@@ -46,7 +46,7 @@
 
                                 <h5 class="font-weight-bold mb-3">
                                     <i class="bi bi-telephone-fill text-primary mr-2"></i>
-                                    Telp./WhatsApp
+                                    {{ __('kontak.phone') }}
                                 </h5>
                                 <p class="text-justify mb-4">
                                     +62 852-7739-0360 | +62 852-9740-1122
@@ -54,7 +54,7 @@
 
                                 <h5 class="font-weight-bold mb-3">
                                     <i class="bi bi-envelope-fill text-primary mr-2"></i>
-                                    Email
+                                    {{ __('kontak.email') }}
                                 </h5>
                                 <p class="text-justify mb-0">
                                     support@ysn.or.id
@@ -67,7 +67,7 @@
                 <!-- Kolom Kanan: Peta Google Maps -->
                 <div class="col-lg-7">
                     <div class="text-center mb-4">
-                        <h3 class="font-weight-bold">Lokasi Kantor</h3>
+                        <h3 class="font-weight-bold">{{ __('kontak.office_location') }}</h3>
                         <div class="divider mx-auto mb-4"></div>
                     </div>
 
@@ -85,7 +85,7 @@
                         <a href="https://www.google.com/maps/search/?api=1&query=5.5483,95.3196" target="_blank"
                             class="btn btn-primary">
                             <i class="bi bi-box-arrow-up-right mr-2"></i>
-                            Google Maps
+                            {{ __('kontak.google_maps') }}
                         </a>
                     </div>
                 </div>

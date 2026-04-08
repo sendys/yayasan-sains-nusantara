@@ -6,13 +6,11 @@
             <!-- Kolom Kiri -->
             <div class="col-lg-5 mb-4">
                 <h2 class="section-title">
-                    Membangun ilmu,<br>
-                    memberdayakan masyarakat
+                    {!! __('about.title') !!}
                 </h2>
 
                 <p style="text-align: justify;">
-                    Kami percaya bahwa ilmu pengetahuan, inovasi, dan kolaborasi dapat menjadi fondasi penting dalam mendorong pembangunan 
-                    yang berkelanjutan serta meningkatkan kesejahteraan masyarakat Indonesia.
+                    {{ __('about.description') }}
                 </p>
             </div>
 
@@ -25,11 +23,11 @@
                         <div class="about-item">
                             <h5>
                                 <a href="{{ route('tentang') }}">
-                                    Tentang Kami >
+                                    {{ __('about.about_us') }} >
                                 </a>
                             </h5>
                             <p>
-                                Yayasan Sains Nusantara adalah lembaga nirlaba yang bergerak di bidang penelitian, pengembangan ilmu pengetahuan, pelatihan, dan rekayasa teknologi terapan.
+                                {{ __('about.about_us_desc') }}
                             </p>
                         </div>
                     </div>
@@ -38,12 +36,11 @@
                         <div class="about-item">
                             <h5>
                                 <a href="#">
-                                    Apa yang Kami Lakukan >
+                                    {{ __('about.what_we_do') }} >
                                 </a>
                             </h5>
                             <p>
-                                Kami mengembangkan berbagai program penelitian, pelatihan, dan inovasi teknologi yang berfokus pada peningkatan kapasitas masyarakat, penguatan ekonomi lokal, 
-                                pendidikan.
+                                {{ __('about.what_we_do_desc') }}
                             </p>
                         </div>
                     </div>
@@ -52,11 +49,11 @@
                         <div class="about-item">
                             <h5>
                                 <a href="#">
-                                    Tempat Kami Bekerja >
+                                    {{ __('about.where_we_work') }} >
                                 </a>
                             </h5>
                             <p>
-                                Yayasan Sains Nusantara bekerja bersama berbagai mitra di tingkat lokal, nasional, dan internasional.
+                                {{ __('about.where_we_work_desc') }}
                             </p>
                         </div>
                     </div>
@@ -65,11 +62,11 @@
                         <div class="about-item">
                             <h5>
                                 <a href="#">
-                                    Dukung Kami >
+                                    {{ __('about.support_us') }} >
                                 </a>
                             </h5>
                             <p>
-                                Dukungan dari berbagai pihak sangat penting dalam memperkuat gerakan kolaboratif berbasis sains dan teknologi.
+                                {{ __('about.support_us_desc') }}
                             </p>
                         </div>
                     </div>

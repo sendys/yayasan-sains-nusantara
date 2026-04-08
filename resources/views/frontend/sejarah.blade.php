@@ -8,11 +8,11 @@
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb">
                         <li class="list-inline-item">
-                            <a class="h3 text-white font-secondary" href="#">Perjalanan dan Pengalaman</a>
+                            <a class="h3 text-white font-secondary" href="#">{{ __('sejarah.page_title') }}</a>
                         </li>
                     </ul>
                     <p class="text-lighten">
-                        Yayasan Sains Nusantara (YSN).
+                        {{ __('sejarah.page_description') }}
                     </p>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                                 {!! $section->deskripsi !!}
                             @else
                                 <div class="text-muted fst-italic">
-                                    Belum ada deskripsi tersedia.
+                                    {{ __('sejarah.no_description') }}
                                 </div>
                             @endif
                         </div>
@@ -52,16 +52,16 @@
                     <!-- Image Donasi -->
                     <div class="mb-4">
                         <div class="text-center mb-4">
-                            <h3></h3>
+                            <h3>{{ __('sejarah.donation_title') }}</h3>
                             <div class="divider mx-auto mb-4"></div>
                         </div>
                         <div class="card border-0 shadow-sm">
                             <img src="{{ asset('assets/fe/images/about/donasi.png') }}" alt="Donasi" class="card-img-top"
                                 style="height: 300px; with:100px;">
                             <div class="card-body text-center">
-                                <p class="card-text">Dukungan Anda sangat berarti untuk kelanjutan program-program kami.</p>
+                                <p class="card-text">{{ __('sejarah.donation_description') }}</p>
                                 <a href="{{ route('donasi') }}" class="btn btn-primary">
-                                    Donasi Sekarang
+                                    {{ __('sejarah.donation_button') }}
                                 </a>
                             </div>
                         </div>

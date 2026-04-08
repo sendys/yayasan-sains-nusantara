@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 /* frontend - web */
 Route::get('/', [App\Http\Controllers\Frontend\WelcomeController::class, 'welcome']);
 
+Route::get('/lang/{locale}', function ($locale) {
+    if (! in_array($locale, ['en', 'id'], true)) {
+        abort(404);
+    }
+
+    session(['locale' => $locale]);
+
+    return redirect()->back();
+})->name('lang.switch');
+
 // Blog Routes (Frontend)
 Route::get('/news', [App\Http\Controllers\Frontend\BlogController::class, 'index'])->name('frontend.blog.index');
 Route::get('/news/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'show'])->name('frontend.blog.show');
