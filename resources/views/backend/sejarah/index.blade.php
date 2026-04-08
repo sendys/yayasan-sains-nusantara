@@ -38,13 +38,51 @@
                                         </h5>
                                     </div>
                                     <div class="card-body">
-                                        <!-- Deskripsi -->
+                                        <!-- Tabs for Languages -->
+                                        <ul class="nav nav-tabs" id="languageTabs" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="id-tab" data-bs-toggle="tab" data-bs-target="#id-content" type="button" role="tab" aria-controls="id-content" aria-selected="true">Bahasa Indonesia</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="en-tab" data-bs-toggle="tab" data-bs-target="#en-content" type="button" role="tab" aria-controls="en-content" aria-selected="false">English</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content mt-3" id="languageTabsContent">
+                                            <!-- Indonesian Tab -->
+                                            <div class="tab-pane fade show active" id="id-content" role="tabpanel" aria-labelledby="id-tab">
+                                                <div class="mb-4">
+                                                    <label for="deskripsi_id" class="form-label fw-semibold">
+                                                        <i class="mdi mdi-text me-1"></i>Deskripsi (Bahasa Indonesia)
+                                                    </label>
+                                                    <textarea class="form-control tinymce @error('deskripsi_id') is-invalid @enderror" id="deskripsi_id" name="deskripsi_id"
+                                                        rows="4" placeholder="Masukkan deskripsi sejarah yayasan dalam bahasa Indonesia...">{{ old('deskripsi_id', isset($sejarah) ? $sejarah->deskripsi_id : '') }}</textarea>
+                                                    @error('deskripsi_id')
+                                                        <div class="invalid-feedback">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <!-- English Tab -->
+                                            <div class="tab-pane fade" id="en-content" role="tabpanel" aria-labelledby="en-tab">
+                                                <div class="mb-4">
+                                                    <label for="deskripsi_en" class="form-label fw-semibold">
+                                                        <i class="mdi mdi-text me-1"></i>Description (English)
+                                                    </label>
+                                                    <textarea class="form-control tinymce @error('deskripsi_en') is-invalid @enderror" id="deskripsi_en" name="deskripsi_en"
+                                                        rows="4" placeholder="Enter the history description in English...">{{ old('deskripsi_en', isset($sejarah) ? $sejarah->deskripsi_en : '') }}</textarea>
+                                                    @error('deskripsi_en')
+                                                        <div class="invalid-feedback">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Default Deskripsi (for backward compatibility) -->
                                         <div class="mb-4">
                                             <label for="deskripsi" class="form-label fw-semibold">
-                                                <i class="mdi mdi-text me-1"></i>Deskripsi
+                                                <i class="mdi mdi-text me-1"></i>Deskripsi Default (Fallback)
                                             </label>
                                             <textarea class="form-control tinymce @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi"
-                                                rows="4" placeholder="Masukkan deskripsi sejarah yayasan...">{{ old('deskripsi', isset($sejarah) ? $sejarah->deskripsi : '') }}</textarea>
+                                                rows="4" placeholder="Masukkan deskripsi default...">{{ old('deskripsi', isset($sejarah) ? $sejarah->deskripsi : '') }}</textarea>
                                             @error('deskripsi')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
