@@ -30,9 +30,8 @@
                     </li>
 
                     <li class="list-inline-item mx-0">
-                        <a class="d-inline-block p-2 text-color"
-                           href="https://www.instagram.com/yayasansainsnusantara/"
-                           target="_blank">
+                        <a class="d-inline-block p-2 text-color" href="https://www.instagram.com/yayasansainsnusantara/"
+                            target="_blank">
                             <i class="ti-instagram"></i>
                         </a>
                     </li>
@@ -48,8 +47,11 @@
 
                     <i class="ti-world"></i>
 
-                    <a href="{{ route('lang.switch', 'id') }}" class="text-color ml-1 {{ app()->getLocale() === 'id' ? 'active' : '' }}">{{ __('navbar.language_indonesia') }}</a> |
-                    <a href="{{ route('lang.switch', 'en') }}" class="text-color ml-1 {{ app()->getLocale() === 'en' ? 'active' : '' }}">{{ __('navbar.language_english') }}</a>
+                    <a href="{{ route('lang.switch', 'id') }}"
+                        class="text-color ml-1 {{ app()->getLocale() === 'id' ? 'active' : '' }}">{{ __('navbar.language_indonesia') }}</a>
+                    |
+                    <a href="{{ route('lang.switch', 'en') }}"
+                        class="text-color ml-1 {{ app()->getLocale() === 'en' ? 'active' : '' }}">{{ __('navbar.language_english') }}</a>
 
                 </span>
 
