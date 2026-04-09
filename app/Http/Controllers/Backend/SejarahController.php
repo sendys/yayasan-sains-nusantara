@@ -142,9 +142,13 @@ class SejarahController extends Controller
         }
 
         $validator = Validator::make($request->all(), [
-            'deskripsi' => 'nullable|string',
+            'deskripsi'    => 'nullable|string',
+            'deskripsi_en' => 'nullable|string',
+            'deskripsi_id' => 'nullable|string',
         ], [
-            'deskripsi.string' => 'Deskripsi harus berupa teks',
+            'deskripsi.string'    => 'Deskripsi harus berupa teks',
+            'deskripsi_en.string' => 'Deskripsi (EN) harus berupa teks',
+            'deskripsi_id.string' => 'Deskripsi (ID) harus berupa teks',
         ]);
 
         if ($validator->fails()) {

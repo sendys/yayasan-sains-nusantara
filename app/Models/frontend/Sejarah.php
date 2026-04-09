@@ -24,22 +24,6 @@ class Sejarah extends Model
     const CACHE_KEY = 'sejarah_section';
 
     /**
-     * Get the description based on current locale
-     */
-    public function getDeskripsiAttribute($value)
-    {
-        $locale = app()->getLocale();
-        
-        if ($locale === 'en' && !empty($this->deskripsi_en)) {
-            return $this->deskripsi_en;
-        } elseif ($locale === 'id' && !empty($this->deskripsi_id)) {
-            return $this->deskripsi_id;
-        }
-        
-        return $value; // fallback to default deskripsi
-    }
-
-    /**
      * Boot the model and auto-generate UUID
      */
     protected static function booted()

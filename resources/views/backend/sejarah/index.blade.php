@@ -169,21 +169,26 @@
                 e.preventDefault();
 
                 // Sync TinyMCE content to textarea before submit
-                if (typeof tinymce !== 'undefined' && tinymce.get('deskripsi')) {
-                    tinymce.get('deskripsi').save();
+                if (typeof tinymce !== 'undefined') {
+                    tinymce.triggerSave();
                 }
 
+                const form = $(this);
                 const formData = new FormData(this);
-                const url = $(this).attr('action');
+                const url = form.attr('action');
+
+                // Get the actual method from the form (handle PUT via _method field)
+                const method = form.find('input[name="_method"]').val() || 'POST';
 
                 $.ajax({
                     url: url,
-                    type: 'POST',
+                    type: method === 'PUT' ? 'POST' : method, // Always use POST for FormData with _method
                     data: formData,
                     processData: false,
                     contentType: false,
                     headers: {
-                        'X-Requested-With': 'XMLHttpRequest'
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
                     success: function(response) {
                         if (response.status === 'success') {

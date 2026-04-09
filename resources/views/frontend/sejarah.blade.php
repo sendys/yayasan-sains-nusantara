@@ -36,8 +36,27 @@
                         <br>
                         
                             <div class="editor-content">
-                            @if (!empty($section?->deskripsi))
-                                {!! $section->deskripsi !!}
+                            @if ($section)
+                                @php
+                                    $locale = app()->getLocale();
+                                    $deskripsi = null;
+
+                                    if ($locale === 'en' && !empty($section->deskripsi_en)) {
+                                        $deskripsi = $section->deskripsi_en;
+                                    } elseif ($locale === 'id' && !empty($section->deskripsi_id)) {
+                                        $deskripsi = $section->deskripsi_id;
+                                    } elseif (!empty($section->deskripsi)) {
+                                        $deskripsi = $section->deskripsi;
+                                    }
+                                @endphp
+
+                                @if ($deskripsi)
+                                    {!! $deskripsi !!}
+                                @else
+                                    <div class="text-muted fst-italic">
+                                        {{ __('sejarah.no_description') }}
+                                    </div>
+                                @endif
                             @else
                                 <div class="text-muted fst-italic">
                                     {{ __('sejarah.no_description') }}
