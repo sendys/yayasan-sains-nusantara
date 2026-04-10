@@ -2,14 +2,14 @@
 
 return [
     'home' => 'Home',
-    'articles' => 'Articles',
+    'news' => 'News',
     'division' => 'Division',
     'publications' => 'Publications',
     'partnership' => 'Partnership',
     'about_us' => 'About Us',
     'reports' => 'Activity Reports',
     'books' => 'Books',
-    'sainspedia' => 'Sainspedia',
+    'scientific' => 'Scientific Articles',
     'history' => 'History',
     'vision_mission' => 'Vision & Mission',
     'team' => 'YSN Team',

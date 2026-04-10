@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Berita',
+    'title' => 'Publikasi',
     'read_more' => 'Baca Selengkapnya',
     'by' => 'Oleh',
 ];

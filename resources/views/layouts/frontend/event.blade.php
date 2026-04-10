@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="d-flex align-items-center section-title justify-content-between">
-                    <h2 class="mb-0 text-nowrap mr-3">Publikasi</h2>
+                    <h2 class="mb-0 text-nowrap mr-3">{{ __('publikasi.title') }}</h2>
                     <div class="border-top w-100 border-primary d-none d-sm-block"></div>
                     <div>
                         <a href="{{ route('frontend.event.all') }}"

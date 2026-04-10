@@ -30,14 +30,14 @@
     <a class="navbar-brand d-flex align-items-center" href="/">
 
         <!-- Logo -->
-        <img src="{{ asset('assets/fe/images/about/small.png') }}" alt="Logo YSN" class="logo-ysn mr-2 mr-lg-3">
+        <img src="{{ asset('assets/fe/images/about/logosmall.png') }}" alt="Logo YSN" class="logo-ysn mr-2 mr-lg-3">
 
         <!-- Nama Yayasan -->
-        <h3 class="mb-0 text-white font-weight-bold d-none d-lg-block">
-            Yayasan Sains Nusantara
+        <h3 class="mb-0 text-black font-weight-bold d-none d-lg-block">
+            YAYASAN SAINS NUSANTARA
         </h3>
-        <h5 class="mb-0 text-white font-weight-bold d-lg-none">
-            Sains Nusantara
+        <h5 class="mb-0 text-black font-weight-bold d-lg-none">
+            YSN
         </h5>
     </a>
     <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
@@ -47,45 +47,15 @@
 
     <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav ml-auto text-center">
-            <li class="nav-item active">
+            {{-- <li class="nav-item active">
                 <a class="nav-link" href="/">
                     <i class="ti-home"></i>
                 </a>
-            </li>
-            <li class="nav-item @@events">
-                <a class="nav-link" href="{{ route('frontend.blog.index') }}">{{ __('navbar.articles') }}</a>
-            </li>
+            </li> --}}
 
             <li class="nav-item dropdown view">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    {{ __('navbar.division') }}
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Environmental Service Project (ESP)</a>
-                    <a class="dropdown-item" href="#">Social Study</a>
-                    <a class="dropdown-item" href="#">Education</a>
-                </div>
-            </li>
-
-            <li class="nav-item dropdown view">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    {{ __('navbar.publications') }}
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                    <a class="dropdown-item" href="{{ route('frontend.event.all') }}">{{ __('navbar.reports') }}</a>
-                    <a class="dropdown-item" href="#">{{ __('navbar.books') }}</a>
-                    <a class="dropdown-item" href="#">{{ __('navbar.sainspedia') }}</a>
-                </div>
-            </li>
-
-            <li class="nav-item @@blog">
-                <a class="nav-link" href="{{ route('partner') }}">{{ __('navbar.partnership') }}</a>
-            </li>
-            <li class="nav-item dropdown view">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ __('navbar.about_us') }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
@@ -97,6 +67,39 @@
 
                 </div>
             </li>
+
+            <li class="nav-item dropdown view">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ __('navbar.division') }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Environmental Service Project (ESP)</a>
+                    <a class="dropdown-item" href="#">Social Study</a>
+                    <a class="dropdown-item" href="#">Education</a>
+                </div>
+            </li>
+
+            <li class="nav-item @@events">
+                <a class="nav-link" href="{{ route('frontend.blog.index') }}">{{ __('navbar.news') }}</a>
+            </li>
+
+            <li class="nav-item dropdown view">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ __('navbar.publications') }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <a class="dropdown-item" href="{{ route('frontend.event.all') }}">{{ __('navbar.reports') }}</a>
+                    <a class="dropdown-item" href="#">{{ __('navbar.books') }}</a>
+                    <a class="dropdown-item" href="#">{{ __('navbar.scientific') }}</a>
+                </div>
+            </li>
+
+            <li class="nav-item @@blog">
+                <a class="nav-link" href="{{ route('partner') }}">{{ __('navbar.partnership') }}</a>
+            </li>
+
         </ul>
     </div>
 </nav>

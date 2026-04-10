@@ -540,14 +540,24 @@ textarea.form-control {
 
 .top-header {
     font-size: 12px;
-    transition: -webkit-transform 0.2s ease;
-    transition: transform 0.2s ease;
-    transition:
-        transform 0.2s ease,
-        -webkit-transform 0.2s ease;
-    -webkit-transform-origin: top;
-    transform-origin: top;
     font-weight: 600;
+
+    background: #000 !important; /* hitam solid */
+    color: #fff; /* teks putih */
+
+    position: relative;
+    z-index: 999;
+
+    transition: transform 0.2s ease;
+    transform-origin: top;
+}
+
+/* pastikan semua elemen di dalamnya juga putih */
+.top-header a,
+.top-header span,
+.top-header p,
+.top-header i {
+    color: #fff !important;
 }
 
 .top-header.hide {
@@ -1118,4 +1128,31 @@ link:focus,
 
 .news-card:hover img {
     transform: scale(1.05);
+}
+
+.navigation {
+    background-image: none !important;
+    background-color: #fff !important;
+}
+
+.navbar-nav {
+    background: transparent !important;
+}
+
+.bg-primary {
+    background: transparent !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000 !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #000 !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 25px 10px;
 }

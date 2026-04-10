@@ -305,7 +305,7 @@
                     <ul class="sub-menu">
                         <li class="menu-item">
                             <a href="{{ route('admin.sejarah.index') }}" class="menu-link">
-                                <span class="menu-text">Sejarah YSN</span>
+                                <span class="menu-text">Data Profil</span>
                             </a>
                         </li>
 
@@ -316,7 +316,7 @@
                         </li>
                         <li class="menu-item">
                             <a href="{{ route('admin.blog.index') }}" class="menu-link">
-                                <span class="menu-text">Artikel</span>
+                                <span class="menu-text">Berita</span>
                             </a>
                         </li>
                         <li class="menu-item">

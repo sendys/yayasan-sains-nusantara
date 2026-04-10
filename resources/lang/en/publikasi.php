@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'News',
+    'title' => 'Publication',
     'read_more' => 'Read More',
     'by' => 'By',
 ];
