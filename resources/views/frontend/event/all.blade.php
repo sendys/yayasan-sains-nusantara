@@ -8,12 +8,11 @@
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb">
                         <li class="list-inline-item">
-                            <a class="h3 text-white font-secondary" href="{{ route('frontend.event.index') }}">Laporan
-                                Kegiatan</a>
+                            <a class="h3 text-white font-secondary" href="{{ route('frontend.event.index') }}">{{ __('publikasi.title') }}</a>
                         </li>
                     </ul>
                     <p class="text-lighten">
-                        Semua kegiatan dari Yayasan Sains Nusantara (YSN).
+                        {{ __('publikasi.title') }} Yayasan Sains Nusantara (YSN).
                     </p>
                 </div>
             </div>
@@ -26,7 +25,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="d-flex align-items-center section-title justify-content-between">
-                        <h2 class="mb-0 text-nowrap mr-3">Semua publikasi</h2>
+                        <h2 class="mb-0 text-nowrap mr-3">{{ __('publikasi.title') }}</h2>
                         <div class="border-top w-100 border-primary d-none d-sm-block"></div>
                     </div>
                 </div>

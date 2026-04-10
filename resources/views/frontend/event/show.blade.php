@@ -20,8 +20,7 @@
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb">
                         <li class="list-inline-item">
-                            <a class="h3 text-white font-secondary" href="{{ route('frontend.event.index') }}">Laporan
-                                Kegiatan</a>
+                            <a class="h3 text-white font-secondary" href="{{ route('frontend.event.index') }}">{{ __('publikasi.title') }}</a>
                         </li>
                     </ul>
                     <p class="text-lighten">

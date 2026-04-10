@@ -1,4 +1,4 @@
-<section class="section bg-primary">
+<section class="section bg-footer">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">

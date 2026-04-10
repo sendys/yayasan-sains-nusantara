@@ -38,22 +38,18 @@
     @include('layouts.frontend.event')
     <!-- /courses -->
 
-    <!-- cta -->
-    @include('layouts.frontend.cta')
-    <!-- /cta -->
-
     <!-- success story -->
     @include('layouts.frontend.story')
     <!-- /success story -->
-
-    <!-- events -->
-    {{-- @include('layouts.frontend.event') --}}
-    <!-- /events -->
 
     <!-- blog -->
     @include('layouts.frontend.blog')
     <!-- /blog -->
 
+    <!-- cta -->
+    @include('layouts.frontend.cta')
+    <!-- /cta -->
+    
     <!-- footer -->
     @include('layouts.frontend.footer')
     <!-- /footer -->

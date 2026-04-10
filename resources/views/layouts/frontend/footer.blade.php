@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <!-- Kolom 1: Info Yayasan -->
-            <div class="col-md-6 mb-5">
+            <div class="col-md-7 mb-5">
                 <a class="logo-footer" href="index.html">
                     <h4 class="text-white mb-4">{{ __('footer.organization_name') }}</h4>
                 </a>
@@ -15,7 +15,7 @@
             </div>
 
             <!-- Kolom 2: Sitemap -->
-            <div class="col-md-6 mb-5">
+            <div class="col-md-3 mb-5">
                 <h4 class="text-white mb-4">{{ __('footer.sitemap') }}</h4>
                 <ul class="list-unstyled">
                     <li class="mb-3"><a class="text-white" href="">{{ __('footer.news') }}</a></li>
@@ -25,6 +25,22 @@
                     <li class="mb-3"><a class="text-white" href="{{ route('kontak') }}">{{ __('footer.contact') }}</a></li>
                 </ul>
             </div>
+
+            <div class="col-md-1 mb-5">
+                <h4 class="text-white mb-4">Follow Us</h4>
+                <ul class="list-unstyled">
+                    <li class="mb-3">
+                        <a class="text-white" href="#"><i class="mdi mdi-facebook me-2"></i>Facebook</a>
+                    </li>
+                    <li class="mb-3">
+                        <a class="text-white" href="#"><i class="mdi mdi-instagram me-2"></i>Instagram</a>
+                    </li>
+                    <li class="mb-3">
+                        <a class="text-white" href="#"><i class="mdi mdi-youtube me-2"></i>YouTube</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </div>
 </div>
@@ -32,7 +48,7 @@
 <div class="copyright py-4 bg-footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-7 text-sm-left text-center">
+            <div class="col-12 text-center">
                 <p class="mb-0 text-white">{{ __('footer.copyright') }}
                     <script>
                         var CurrentYear = new Date().getFullYear()
@@ -41,18 +57,7 @@
                     © <a href="https://fintekindonesia.web.id" target="_blank" rel="noopener noreferrer">Fintek
                         Indonesia</a> {{ __('footer.all_rights_reserved') }}
             </div>
-            <div class="col-sm-5 text-sm-right text-center">
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i
-                                class="ti-facebook text-primary"></i></a></li>
-                    <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i
-                                class="ti-twitter-alt text-primary"></i></a></li>
-                    <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i
-                                class="ti-instagram text-primary"></i></a></li>
-                    <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i
-                                class="ti-dribbble text-primary"></i></a></li>
-                </ul>
-            </div>
+           
         </div>
     </div>
 

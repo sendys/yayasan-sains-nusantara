@@ -244,4 +244,6 @@ Route::middleware([
     Route::get('/event/{uuid}/edit', [App\Http\Controllers\Backend\EventController::class, 'edit'])->name('admin.event.edit');
     Route::put('/event/{uuid}', [App\Http\Controllers\Backend\EventController::class, 'update'])->name('admin.event.update');
     Route::delete('/event/{uuid}', [App\Http\Controllers\Backend\EventController::class, 'destroy'])->name('admin.event.destroy');
+
+    Route::post('/translate', [App\Http\Controllers\TranslateController::class, 'translate'])->name('translate');
 });
