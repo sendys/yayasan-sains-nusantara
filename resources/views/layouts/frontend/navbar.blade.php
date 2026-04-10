@@ -37,7 +37,7 @@
             YAYASAN SAINS NUSANTARA
         </h3>
         <h5 class="mb-0 text-black font-weight-bold d-lg-none">
-            YSN
+            YAYASAN SAINS NUSANTARA
         </h5>
     </a>
     <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
@@ -47,12 +47,6 @@
 
     <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav ml-auto text-center">
-            {{-- <li class="nav-item active">
-                <a class="nav-link" href="/">
-                    <i class="ti-home"></i>
-                </a>
-            </li> --}}
-
             <li class="nav-item dropdown view">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
