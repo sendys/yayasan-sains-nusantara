@@ -105,12 +105,12 @@
                                             </button>
                                         </div>
                                         
-                                        <div class="col-12">
+                                        <!-- <div class="col-12">
                                             <a href="{{ route('auth.google') }}" class="btn btn-danger w-100">
                                                 <i class="mdi mdi-google me-2"></i>
                                                 Login Gmail
                                             </a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </form>

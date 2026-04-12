@@ -1156,33 +1156,3 @@ link:focus,
 .navbar-expand-lg .navbar-nav .nav-link {
     padding: 25px 10px;
 }
-
-/* ===============================
-   FIX HAMBURGER + MOBILE MENU
-================================= */
-
-/* hamburger icon putih jelas */
-.navbar-dark .navbar-toggler {
-    border-color: rgba(255,255,255,0.5);
-}
-
-.navbar-dark .navbar-toggler-icon {
-    filter: brightness(100%);
-}
-
-/* saat collapse dibuka */
-@media (max-width: 991px) {
-
-    .navbar-collapse {
-        background: #fff !important;
-        padding: 15px;
-    }
-
-    .navbar-collapse .nav-link {
-        color: #000 !important;
-    }
-
-    .navbar-collapse .nav-link:hover {
-        color: #269c41 !important;
-    }
-}

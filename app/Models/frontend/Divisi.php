@@ -8,29 +8,24 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 
-class Sejarah extends Model
+class Divisi extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $table = 'sejarah';
+    protected $table = 'divisi';
 
     protected $fillable = [
         'uuid',
-        'deskripsi_en',
         'deskripsi_id',
+        'deskripsi_en',
     ];
 
-    const CACHE_KEY = 'sejarah_section';
+    const CACHE_KEY = 'divisi_section';
 
-    /**
-     * Boot the model and auto-generate UUID
-     */
     protected static function booted()
     {
         static::creating(function ($model) {
-            if (empty($model->uuid)) {
-                $model->uuid = Str::uuid();
-            }
+            $model->uuid = (string) Str::uuid();
         });
 
         static::saved(function () {

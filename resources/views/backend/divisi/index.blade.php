@@ -2,8 +2,8 @@
 
 @section('content')
     <?php
-    $sub_title = 'Tentang Kami';
-    $title = 'Kelola Data Tentang Kami';
+    $sub_title = 'Divisi';
+    $title = 'Kelola Data Divisi';
     ?>
 
     @include('layouts.partials.page-title')
@@ -14,58 +14,27 @@
             <div class="card">
                 <div class="card-body">
                     <p class="text-muted font-14">
-                        Halaman ini digunakan untuk mengelola data Tentang Kami yang ditampilkan di halaman frontend. <br>
-                        Data ini mencakup Logo, Deskripsi, Visi, dan Misi organisasi.
+                        Halaman ini digunakan untuk mengelola data Divisi yang ditampilkan di halaman frontend. <br>
+                        Data ini mencakup diskripsi.
                     </p>
                     <hr class="my-1">
                     <br>
 
-                    <form id="tentangForm"
-                        action="{{ isset($tentang) ? route('admin.tentang.update', $tentang->id) : route('admin.tentang.store') }}"
+                    <form id="divisiForm"
+                        action="{{ isset($divisi) ? route('admin.divisi.update', $divisi->id) : route('admin.divisi.store') }}"
                         method="POST" enctype="multipart/form-data">
                         @csrf
-                        @if (isset($tentang))
+                        @if (isset($divisi))
                             @method('PUT')
                         @endif
 
                         <div class="row">
-                            <!-- Logo Section -->
-                            {{--  <div class="col-md-4 mb-4">
-                                <div class="card border-light">
-                                    <div class="card-header bg-light">
-                                        <h5 class="mb-0"><i class="mdi mdi-image me-2"></i>Logo Organisasi</h5>
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <div class="mb-3">
-                                            @if (isset($tentang) && $tentang->logo)
-                                                <img id="logoPreview" src="{{ asset('storage/' . $tentang->logo) }}"
-                                                    alt="Logo" class="img-fluid rounded" style="max-height: 200px;">
-                                            @else
-                                                <img id="logoPreview" src="{{ asset('assets/fe/images/about/logo.png') }}"
-                                                    alt="Preview" class="img-fluid rounded d-none"
-                                                    style="max-height: 200px;">
-                                                <div id="logoPlaceholder"
-                                                    class="border rounded d-flex align-items-center justify-content-center"
-                                                    style="height: 200px; background-color: #f8f9fa;">
-                                                    <span class="text-muted">Tidak ada logo</span>
-                                                </div>
-                                            @endif
-                                        </div>
-                                        <input type="file" class="form-control @error('logo') is-invalid @enderror"
-                                            id="logo" name="logo" accept="image/jpeg,image/png,image/jpg,image/gif">
-                                        <small class="text-muted">Format: JPG, PNG, GIF. Maks: 2MB</small>
-                                        @error('logo')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                </div>
-                            </div>
- --}}
+
                             <!-- Form Fields Section -->
                             <div class="col-12">
                                 <div class="card border-light">
                                     <div class="card-header bg-light">
-                                        <h5 class="mb-0"><i class="mdi mdi-information me-2"></i>Informasi Tentang Kami
+                                        <h5 class="mb-0"><i class="mdi mdi-information me-2"></i>Informasi Divisi
                                         </h5>
                                     </div>
 
@@ -104,10 +73,10 @@
                                                         </button>
                                                     </div>
 
-                                                    <textarea class="form-control tinymce @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi"
-                                                        rows="4" placeholder="Masukkan deskripsi tentang yayasan dalam bahasa Indonesia...">{{ old('deskripsi', $tentang->deskripsi ?? '') }}</textarea>
+                                                    <textarea class="form-control tinymce @error('deskripsi_id') is-invalid @enderror" id="deskripsi_id" name="deskripsi_id"
+                                                        rows="4" placeholder="Masukkan deskripsi tentang yayasan dalam bahasa Indonesia...">{{ old('deskripsi_id', $divisi->deskripsi_id ?? '') }}</textarea>
 
-                                                    @error('deskripsi')
+                                                    @error('deskripsi_id')
                                                         <div class="invalid-feedback">{{ $message }}</div>
                                                     @enderror
                                                 </div>
@@ -151,14 +120,14 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex justify-content-end gap-2">
-                                    @if (isset($tentang))
+                                    @if (isset($divisi))
                                         <button type="button" class="btn btn-outline-danger" id="deleteBtn">
                                             <i class="mdi mdi-delete me-1"></i>Hapus
                                         </button>
                                     @endif
                                     <button type="submit" class="btn btn-primary">
                                         <i class="mdi mdi-content-save me-1"></i>
-                                        {{ isset($tentang) ? 'Update' : 'Simpan' }}
+                                        {{ isset($divisi) ? 'Update' : 'Simpan' }}
                                     </button>
                                 </div>
                             </div>
@@ -178,7 +147,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Apakah Anda yakin ingin menghapus data Tentang Kami?</p>
+                    <p>Apakah Anda yakin ingin menghapus data Divisi?</p>
                     <p class="text-muted small">Data akan dihapus secara soft delete dan dapat dipulihkan nanti.</p>
                 </div>
                 <div class="modal-footer">
@@ -278,7 +247,7 @@
 
             function translateText() {
 
-                let indoText = tinymce.get('deskripsi')?.getContent() || '';
+                let indoText = tinymce.get('deskripsi_id')?.getContent() || '';
 
                 if (!stripHtml(indoText).trim()) {
                     Swal.fire({
@@ -345,68 +314,22 @@
 
     <script>
         $(document).ready(function() {
-            // Logo Preview
-            /* $('#logo').on('change', function(e) {
-                const file = e.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        $('#logoPreview').attr('src', e.target.result).removeClass('d-none');
-                        $('#logoPlaceholder').addClass('d-none');
-                    }
-                    reader.readAsDataURL(file);
-                }
-            }); */
-
-            // Add Misi
-            /* let misiCount = $('#misiContainer .misi-item').length; */
-
-            /* $('#addMisi').on('click', function() {
-                misiCount++;
-                var newMisi = '<div class="misi-item mb-2">' +
-                    '<div class="input-group">' +
-                    '<span class="input-group-text bg-light">' + misiCount + '</span>' +
-                    '<input type="text" class="form-control" name="misi[]" placeholder="Masukkan misi organisasi...">' +
-                    '<button type="button" class="btn btn-outline-danger remove-misi" title="Hapus">' +
-                    '<i class="mdi mdi-close"></i>' +
-                    '</button>' +
-                    '</div>' +
-                    '</div>';
-                $('#misiContainer').append(newMisi);
-                updateMisiNumbers();
-            }); */
-
-            // Remove Misi
-            /*  $(document).on('click', '.remove-misi', function() {
-                 $(this).closest('.misi-item').fadeOut(300, function() {
-                     $(this).remove();
-                     updateMisiNumbers();
-                 });
-             }); */
-
-            // Update Misi Numbers
-            /* function updateMisiNumbers() {
-                $('#misiContainer .misi-item').each(function(index) {
-                    $(this).find('.input-group-text').text(index + 1);
-                });
-                misiCount = $('#misiContainer .misi-item').length;
-            } */
 
             // Delete Button
-            @if (isset($tentang))
+            @if (isset($divisi))
                 $('#deleteBtn').on('click', function() {
-                    $('#deleteForm').attr('action', '{{ route('admin.tentang.destroy', $tentang->id) }}');
+                    $('#deleteForm').attr('action', '{{ route('admin.divisi.destroy', $divisi->id) }}');
                     $('#deleteModal').modal('show');
                 });
             @endif
 
             // Form Submit with AJAX
-            $('#tentangForm').on('submit', function(e) {
+            $('#divisiForm').on('submit', function(e) {
                 e.preventDefault();
 
                 // Sync TinyMCE content to textarea before submit
-                if (typeof tinymce !== 'undefined' && tinymce.get('deskripsi')) {
-                    tinymce.get('deskripsi').save();
+                if (typeof tinymce !== 'undefined' && tinymce.get('deskripsi_id')) {
+                    tinymce.get('deskripsi_id').save();
                 }
 
                 const formData = new FormData(this);
@@ -432,7 +355,7 @@
                                 timer: 2000
                             }).then(() => {
                                 window.location.href =
-                                    '{{ route('admin.tentang.index') }}';
+                                    '{{ route('admin.divisi.index') }}';
                             });
                         }
                     },

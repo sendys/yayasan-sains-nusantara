@@ -37,7 +37,7 @@
             YAYASAN SAINS NUSANTARA
         </h3>
         <h5 class="mb-0 text-black font-weight-bold d-lg-none">
-            YAYASAN SAINS NUSANTARA
+            YSN
         </h5>
     </a>
     <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
@@ -62,16 +62,8 @@
                 </div>
             </li>
 
-            <li class="nav-item dropdown view">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{ __('navbar.division') }}
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Environmental Service Project (ESP)</a>
-                    <a class="dropdown-item" href="#">Social Study</a>
-                    <a class="dropdown-item" href="#">Education</a>
-                </div>
+            <li class="nav-item @@events">
+                <a class="nav-link" href="{{ route('divisi') }}">{{ __('navbar.division') }}</a>
             </li>
 
             <li class="nav-item @@events">

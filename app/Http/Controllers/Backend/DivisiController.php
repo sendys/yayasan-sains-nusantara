@@ -3,35 +3,34 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\frontend\TentangKami;
+use App\Models\frontend\Divisi;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
-class AdminTentangController extends Controller
+class DivisiController extends Controller
 {
     /**
-     * Display the single tentang kami record (view).
+     * Display the single divisirecord (view).
      */
     public function index()
     {
-        $tentang = TentangKami::first();
+        $divisi = Divisi::first();
 
         // Return view for display
-        return view('backend.tentang.index', compact('tentang'));
+        return view('backend.divisi.index', compact('divisi'));
     }
 
     /**
      * Store a newly created resource (single record only).
      */
-     public function store(Request $request)
+    public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'deskripsi' => 'nullable|string',
+            'deskripsi_id' => 'nullable|string',
             'deskripsi_en' => 'nullable|string',
         ], [
-            'deskripsi.string' => 'Deskripsi (ID) harus berupa teks',
+            'deskripsi_id.string' => 'Deskripsi (ID) harus berupa teks',
             'deskripsi_en.string' => 'Deskripsi (EN) harus berupa teks',
         ]);
 
@@ -50,21 +49,20 @@ class AdminTentangController extends Controller
             $data = $validator->validated();
 
             // Get existing record or create new one
-            $tentang = TentangKami::first() ?? new TentangKami();
-            $tentang->fill($data);
-            $tentang->save();
+            $divisi = Divisi::first() ?? new Divisi();
+            $divisi->fill($data);
+            $divisi->save();
 
             if ($request->ajax() || $request->wantsJson()) {
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Data berhasil disimpan.',
-                    'data' => $tentang
+                    'data' => $divisi
                 ], 201);
             }
-            return redirect()->route('admin.tentang.index')->with('success', 'Data berhasil disimpan.');
-
+            return redirect()->route('admin.divisi.index')->with('success', 'Data berhasil disimpan.');
         } catch (\Exception $e) {
-            \Log::error('Tentang Store Error: ' . $e->getMessage(), [
+            \Log::error('divisi Store Error: ' . $e->getMessage(), [
                 'file' => $e->getFile(),
                 'line' => $e->getLine(),
                 'trace' => $e->getTraceAsString()
@@ -85,9 +83,9 @@ class AdminTentangController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $tentang = TentangKami::find($id);
+        $divisi = Divisi::find($id);
 
-        if (!$tentang) {
+        if (!$divisi) {
             if ($request->ajax() || $request->wantsJson()) {
                 return response()->json([
                     'status' => 'error',
@@ -98,10 +96,10 @@ class AdminTentangController extends Controller
         }
 
         $validator = Validator::make($request->all(), [
-            'deskripsi' => 'nullable|string',
+            'deskripsi_id' => 'nullable|string',
             'deskripsi_en' => 'nullable|string',
         ], [
-            'deskripsi.string' => 'Deskripsi (ID) harus berupa teks',
+            'deskripsi_id.string' => 'Deskripsi (ID) harus berupa teks',
             'deskripsi_en.string' => 'Deskripsi (EN) harus berupa teks',
         ]);
 
@@ -118,18 +116,18 @@ class AdminTentangController extends Controller
 
         try {
             $data = $validator->validated();
-            $tentang->update($data);
+            $divisi->update($data);
 
             if ($request->ajax() || $request->wantsJson()) {
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Data berhasil disimpan.',
-                    'data' => $tentang->fresh()
+                    'data' => $divisi->fresh()
                 ]);
             }
-            return redirect()->route('admin.tentang.index')->with('success', 'Data berhasil disimpan.');
+            return redirect()->route('admin.divisi.index')->with('success', 'Data berhasil disimpan.');
         } catch (\Exception $e) {
-            \Log::error('Sejarah Update Error: ' . $e->getMessage(), [
+            \Log::error('divisi Update Error: ' . $e->getMessage(), [
                 'file' => $e->getFile(),
                 'line' => $e->getLine(),
                 'trace' => $e->getTraceAsString()
@@ -150,9 +148,9 @@ class AdminTentangController extends Controller
      */
     public function show($id)
     {
-        $tentang = TentangKami::find($id);
+        $divisi = Divisi::find($id);
 
-        if (!$tentang) {
+        if (!$divisi) {
             return response()->json([
                 'status' => 'error',
                 'message' => 'Data tidak ditemukan.'
@@ -161,7 +159,7 @@ class AdminTentangController extends Controller
 
         return response()->json([
             'status' => 'success',
-            'data' => $tentang
+            'data' => $divisi
         ]);
     }
 
@@ -170,9 +168,9 @@ class AdminTentangController extends Controller
      */
     public function destroy($id)
     {
-        $tentang = TentangKami::find($id);
+        $divisi = Divisi::find($id);
 
-        if (!$tentang) {
+        if (!$divisi) {
             if (request()->ajax() || request()->wantsJson()) {
                 return response()->json([
                     'status' => 'error',
@@ -183,20 +181,16 @@ class AdminTentangController extends Controller
         }
 
         try {
-            // Delete logo file if exists
-            if ($tentang->logo && Storage::disk('public')->exists($tentang->logo)) {
-                Storage::disk('public')->delete($tentang->logo);
-            }
 
-            $tentang->delete();
+            $divisi->delete();
 
             if (request()->ajax() || request()->wantsJson()) {
                 return response()->json([
                     'status' => 'success',
-                    'message' => 'Data Tentang Kami berhasil dihapus.'
+                    'message' => 'Data divisi berhasil dihapus.'
                 ]);
             }
-            return redirect()->route('admin.tentang.index')->with('success', 'Data Tentang Kami berhasil dihapus.');
+            return redirect()->route('admin.divisi.index')->with('success', 'Data divisi berhasil dihapus.');
         } catch (\Exception $e) {
             if (request()->ajax() || request()->wantsJson()) {
                 return response()->json([
@@ -205,54 +199,6 @@ class AdminTentangController extends Controller
                 ], 500);
             }
             return redirect()->back()->with('error', 'Terjadi kesalahan saat menghapus data.');
-        }
-    }
-
-    /**
-     * Upload logo separately.
-     */
-    public function uploadLogo(Request $request, $id)
-    {
-        $tentang = TentangKami::find($id);
-
-        if (!$tentang) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Data tidak ditemukan.'
-            ], 404);
-        }
-
-        $request->validate([
-            'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ], [
-            'logo.required' => 'File gambar harus diupload',
-            'logo.image' => 'File harus berupa gambar',
-            'logo.mimes' => 'Format gambar harus jpeg, png, jpg, atau gif',
-            'logo.max' => 'Ukuran gambar maksimal 2MB',
-        ]);
-
-        try {
-            // Delete old logo if exists
-            if ($tentang->logo && Storage::disk('public')->exists($tentang->logo)) {
-                Storage::disk('public')->delete($tentang->logo);
-            }
-
-            $file = $request->file('logo');
-            $filename = Str::uuid() . '.' . $file->getClientOriginalExtension();
-            $path = $file->storeAs('tentang-kami', $filename, 'public');
-
-            $tentang->update(['logo' => $path]);
-
-            return response()->json([
-                'status' => 'success',
-                'message' => 'Logo berhasil diupload.',
-                'logo_url' => asset('storage/' . $path),
-            ]);
-        } catch (\Exception $e) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Gagal mengupload logo.',
-            ], 500);
         }
     }
 }

@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 }); */
 
 /* frontend - web */
+
 Route::get('/', [App\Http\Controllers\Frontend\WelcomeController::class, 'welcome']);
 
 Route::get('/lang/{locale}', function ($locale) {
@@ -52,6 +53,7 @@ Route::get('/donasi', function () {
 })->name('donasi');
 
 Route::get('/legalitas', [App\Http\Controllers\Frontend\TentangController::class, 'legalitas'])->name('legalitas');
+Route::get('/divisi', [App\Http\Controllers\Frontend\DivisiController::class, 'divisi'])->name('divisi');
 
 // Register user
 Route::get('user/register', [App\Http\Controllers\UserController::class, 'register'])->name('user.register');
@@ -244,6 +246,16 @@ Route::middleware([
     Route::get('/event/{uuid}/edit', [App\Http\Controllers\Backend\EventController::class, 'edit'])->name('admin.event.edit');
     Route::put('/event/{uuid}', [App\Http\Controllers\Backend\EventController::class, 'update'])->name('admin.event.update');
     Route::delete('/event/{uuid}', [App\Http\Controllers\Backend\EventController::class, 'destroy'])->name('admin.event.destroy');
+
+    // Admin Divisi Routes
+    Route::get('/divisi-new', [App\Http\Controllers\Backend\DivisiController::class, 'index'])->name('admin.divisi.index');
+    Route::get('/divisi/create', [App\Http\Controllers\Backend\DivisiController::class, 'create'])->name('admin.divisi.create');
+    Route::post('/divisi', [App\Http\Controllers\Backend\DivisiController::class, 'store'])->name('admin.divisi.store');
+    Route::get('/divisi/{id}', [App\Http\Controllers\Backend\DivisiController::class, 'show'])->name('admin.divisi.show');
+    Route::get('/divisi/{id}/edit', [App\Http\Controllers\Backend\DivisiController::class, 'edit'])->name('admin.divisi.edit');
+    Route::put('/divisi/{id}', [App\Http\Controllers\Backend\DivisiController::class, 'update'])->name('admin.divisi.update');
+    Route::get('/divisi/{id}/delete', [App\Http\Controllers\Backend\DivisiController::class, 'delete'])->name('divisi.delete');
+    Route::delete('/divisi/{id}', [App\Http\Controllers\Backend\DivisiController::class, 'destroy'])->name('admin.divisi.destroy');
 
     Route::post('/translate', [App\Http\Controllers\TranslateController::class, 'translate'])->name('translate');
 });

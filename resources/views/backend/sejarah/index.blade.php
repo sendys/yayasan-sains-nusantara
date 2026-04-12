@@ -2,8 +2,8 @@
 
 @section('content')
     <?php
-    $sub_title = 'Deskripsi Sejarah';
-    $title = 'Kelola Data Sejarah';
+    $sub_title = 'Profil';
+    $title = 'Kelola Data Profil';
     ?>
 
     @include('layouts.partials.page-title')
@@ -34,7 +34,7 @@
                                 <div class="card border-light">
                                     <div class="card-header bg-light">
                                         <h5 class="mb-0">
-                                            <i class="mdi mdi-information me-2"></i>Informasi Sejarah YSN
+                                            <i class="mdi mdi-information me-2"></i>Informasi Profil YSN
                                         </h5>
                                     </div>
                                     <div class="card-body">
@@ -42,12 +42,14 @@
                                         <!-- Tabs -->
                                         <ul class="nav nav-tabs" id="languageTabs">
                                             <li class="nav-item">
-                                                <button type="button" class="nav-link active" data-bs-toggle="tab" data-bs-target="#id-content">
+                                                <button type="button" class="nav-link active" data-bs-toggle="tab"
+                                                    data-bs-target="#id-content">
                                                     Bahasa Indonesia
                                                 </button>
                                             </li>
                                             <li class="nav-item">
-                                                <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#en-content">
+                                                <button type="button" class="nav-link" data-bs-toggle="tab"
+                                                    data-bs-target="#en-content">
                                                     English
                                                 </button>
                                             </li>
@@ -65,17 +67,14 @@
                                                             <i class="mdi mdi-text me-1"></i>Deskripsi (Bahasa Indonesia)
                                                         </label>
 
-                                                        <button type="button" id="btnTranslate" class="btn btn-sm btn-success">
+                                                        <button type="button" id="btnTranslate"
+                                                            class="btn btn-sm btn-success">
                                                             <i class="mdi mdi-translate"></i> Translate
                                                         </button>
                                                     </div>
 
-                                                    <textarea
-                                                        class="form-control tinymce @error('deskripsi_id') is-invalid @enderror"
-                                                        id="deskripsi_id"
-                                                        name="deskripsi_id"
-                                                        rows="4"
-                                                        placeholder="Masukkan deskripsi sejarah yayasan dalam bahasa Indonesia...">{{ old('deskripsi_id', $sejarah->deskripsi_id ?? '') }}</textarea>
+                                                    <textarea class="form-control tinymce @error('deskripsi_id') is-invalid @enderror" id="deskripsi_id" name="deskripsi_id"
+                                                        rows="4" placeholder="Masukkan deskripsi sejarah yayasan dalam bahasa Indonesia...">{{ old('deskripsi_id', $sejarah->deskripsi_id ?? '') }}</textarea>
 
                                                     @error('deskripsi_id')
                                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -90,36 +89,14 @@
                                                         <i class="mdi mdi-text me-1"></i>Description (English)
                                                     </label>
 
-                                                    <textarea
-                                                        class="form-control tinymce @error('deskripsi_en') is-invalid @enderror"
-                                                        id="deskripsi_en"
-                                                        name="deskripsi_en"
-                                                        rows="4"
-                                                        placeholder="Enter the history description in English...">{{ old('deskripsi_en', $sejarah->deskripsi_en ?? '') }}</textarea>
+                                                    <textarea class="form-control tinymce @error('deskripsi_en') is-invalid @enderror" id="deskripsi_en" name="deskripsi_en"
+                                                        rows="4" placeholder="Enter the history description in English...">{{ old('deskripsi_en', $sejarah->deskripsi_en ?? '') }}</textarea>
 
                                                     @error('deskripsi_en')
                                                         <div class="invalid-feedback">{{ $message }}</div>
                                                     @enderror
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <!-- FALLBACK -->
-                                        <div class="mb-4">
-                                            <label class="form-label fw-semibold">
-                                                <i class="mdi mdi-text me-1"></i>Deskripsi Default (Fallback)
-                                            </label>
-
-                                            <textarea
-                                                class="form-control tinymce @error('deskripsi') is-invalid @enderror"
-                                                id="deskripsi"
-                                                name="deskripsi"
-                                                rows="4"
-                                                placeholder="Masukkan deskripsi default...">{{ old('deskripsi', $sejarah->deskripsi ?? '') }}</textarea>
-
-                                            @error('deskripsi')
-                                                <div class="invalid-feedback">{{ $message }}</div>
-                                            @enderror
                                         </div>
 
                                     </div>
@@ -176,91 +153,122 @@
 @endsection
 
 @push('scripts')
+    <script src="https://cdn.tiny.cloud/1/{{ config('tinymce.api_key') }}/tinymce/7/tinymce.min.js"></script>
 
-<script src="https://cdn.tiny.cloud/1/{{ config('tinymce.api_key') }}/tinymce/7/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea.tinymce',
+            height: 500,
+            menubar: false,
 
-<script>
-    tinymce.init({
-        selector: 'textarea.tinymce',
-        height: 300,
-        menubar: false
-    });
-</script>
+            plugins: 'lists link image table code fontfamily fontsize',
 
-<script>
-$(document).ready(function(){
+            // 🔥 ini penting
+            paste_as_text: true,
 
-    function stripHtml(html){
-        let tmp = document.createElement("DIV");
-        tmp.innerHTML = html;
-        return tmp.textContent || tmp.innerText || "";
-    }
+            valid_elements: '*[*]',
+            cleanup: true,
 
-    function translateText(){
+            toolbar: `
+                undo redo |
+                fontfamily fontsize |
+                bold italic underline |
+                alignleft aligncenter alignright |
+                bullist numlist |
+                link image |
+                code
+            `,
 
-        let indoText = tinymce.get('deskripsi_id')?.getContent() || '';
+            // Custom font (optional tapi bagus)
+            font_family_formats: `
+                Poppins=Poppins,sans-serif;
+                Arial=arial,helvetica,sans-serif;
+                Times New Roman=times new roman,times;
+                Courier New=courier new,courier;
+            `,
 
-        if(!stripHtml(indoText).trim()){
-            Swal.fire({
-                icon: 'warning',
-                title: 'Oops!',
-                text: 'Isi Bahasa Indonesia dulu'
-            });
-            return;
-        }
+            // Custom size
+            font_size_formats: '10pt 12pt 14pt 16pt 18pt 24pt 32pt',
 
-        $('#btnTranslate')
-            .html('⏳ Translating...')
-            .prop('disabled', true);
-
-        $.ajax({
-            url: "{{ route('translate') }}",
-            method: "POST",
-            data: {
-                _token: "{{ csrf_token() }}",
-                text: indoText
-            },
-            success: function(res){
-
-                tinymce.get('deskripsi_en')?.setContent(res.result);
-                tinymce.get('deskripsi')?.setContent(res.result);
-
-                $('#btnTranslate')
-                    .html('✅ Translate')
-                    .prop('disabled', false);
-            },
-            error: function(){
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Gagal!',
-                    text: 'Gagal translate'
-                });
-
-                $('#btnTranslate')
-                    .html('Translate')
-                    .prop('disabled', false);
-            }
+            content_style: `
+                body { font-family: Poppins, sans-serif; font-size: 14px; }
+            `
         });
-    }
+    </script>
 
-    // ✅ tombol translate (ANTI SUBMIT)
-    $('#btnTranslate').on('click', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        translateText();
-    });
+    <script>
+        $(document).ready(function() {
 
-    // ✅ AUTO TRANSLATE SAAT TAB ENGLISH
-    $('button[data-bs-target="#en-content"]').on('shown.bs.tab', function(){
+            function stripHtml(html) {
+                let tmp = document.createElement("DIV");
+                tmp.innerHTML = html;
+                return tmp.textContent || tmp.innerText || "";
+            }
 
-        let enText = tinymce.get('deskripsi_en')?.getContent() || '';
+            function translateText() {
 
-        if(!stripHtml(enText).trim()){
-            translateText();
-        }
-    });
+                let indoText = tinymce.get('deskripsi_id')?.getContent() || '';
 
-});
-</script>
+                if (!stripHtml(indoText).trim()) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Oops!',
+                        text: 'Isi Bahasa Indonesia dulu'
+                    });
+                    return;
+                }
 
+                $('#btnTranslate')
+                    .html('⏳ Translating...')
+                    .prop('disabled', true);
+
+                $.ajax({
+                    url: "{{ route('translate') }}",
+                    method: "POST",
+                    data: {
+                        _token: "{{ csrf_token() }}",
+                        text: indoText
+                    },
+                    success: function(res) {
+
+                        tinymce.get('deskripsi_en')?.setContent(res.result);
+                        /* tinymce.get('deskripsi')?.setContent(res.result); */
+
+                        $('#btnTranslate')
+                            .html('✅ Translate')
+                            .prop('disabled', false);
+                    },
+                    error: function() {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Gagal!',
+                            text: 'Gagal translate'
+                        });
+
+                        $('#btnTranslate')
+                            .html('Translate')
+                            .prop('disabled', false);
+                    }
+                });
+            }
+
+            // ✅ tombol translate (ANTI SUBMIT)
+            $('#btnTranslate').on('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                translateText();
+            });
+
+            // ✅ AUTO TRANSLATE SAAT TAB ENGLISH
+            $('button[data-bs-target="#en-content"]').on('shown.bs.tab', function() {
+
+                let enText = tinymce.get('deskripsi_en')?.getContent() || '';
+
+                if (!stripHtml(enText).trim()) {
+                    translateText();
+                }
+            });
+
+        });
+    </script>
 @endpush

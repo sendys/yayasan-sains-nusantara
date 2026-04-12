@@ -87,7 +87,7 @@
 
                             <div class="col-md-4 mb-4">
                                 <div class="struktur-card text-center">
-                                    <img src="{{ asset('assets/fe/images/struktur/yansya.jpeg') }}" class="struktur-img"
+                                    <img src="{{ asset('assets/fe/images/struktur/userdefault.png') }}" class="struktur-img"
                                         alt="Dedy Yansyah">
                                     <h6 class="mt-3 mb-1">Dedy Yansyah, S.Si</h6>
                                     <small class="text-color">Ketua Pengawas</small>

@@ -1,20 +1,18 @@
 @extends('layouts.frontend')
 
 @section('content')
-
     <!-- page title -->
-    <section class="page-title-section overlay"
-        data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
+    <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb">
                         <li class="list-inline-item">
-                            <a class="h3 text-white font-secondary" href="#">Donasi</a>
+                            <a class="h3 text-white font-secondary" href="#">{{ __('donasi.page_title') }}</a>
                         </li>
                     </ul>
                     <p class="text-lighten">
-                        Dukungan Anda sangat berarti bagi Yayasan Sains Nusantara (YSN).
+                        {{ __('donasi.page_description') }}
                     </p>
                 </div>
             </div>
@@ -26,7 +24,7 @@
         <div class="container">
             <div class="row mb-5">
                 <!-- Kolom Kiri: Informasi Donasi -->
-                <div class="col-lg-7">
+                <div class="col-12">
                     <div class="text-center mb-4">
                         <h3></h3>
                         <div class="divider mx-auto mb-4"></div>
@@ -36,28 +34,18 @@
                         <hr class="my-2">
                         <br>
 
-                        <h5 class="fw-bold">Mengapa Donasi Anda Penting?</h5>
+                        <h5 class="fw-bold">{{ __('donasi.page_desc_1') }}</h5>
 
                         <p>
-                            Yayasan Sains Nusantara (YSN) adalah lembaga nirlaba yang berkomitmen untuk memajukan
-                            kesejahteraan masyarakat melalui pengembangan ilmu pengetahuan, pemberdayaan ekonomi,
-                            dan konservasi lingkungan. Setiap donasi yang Anda berikan akan digunakan untuk mendukung
-                            program-program YSN dalam bidang pendidikan, pelatihan, riset, dan kemanusiaan.
-                        </p>
-
-                        <p>
-                            Dengan dukungan Anda, kami dapat terus menjalankan misi kami untuk menciptakan
-                            masyarakat yang mandiri, sejahtera, dan berbasis sains. Setiap kontribusi, sekecil apa pun,
-                            akan memberikan dampak nyata bagi kehidupan masyarakat.
+                            {{ __('donasi.page_desc_2') }}
                         </p>
 
                         <br>
 
-                        <h5 class="fw-bold">Cara Berdonasi</h5>
+                        <h5 class="fw-bold">{{ __('donasi.page_desc_3') }}</h5>
 
                         <p>
-                            Anda dapat menyalurkan donasi melalui transfer bank ke rekening resmi Yayasan Sains Nusantara
-                            berikut ini:
+                            {{ __('donasi.page_desc_4') }}
                         </p>
 
                         <!-- Rekening Bank -->
@@ -75,59 +63,29 @@
                                 <table class="table table-borderless mb-0 donasi-table">
                                     <tbody>
                                         <tr>
-                                            <td class="fw-semibold" style="width: 140px;">Bank</td>
-                                            <td>: Bank Syariah Indonesia (BSI)</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-semibold">Atas Nama</td>
-                                            <td>: Yayasan Sains Nusantara</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-semibold">No. Rekening</td>
+                                            {{-- <td class="fw-semibold" style="width: 140px;">Bank</td> --}}
                                             <td>
-                                                : <span id="noRekening" class="fw-bold text-primary">7261814239</span>
-                                                <button class="btn btn-sm btn-outline-primary ms-2 btn-copy"
-                                                    onclick="copyRekening()" title="Salin No. Rekening">
-                                                    <i class="ti-clipboard"></i>
-                                                </button>
+                                                <h4>Bank Syariah Indonesia (BSI)</h4>
+                                                <h3>Yayasan Sains Nusantara</h3>
+                                                <h3>NOREK : 7261814239</h3>
                                             </td>
                                         </tr>
+
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-
                         <br>
 
-                        <h5 class="fw-bold">Konfirmasi Donasi</h5>
-
                         <p>
-                            Setelah melakukan transfer, mohon konfirmasi donasi Anda melalui:
+                            {{ __('donasi.page_desc_5') }}
                         </p>
 
-                        <ul class="donasi-konfirmasi-list">
-                            <li>
-                                <i class="ti-email me-2 text-primary"></i>
-                                Email: <a href="mailto:yayasansainsnusantara@gmail.com "
-                                    class="text-primary fw-semibold">yayasansainsnusantara@gmail.com </a>
-                            </li>
-                            <li>
-                                <i class="ti-mobile me-2 text-primary"></i>
-                                WhatsApp: <a href="https://wa.me/6285260000000" target="_blank"
-                                    class="text-primary fw-semibold">0852 6000 0000</a>
-                            </li>
-                        </ul>
-
-                        <p class="text-muted small mt-3">
-                            <i class="ti-info-alt me-1"></i>
-                            Sertakan bukti transfer, nama lengkap, dan pesan/tujuan donasi agar kami dapat mencatatnya
-                            dengan baik.
-                        </p>
                     </div>
                 </div>
 
                 <!-- Kolom Kanan: Gambar & Ajakan -->
-                <div class="col-lg-5">
+                {{--  <div class="col-lg-5">
                     <!-- Info Box Transparansi -->
                     <div class="card border-0 shadow-sm donasi-info-card">
                         <div class="card-body">
@@ -155,7 +113,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
@@ -271,19 +229,19 @@
     <script>
         function copyRekening() {
             var noRek = document.getElementById('noRekening').innerText;
-            navigator.clipboard.writeText(noRek).then(function () {
+            navigator.clipboard.writeText(noRek).then(function() {
                 // Tampilkan notifikasi berhasil
                 var btn = document.querySelector('.btn-copy');
                 var originalHtml = btn.innerHTML;
                 btn.innerHTML = '<i class="ti-check"></i>';
                 btn.classList.remove('btn-outline-primary');
                 btn.classList.add('btn-success');
-                setTimeout(function () {
+                setTimeout(function() {
                     btn.innerHTML = originalHtml;
                     btn.classList.remove('btn-success');
                     btn.classList.add('btn-outline-primary');
                 }, 2000);
-            }).catch(function (err) {
+            }).catch(function(err) {
                 // Fallback untuk browser yang tidak support clipboard API
                 var textArea = document.createElement('textarea');
                 textArea.value = noRek;

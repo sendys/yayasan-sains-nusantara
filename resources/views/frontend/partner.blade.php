@@ -131,7 +131,7 @@
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="partner-card">
                         <a href="https://www.leuser.org/" target="_blank" class="partner-link-wrapper">
-                        <img src="{{ asset('assets/fe/images/partners/leuser.jpg') }}" class="partner-logo"
+                        <img src="{{ asset('assets/fe/images/partners/YKL.jpeg') }}" class="partner-logo"
                             alt="Forum Konservasi Leuser">
                         <h6 class="mt-3">Forum Konservasi Leuser</h6>
                         <span class="partner-visit">Kunjungi Website</span>

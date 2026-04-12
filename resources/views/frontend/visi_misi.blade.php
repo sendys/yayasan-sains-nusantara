@@ -34,7 +34,34 @@
                         <hr class="my-2">
                         <br>
 
-                        {!! $section->deskripsi !!}
+                        <div class="editor-content">
+                            @if ($section)
+                                @php
+                                    $locale = app()->getLocale();
+                                    $deskripsi = null;
+
+                                    if ($locale === 'en' && !empty($section->deskripsi_en)) {
+                                        $deskripsi = $section->deskripsi_en;
+                                    } elseif ($locale === 'id' && !empty($section->deskripsi)) {
+                                        $deskripsi = $section->deskripsi;
+                                    }
+                                @endphp
+
+                                @if ($deskripsi)
+                                    {!! $deskripsi !!}
+                                @else
+                                    <div class="text-muted fst-italic">
+                                        {{ __('visi_misi.no_description') }}
+                                    </div>
+                                @endif
+                            @else
+                                <div class="text-muted fst-italic">
+                                    {{ __('visi_misi.no_description') }}
+                                </div>
+                            @endif
+                        </div>
+
+                        {{--  {!! $section->deskripsi !!} --}}
 
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'page_title' => 'Vision & Mission',
+    'page_title' => 'Division',
     'page_description' => 'Yayasan Sains Nusantara (YSN).',
     'no_description' => 'No description available yet.',
     'donation_title' => 'Make a Donation',
