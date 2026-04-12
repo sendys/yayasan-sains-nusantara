@@ -1,4 +1,4 @@
- <section class="section bg-cover" data-background="{{ asset('assets/fe/images/backgrounds/success-story.jpg') }}">
+{{--  <section class="section bg-cover" data-background="{{ asset('assets/fe/images/backgrounds/success-story.jpg') }}">
      <div class="container">
          <div class="row">
              <div class="col-lg-6 col-sm-4 position-relative success-video">
@@ -15,4 +15,45 @@
              </div>
          </div>
      </div>
- </section>
+ </section> --}}
+
+<section class="section bg-light">
+    <div class="container">
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-12 text-left">
+                <h2 class="section-title">Dokumentasi</h2>
+                <p>Dokumentasi program dan kegiatan Yayasan Sains Nusantara</p>
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="row">
+
+            @for ($i = 1; $i <= 6; $i++)
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <img src="{{ asset('assets/fe/images/kegiatan/kegiatan-' . $i . '.jpg') }}" class="card-img-top"
+                            alt="Kegiatan {{ $i }}">
+
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Kegiatan {{ $i }}</h5>
+                        </div>
+                    </div>
+                </div>
+            @endfor
+
+        </div>
+
+        <!-- Button -->
+        <div class="row">
+            <div class="col-12 text-center mt-4">
+                <a href="#" class="btn btn-outline-primary">
+                    Lihat Semua Kegiatan
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>

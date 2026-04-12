@@ -1156,3 +1156,13 @@ link:focus,
 .navbar-expand-lg .navbar-nav .nav-link {
     padding: 25px 10px;
 }
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}

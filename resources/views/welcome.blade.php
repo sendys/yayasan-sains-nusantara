@@ -38,24 +38,25 @@
     @include('layouts.frontend.event')
     <!-- /courses -->
 
-    <!-- success story -->
-    @include('layouts.frontend.story')
-    <!-- /success story -->
-
     <!-- blog -->
     @include('layouts.frontend.blog')
     <!-- /blog -->
 
+    <!-- success story -->
+    @include('layouts.frontend.story')
+    <!-- /success story -->
+
     <!-- cta -->
     @include('layouts.frontend.cta')
     <!-- /cta -->
-    
+
     <!-- footer -->
     @include('layouts.frontend.footer')
     <!-- /footer -->
 
     <!-- Cookie Consent Banner -->
-    <div id="cookie-consent" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999;
+    <div id="cookie-consent"
+        style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999;
         background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         color: #f0f0f0; padding: 18px 24px;
         box-shadow: 0 -4px 20px rgba(0,0,0,0.35);
@@ -79,12 +80,14 @@
                 </div>
             </div>
             <div style="display:flex; gap:10px; flex-shrink:0;">
-                <button id="reject-cookie" style="padding:9px 20px; border:1px solid rgba(255,255,255,0.25); background:transparent;
+                <button id="reject-cookie"
+                    style="padding:9px 20px; border:1px solid rgba(255,255,255,0.25); background:transparent;
                     color:#c0c0d0; border-radius:6px; cursor:pointer; font-size:13px;
                     transition:all 0.2s ease;">
                     Tolak
                 </button>
-                <button id="accept-cookie" style="padding:9px 22px; background:linear-gradient(135deg, #4f8ef7, #3a6fd8);
+                <button id="accept-cookie"
+                    style="padding:9px 22px; background:linear-gradient(135deg, #4f8ef7, #3a6fd8);
                     color:#fff; border:none; border-radius:6px; cursor:pointer; font-size:13px;
                     font-weight:600; box-shadow:0 3px 10px rgba(79,142,247,0.4);
                     transition:all 0.2s ease;">
@@ -100,7 +103,7 @@
     <script src="{{ asset('assets/fe/plugins/bootstrap/bootstrap.min.js') }}"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
 
             // ── Helper: set cookie ──────────────────────────────────────
             function setCookie(name, value, days) {
@@ -136,7 +139,7 @@
                 banner.style.transition = "transform 0.4s ease, opacity 0.4s ease";
                 banner.style.transform = "translateY(100%)";
                 banner.style.opacity = "0";
-                setTimeout(function () {
+                setTimeout(function() {
                     banner.style.display = "none";
                 }, 420);
             }
@@ -150,8 +153,8 @@
                 banner.style.transform = "translateY(100%)";
                 banner.style.opacity = "0";
                 banner.style.transition = "transform 0.5s ease, opacity 0.5s ease";
-                requestAnimationFrame(function () {
-                    requestAnimationFrame(function () {
+                requestAnimationFrame(function() {
+                    requestAnimationFrame(function() {
                         banner.style.transform = "translateY(0)";
                         banner.style.opacity = "1";
                     });
@@ -159,13 +162,13 @@
             }
 
             // ── Accept button ───────────────────────────────────────────
-            document.getElementById("accept-cookie").addEventListener("click", function () {
+            document.getElementById("accept-cookie").addEventListener("click", function() {
                 setCookie("cookie_consent", "accepted", 365);
                 hideBanner();
             });
 
             // ── Reject button ───────────────────────────────────────────
-            document.getElementById("reject-cookie").addEventListener("click", function () {
+            document.getElementById("reject-cookie").addEventListener("click", function() {
                 setCookie("cookie_consent", "rejected", 30);
                 hideBanner();
             });
@@ -174,19 +177,19 @@
             const acceptBtn = document.getElementById("accept-cookie");
             const rejectBtn = document.getElementById("reject-cookie");
 
-            acceptBtn.addEventListener("mouseover", function () {
+            acceptBtn.addEventListener("mouseover", function() {
                 this.style.transform = "translateY(-2px)";
                 this.style.boxShadow = "0 6px 18px rgba(79,142,247,0.55)";
             });
-            acceptBtn.addEventListener("mouseout", function () {
+            acceptBtn.addEventListener("mouseout", function() {
                 this.style.transform = "translateY(0)";
                 this.style.boxShadow = "0 3px 10px rgba(79,142,247,0.4)";
             });
-            rejectBtn.addEventListener("mouseover", function () {
+            rejectBtn.addEventListener("mouseover", function() {
                 this.style.background = "rgba(255,255,255,0.08)";
                 this.style.color = "#fff";
             });
-            rejectBtn.addEventListener("mouseout", function () {
+            rejectBtn.addEventListener("mouseout", function() {
                 this.style.background = "transparent";
                 this.style.color = "#c0c0d0";
             });
@@ -248,6 +251,6 @@
 
     @push('scripts')
 
-</body>
+    </body>
 
-</html>
+    </html>
