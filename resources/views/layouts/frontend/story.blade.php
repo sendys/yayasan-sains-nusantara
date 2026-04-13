@@ -23,8 +23,8 @@
         <!-- Title -->
         <div class="row">
             <div class="col-12 text-left">
-                <h2 class="section-title">Dokumentasi</h2>
-                <p>Dokumentasi program dan kegiatan Yayasan Sains Nusantara</p>
+                <h2 class="section-title">{{ __('story.title') }}</h2>
+                <p>{{ __('story.description') }}</p>
             </div>
         </div>
 
@@ -37,9 +37,9 @@
                         <img src="{{ asset('assets/fe/images/kegiatan/kegiatan-' . $i . '.jpg') }}" class="card-img-top"
                             alt="Kegiatan {{ $i }}">
 
-                        <div class="card-body text-center">
+                        {{-- <div class="card-body text-center">
                             <h5 class="card-title">Kegiatan {{ $i }}</h5>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             @endfor
@@ -47,13 +47,13 @@
         </div>
 
         <!-- Button -->
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-12 text-center mt-4">
                 <a href="#" class="btn btn-outline-primary">
                     Lihat Semua Kegiatan
                 </a>
             </div>
-        </div>
+        </div> --}}
 
     </div>
 </section>
