@@ -55,6 +55,11 @@ Route::get('/donasi', function () {
 Route::get('/legalitas', [App\Http\Controllers\Frontend\TentangController::class, 'legalitas'])->name('legalitas');
 Route::get('/divisi', [App\Http\Controllers\Frontend\DivisiController::class, 'divisi'])->name('divisi');
 
+// Gallery Routes (Frontend)
+Route::get('/galeri', [App\Http\Controllers\Frontend\GalleryController::class, 'index'])->name('frontend.galeri.index');
+Route::get('/galeri/kategori/{kategori}', [App\Http\Controllers\Frontend\GalleryController::class, 'byKategori'])->name('frontend.galeri.kategori');
+Route::get('/galeri/{uuid}', [App\Http\Controllers\Frontend\GalleryController::class, 'show'])->name('frontend.galeri.show');
+
 // Register user
 Route::get('user/register', [App\Http\Controllers\UserController::class, 'register'])->name('user.register');
 Route::post('/user/daftar', [App\Http\Controllers\UserController::class, 'daftar'])
@@ -256,6 +261,15 @@ Route::middleware([
     Route::put('/divisi/{id}', [App\Http\Controllers\Backend\DivisiController::class, 'update'])->name('admin.divisi.update');
     Route::get('/divisi/{id}/delete', [App\Http\Controllers\Backend\DivisiController::class, 'delete'])->name('divisi.delete');
     Route::delete('/divisi/{id}', [App\Http\Controllers\Backend\DivisiController::class, 'destroy'])->name('admin.divisi.destroy');
+
+    // Admin Gallery Routes
+    Route::get('/gallery', [App\Http\Controllers\Backend\GalleryController::class, 'index'])->name('admin.gallery.index');
+    Route::get('/gallery/create', [App\Http\Controllers\Backend\GalleryController::class, 'create'])->name('admin.gallery.create');
+    Route::post('/gallery', [App\Http\Controllers\Backend\GalleryController::class, 'store'])->name('admin.gallery.store');
+    Route::get('/gallery/{uuid}', [App\Http\Controllers\Backend\GalleryController::class, 'show'])->name('admin.gallery.show');
+    Route::get('/gallery/{uuid}/edit', [App\Http\Controllers\Backend\GalleryController::class, 'edit'])->name('admin.gallery.edit');
+    Route::put('/gallery/{uuid}', [App\Http\Controllers\Backend\GalleryController::class, 'update'])->name('admin.gallery.update');
+    Route::delete('/gallery/{uuid}', [App\Http\Controllers\Backend\GalleryController::class, 'destroy'])->name('admin.gallery.destroy');
 
     Route::post('/translate', [App\Http\Controllers\TranslateController::class, 'translate'])->name('translate');
 });

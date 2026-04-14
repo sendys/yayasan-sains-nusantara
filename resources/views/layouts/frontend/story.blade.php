@@ -22,38 +22,57 @@
 
         <!-- Title -->
         <div class="row">
-            <div class="col-12 text-left">
-                <h2 class="section-title">{{ __('story.title') }}</h2>
-                <p>{{ __('story.description') }}</p>
+            <div class="col-12">
+                <div class="d-flex align-items-center section-title justify-content-between">
+                    <h2 class="mb-0 text-nowrap mr-3">{{ __('story.title') }}</h2>
+                    <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+                    <div>
+                        <a href={{ route('frontend.galeri.index') }} class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see
+                            all</a>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Gallery -->
         <div class="row">
 
-            @for ($i = 1; $i <= 6; $i++)
+            @foreach($galleries as $gallery)
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card border-0 shadow-sm">
-                        <img src="{{ asset('assets/fe/images/kegiatan/kegiatan-' . $i . '.jpg') }}" class="card-img-top"
-                            alt="Kegiatan {{ $i }}">
+                    <div class="card border-0 shadow-sm gallery-item">
 
-                        {{-- <div class="card-body text-center">
-                            <h5 class="card-title">Kegiatan {{ $i }}</h5>
-                        </div> --}}
+                        <a class="venobox"
+                        data-gall="kegiatan"
+                        href="{{ $gallery->image_url }}"
+                        data-title="{{ $gallery->title }}">
+
+                            <img src="{{ $gallery->image_url }}"
+                                class="card-img-top"
+                                alt="{{ $gallery->title }}">
+
+                            <!-- Overlay -->
+                            <div class="overlay">
+                                <i class="ti-search"></i>
+                            </div>
+
+                        </a>
+
+                        <!-- Info -->
+                        <div class="card-body">
+                            <span class="badge bg-warning">
+                                {{ \App\Models\Gallery::getKategoriList()[$gallery->kategori] ?? $gallery->kategori }}
+                            </span>
+
+                            <p class="mt-2">
+                                {{ \Illuminate\Support\Str::limit($gallery->title, 100) }}
+                            </p>
+                        </div>
+
                     </div>
                 </div>
-            @endfor
+            @endforeach
 
         </div>
-
-        <!-- Button -->
-        {{-- <div class="row">
-            <div class="col-12 text-center mt-4">
-                <a href="#" class="btn btn-outline-primary">
-                    Lihat Semua Kegiatan
-                </a>
-            </div>
-        </div> --}}
 
     </div>
 </section>

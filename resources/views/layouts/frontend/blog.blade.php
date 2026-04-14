@@ -4,7 +4,14 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="section-title">{{ __('blog.title') }}</h2>
+                <div class="d-flex align-items-center section-title justify-content-between">
+                    <h2 class="mb-0 text-nowrap mr-3">{{ __('blog.title') }}</h2>
+                    <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+                    <div>
+                        <a href={{ route('frontend.blog.index') }} class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see
+                            all</a>
+                    </div>
+                </div>
             </div>
         </div>
 

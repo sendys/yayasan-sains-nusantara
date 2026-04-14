@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Event;
+use App\Models\Gallery;
 use Illuminate\View\View;
 
 class WelcomeController extends Controller
@@ -27,11 +28,18 @@ class WelcomeController extends Controller
                      ->take(6)
                      ->get();
 
+                     // Get active galleries for homepage (show 6)
+        $galleries = Gallery::active()
+                          ->orderBy('created_at', 'desc')
+                          ->take(6)
+                          ->get();
+
         return view('welcome', compact(
             'ctaSubtitle',
             'ctaTitle',
             'ctaButton',
             'blogs',
+            'galleries',
             'events'
         ));
     }

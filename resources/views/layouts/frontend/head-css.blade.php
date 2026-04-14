@@ -23,6 +23,8 @@
 
 <link rel="stylesheet" href="{{ asset('assets/fe/css/timeline.css') }}">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.css">
+
 <!-- Main Stylesheet -->
 <link href="{{ asset('assets/fe/css/style.css') }}" rel="stylesheet">
 

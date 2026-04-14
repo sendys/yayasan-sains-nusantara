@@ -331,6 +331,11 @@
                                 <span class="menu-text">Publikasi</span>
                             </a>
                         </li>
+                         <li class="menu-item">
+                            <a href="{{ route('admin.gallery.index') }}" class="menu-link">
+                                <span class="menu-text">Galeri</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>
