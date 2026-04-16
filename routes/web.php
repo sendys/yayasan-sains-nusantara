@@ -271,5 +271,12 @@ Route::middleware([
     Route::put('/gallery/{uuid}', [App\Http\Controllers\Backend\GalleryController::class, 'update'])->name('admin.gallery.update');
     Route::delete('/gallery/{uuid}', [App\Http\Controllers\Backend\GalleryController::class, 'destroy'])->name('admin.gallery.destroy');
 
+    // Admin Banner Routes (static routes dulu)
+    Route::get('/banner', [App\Http\Controllers\Backend\BannerController::class, 'index'])->name('admin.banner.index');
+    Route::get('/banner/create', [App\Http\Controllers\Backend\BannerController::class, 'create'])->name('admin.banner.create');
+    Route::post('/banner', [App\Http\Controllers\Backend\BannerController::class, 'store'])->name('admin.banner.store');
+    Route::delete('/banner/{banner}', [App\Http\Controllers\Backend\BannerController::class, 'destroy'])->name('admin.banner.destroy');
+    Route::post('/banner/{banner}/toggle', [App\Http\Controllers\Backend\BannerController::class, 'toggle'])->name('admin.banner.toggle');
+
     Route::post('/translate', [App\Http\Controllers\TranslateController::class, 'translate'])->name('translate');
 });

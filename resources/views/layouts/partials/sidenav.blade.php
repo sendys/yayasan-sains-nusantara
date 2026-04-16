@@ -331,9 +331,14 @@
                                 <span class="menu-text">Publikasi</span>
                             </a>
                         </li>
-                         <li class="menu-item">
+                        <li class="menu-item">
                             <a href="{{ route('admin.gallery.index') }}" class="menu-link">
                                 <span class="menu-text">Galeri</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{{ route('admin.banner.index') }}" class="menu-link">
+                                <span class="menu-text">Banner</span>
                             </a>
                         </li>
                     </ul>

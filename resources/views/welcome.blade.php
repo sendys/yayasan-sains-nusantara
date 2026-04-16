@@ -104,11 +104,11 @@
     <script src="{{ asset('assets/fe/plugins/venobox/venobox.min.js') }}"></script>
     <script src="{{ asset('assets/fe/plugins/mixitup/mixitup.min.js') }}"></script>
 
-   {{--  <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.js"></script> --}}
+    {{--  <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.js"></script> --}}
 
     <script>
-        $(document).ready(function(){
-            $('.venobox').venobox(); 
+        $(document).ready(function() {
+            $('.venobox').venobox();
         });
     </script>
     <script>
