@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Banner;
+use App\Models\frontend\Banner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Facades\Image;
+use Intervention\Image\Laravel\Facades\Image;
 
 class BannerController extends Controller
 {
@@ -32,12 +32,10 @@ class BannerController extends Controller
         $filename = time() . '.webp';
         $path = 'banner/' . $filename;
 
-        // resize + compress
-        $img = Image::make($image)
-            ->resize(1920, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })
-            ->encode('webp', 80); // compress 80%
+        // resize + compress using Intervention Image Facade
+        $img = Image::read($image)
+            ->scale(width: 1920)
+            ->toWebp(quality: 80);
 
         Storage::disk('public')->put($path, $img);
 

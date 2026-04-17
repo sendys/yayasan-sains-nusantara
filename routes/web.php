@@ -278,5 +278,7 @@ Route::middleware([
     Route::delete('/banner/{banner}', [App\Http\Controllers\Backend\BannerController::class, 'destroy'])->name('admin.banner.destroy');
     Route::post('/banner/{banner}/toggle', [App\Http\Controllers\Backend\BannerController::class, 'toggle'])->name('admin.banner.toggle');
 
+    // product
+
     Route::post('/translate', [App\Http\Controllers\TranslateController::class, 'translate'])->name('translate');
 });
