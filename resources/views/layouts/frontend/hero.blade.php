@@ -1,13 +1,28 @@
-<section class="hero-section bg-cover" data-background="{{ asset('assets/fe/images/banner/DSC03358.webp') }}"
-    loading="lazy">
-    <div class="container">
+<section class="hero-section">
+    <picture>
+        <!-- mobile -->
+        @if ($banner)
+            <source media="(max-width: 768px)" srcset="{{ asset('storage/' . $banner->image) }}">
+            <!-- desktop -->
+            <img src="{{ asset('storage/' . $banner->image) }}" class="hero-bg" loading="eager" fetchpriority="high"
+                decoding="async" alt="banner">
+        @else
+            <source media="(max-width: 768px)" srcset="{{ asset('assets/fe/images/banner/DSC03358.webp') }}">
+            <!-- desktop -->
+            <img src="{{ asset('assets/fe/images/banner/DSC03358.webp') }}" class="hero-bg" loading="eager"
+                fetchpriority="high" decoding="async" alt="banner">
+        @endif
+    </picture>
+
+    <div class="container position-relative">
         <div class="hero-slider">
             <!-- slider item -->
             <div class="hero-slider-item">
                 <div class="row">
                     <div class="col-md-8">
-                        <h3 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3"
-                            data-animation-in="fadeInLeft" data-delay-in=".1">{{ __('hero.strategic_issue') }}
+                        <h3 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
+                            data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">
+                            {{ __('hero.strategic_issue') }}
                         </h3>
                         <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5"
                             data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">
@@ -122,6 +137,8 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
+
 </section>

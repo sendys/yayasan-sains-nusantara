@@ -1,4 +1,3 @@
-
 <section class="section about-ysn">
     <div class="container">
         <div class="row">
@@ -22,7 +21,7 @@
                     <div class="col-md-6 mb-4">
                         <div class="about-item">
                             <h5>
-                                <a href="{{ route('tentang') }}">
+                                <a href="{{ route('sejarah') }}">
                                     {{ __('about.about_us') }} >
                                 </a>
                             </h5>
@@ -61,7 +60,7 @@
                     <div class="col-md-6 mb-4">
                         <div class="about-item">
                             <h5>
-                                <a href="#">
+                                <a href="{{ route('donasi') }}">
                                     {{ __('about.support_us') }} >
                                 </a>
                             </h5>
