@@ -1,5 +1,10 @@
 @extends('layouts.frontend')
 
+@section('title', __('publikasi.title') . ' - Semua | Yayasan Sains Nusantara')
+@section('meta_description', 'Arsip lengkap publikasi dan kegiatan Yayasan Sains Nusantara. Temukan laporan, acara, dan
+    berita kami.')
+@section('meta_keywords', 'arsip, publikasi, kegiatan, Yayasan Sains Nusantara')
+
 @section('content')
     <!-- page title -->
     <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
@@ -8,7 +13,8 @@
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb">
                         <li class="list-inline-item">
-                            <a class="h3 text-white font-secondary" href="{{ route('frontend.event.index') }}">{{ __('publikasi.title') }}</a>
+                            <a class="h3 text-white font-secondary"
+                                href="{{ route('frontend.event.index') }}">{{ __('publikasi.title') }}</a>
                         </li>
                     </ul>
                     <p class="text-lighten">

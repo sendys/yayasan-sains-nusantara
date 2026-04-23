@@ -7,12 +7,13 @@
             <div class="logo-box">
                 <!-- Brand Logo Light -->
                 <a href="{{ route('home') }}" class="logo-light">
-                    <img src="{{ asset('assets/images/favicon.ico') }}" class="logo-sm">
+                    <img src="{{ asset('assets/images/favicon.ico') }}" class="logo-sm" alt="Yayasan Sains Nusantara logo">
                 </a>
 
                 <!-- Brand Logo Dark -->
                 <a href="{{ route('home') }}" class="logo-dark">
-                    <img src="{{ asset('assets/images/favicon.ico') }}" class="logo-sm">
+                    <img src="{{ asset('assets/images/favicon.ico') }}" class="logo-sm"
+                        alt="Yayasan Sains Nusantara logo">
                 </a>
             </div>
 
@@ -64,8 +65,7 @@
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
                             <div class="d-flex align-items-start">
-                                <img class="d-flex me-2 rounded-circle"
-                                    src="" alt="Generic placeholder image"
+                                <img class="d-flex me-2 rounded-circle" src="" alt="Notification avatar"
                                     height="32">
                                 <div class="w-100">
                                     <h5 class="m-0 font-14">Erwin E. Brown</h5>
@@ -77,8 +77,7 @@
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
                             <div class="d-flex align-items-start">
-                                <img class="d-flex me-2 rounded-circle"
-                                    src="" alt="Generic placeholder image"
+                                <img class="d-flex me-2 rounded-circle" src="" alt="Notification avatar"
                                     height="32">
                                 <div class="w-100">
                                     <h5 class="m-0 font-14">Jacob Deo</h5>
@@ -187,9 +186,8 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="notify-icon">
-                                            <img src=""
-                                                class="img-fluid rounded-circle" alt="" />
-                                            class="img-fluid rounded-circle" alt="" />
+                                            <img src="" class="img-fluid rounded-circle"
+                                                alt="Notification avatar" />
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 text-truncate ms-2">
@@ -232,8 +230,8 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="notify-icon">
-                                            <img src=""
-                                                class="img-fluid rounded-circle" alt="" />
+                                            <img src="" class="img-fluid rounded-circle"
+                                                alt="Notification avatar" />
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 text-truncate ms-2">

@@ -1,5 +1,10 @@
 @extends('layouts.frontend')
 
+@section('title', $gallery->title . ' | Galeri | Yayasan Sains Nusantara')
+@section('meta_description', $gallery->deskripsi ?? Str::limit(strip_tags($gallery->title), 150))
+@section('meta_keywords', $gallery->title)
+@section('canonical', route('frontend.galeri.show', $gallery->uuid))
+
 @section('content')
     <!-- page title -->
     <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
@@ -24,8 +29,8 @@
                 <div class="col-lg-8">
                     <!-- Main Image -->
                     <div class="card mb-4">
-                        <img src="{{ $gallery->image_url }}" alt="{{ e($gallery->title) }}" 
-                             class="img-fluid rounded" style="width: 100%;">
+                        <img src="{{ $gallery->image_url }}" alt="{{ e($gallery->title) }}" class="img-fluid rounded"
+                            style="width: 100%;">
                     </div>
 
                     <!-- Gallery Info -->
@@ -57,8 +62,9 @@
                                 @forelse($relatedGalleries as $related)
                                     <div class="col-6 mb-3">
                                         <a href="{{ route('frontend.galeri.show', $related->uuid) }}">
-                                            <img src="{{ $related->image_url }}" alt="{{ e($related->title) }}" 
-                                                 class="img-fluid rounded" style="height: 100px; width: 100%; object-fit: cover;">
+                                            <img src="{{ $related->image_url }}" alt="{{ e($related->title) }}"
+                                                class="img-fluid rounded"
+                                                style="height: 100px; width: 100%; object-fit: cover;">
                                             <p class="small text-truncate mt-1 mb-0">{{ $related->title }}</p>
                                         </a>
                                     </div>
@@ -77,7 +83,8 @@
                             <ul class="list-unstyled mb-0">
                                 @foreach (\App\Models\Gallery::getKategoriList() as $key => $label)
                                     <li class="mb-2">
-                                        <a href="{{ route('frontend.galeri.kategori', $key) }}" class="text-decoration-none">
+                                        <a href="{{ route('frontend.galeri.kategori', $key) }}"
+                                            class="text-decoration-none">
                                             <i class="ti-angle-right text-primary me-2"></i>{{ $label }}
                                         </a>
                                     </li>
@@ -92,27 +99,29 @@
 @endsection
 
 @push('styles')
-<style>
-    .gallery-image-wrapper {
-        position: relative;
-        overflow: hidden;
-    }
-    .gallery-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-    .gallery-card:hover .gallery-overlay {
-        opacity: 1;
-    }
-</style>
+    <style>
+        .gallery-image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+    </style>
 @endpush
 @endsection

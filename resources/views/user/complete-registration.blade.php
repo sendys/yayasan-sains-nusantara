@@ -27,15 +27,15 @@
                                 <div class="auth-brand">
                                     <a href="index.php" class="logo logo-dark text-center">
                                         <span class="logo-lg">
-                                            <img src="{{ asset('assets/images/logo-dark.png') }}" alt=""
-                                                height="40">
+                                            <img src="{{ asset('assets/images/logo-dark.png') }}"
+                                                alt="Yayasan Sains Nusantara logo" height="40">
                                         </span>
                                     </a>
 
                                     <a href="index.php" class="logo logo-light text-center">
                                         <span class="logo-lg">
-                                            <img src="{{ asset('assets/images/logo-dark.png') }}" alt=""
-                                                height="40">
+                                            <img src="{{ asset('assets/images/logo-dark.png') }}"
+                                                alt="Yayasan Sains Nusantara logo" height="40">
                                         </span>
                                     </a>
                                 </div>
@@ -124,7 +124,7 @@
     <!-- end page -->
 
     <!-- Modal Terms -->
-   <!--  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <!--  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">

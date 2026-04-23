@@ -1,5 +1,17 @@
 @extends('layouts.frontend')
 
+@section('title', $blog->title . ' | Yayasan Sains Nusantara')
+
+@section('meta_description')
+    {{ $blog->excerpt ?? Str::limit(strip_tags($blog->content), 150) }}
+@endsection
+
+@section('meta_keywords')
+    {{ $blog->tags ?? $blog->title . ', Yayasan Sains Nusantara, penelitian, teknologi' }}
+@endsection
+
+@section('canonical', route('frontend.blog.show', $blog->slug))
+
 @section('content')
 
     <style>
@@ -50,9 +62,7 @@
                         <ul class="list-inline mb-3 text-muted">
                             <li class="list-inline-item mr-3 ml-0">
                                 <i class="mdi mdi-calendar"></i>
-                                {{ $blog->published_at
-        ? $blog->published_at->format('F d, Y')
-        : $blog->created_at->format('F d, Y') }}
+                                {{ $blog->published_at ? $blog->published_at->format('F d, Y') : $blog->created_at->format('F d, Y') }}
                             </li>
 
                             <li class="list-inline-item mr-3">
@@ -63,7 +73,7 @@
 
                         <h2 class="mb-3">{{ $blog->title }}</h2>
 
-                        @if($blog->excerpt)
+                        @if ($blog->excerpt)
                             <p class="lead mb-4">{{ $blog->excerpt }}</p>
                         @endif
 
@@ -83,30 +93,27 @@
                         <div class="widget bg-white p-4 rounded shadow-sm">
                             <h4 class="widget-title mb-4">Recent Posts</h4>
 
-                            @if($relatedBlogs->count() > 0)
+                            @if ($relatedBlogs->count() > 0)
 
-                                @foreach($relatedBlogs as $related)
-                                                <div class="media mb-3">
+                                @foreach ($relatedBlogs as $related)
+                                    <div class="media mb-3">
 
-                                                    <img src="{{ $related->image ? asset('storage/' . $related->image) : asset('assets/fe/images/blog/default.jpg') }}"
-                                                        alt="{{ e($related->title) }}" class="mr-3 rounded"
-                                                        style="width:80px; height:60px; object-fit:cover;">
+                                        <img src="{{ $related->image ? asset('storage/' . $related->image) : asset('assets/fe/images/blog/default.jpg') }}"
+                                            alt="{{ e($related->title) }}" class="mr-3 rounded"
+                                            style="width:80px; height:60px; object-fit:cover;">
 
-                                                    <div class="media-body">
-                                                        <a href="{{ route('frontend.blog.show', $related->slug) }}">
-                                                            <h6 class="mt-0 mb-1">{{ $related->title }}</h6>
-                                                        </a>
+                                        <div class="media-body">
+                                            <a href="{{ route('frontend.blog.show', $related->slug) }}">
+                                                <h6 class="mt-0 mb-1">{{ $related->title }}</h6>
+                                            </a>
 
-                                                        <small class="text-muted">
-                                                            {{ $related->published_at
-                                    ? $related->published_at->format('F d, Y')
-                                    : $related->created_at->format('F d, Y') }}
-                                                        </small>
-                                                    </div>
+                                            <small class="text-muted">
+                                                {{ $related->published_at ? $related->published_at->format('F d, Y') : $related->created_at->format('F d, Y') }}
+                                            </small>
+                                        </div>
 
-                                                </div>
+                                    </div>
                                 @endforeach
-
                             @else
                                 <p class="text-muted mb-0">No related posts.</p>
                             @endif

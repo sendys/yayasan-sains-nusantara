@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('title', __('sejarah.page_title') . ' | Yayasan Sains Nusantara')
+@section('meta_description', __('sejarah.page_description'))
+@section('meta_keywords', 'sejarah, sejarah YSN, Yayasan Sains Nusantara')
+
 @section('content')
     <!-- page title -->
     <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">

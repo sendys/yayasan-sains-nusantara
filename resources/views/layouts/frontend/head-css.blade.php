@@ -1,11 +1,18 @@
 <meta charset="utf-8">
-<title>Yayasan Sains Nusantara | Penelitian & Teknologi Terapan Indonesia</title>
+
+<!-- Title (page-specific override via @section('title', '...')) -->
+<title>@yield('title', 'Yayasan Sains Nusantara | Penelitian & Teknologi Terapan Indonesia')</title>
 
 <!-- mobile responsive meta -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description"
-    content="YSN menghadirkan inovasi teknologi terapan melalui penelitian dan pelatihan untuk mendukung kesejahteraan masyarakat Indonesia. Jelajahi program kami.">
-<meta name="robots" content="index, follow">
+
+<!-- Meta description (page override) -->
+<meta name="description" content="@yield('meta_description', 'YSN menghadirkan inovasi teknologi terapan melalui penelitian dan pelatihan untuk mendukung kesejahteraan masyarakat Indonesia. Jelajahi program kami.')">
+
+<!-- Meta keywords (optional page override) -->
+<meta name="keywords" content="@yield('meta_keywords', 'YSN, teknologi terapan, penelitian, pelatihan, Indonesia')">
+
+<meta name="robots" content="@yield('meta_robots', 'index, follow')">
 
 <!-- ** Plugins Needed for the Project ** -->
 <!-- Bootstrap -->
@@ -33,6 +40,6 @@
 <link rel="icon" href="{{ asset('assets/fe/images/favicon.ico') }}" type="image/x-icon">
 
 
-<link rel="canonical" href="https://ysn.or.id/">
+<link rel="canonical" href="@yield('canonical', url()->current())">
 
 @stack('styles')

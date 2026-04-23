@@ -1,10 +1,14 @@
 @extends('layouts.frontend')
 
+@section('title', 'Mitra & Kolaborasi | Yayasan Sains Nusantara')
+@section('meta_description', 'Temui mitra dan kolaborator strategis Yayasan Sains Nusantara yang bekerja bersama kami
+    untuk dampak sosial dan lingkungan.')
+@section('meta_keywords', 'mitra, kolaborasi, partner, Yayasan Sains Nusantara')
+
 @section('content')
 
     <!-- page title -->
-    <section class="page-title-section overlay"
-        data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
+    <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -98,17 +102,17 @@
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="partner-card">
                         <a href="https://sintas.or.id/" target="_blank" class="partner-link-wrapper">
-                        <img src="{{ asset('assets/fe/images/partners/sintas.jpg') }}" class="partner-logo"
-                            alt="Yayasan Sintas">
-                        <h6 class="mt-3">Yayasan Sintas</h6>
-                         <span class="partner-visit">Kunjungi Website</span>
+                            <img src="{{ asset('assets/fe/images/partners/sintas.jpg') }}" class="partner-logo"
+                                alt="Yayasan Sintas">
+                            <h6 class="mt-3">Yayasan Sintas</h6>
+                            <span class="partner-visit">Kunjungi Website</span>
                         </a>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="partner-card">
-                         <a href="https://www.geutanyoe.id/" target="_blank" class="partner-link-wrapper">
+                        <a href="https://www.geutanyoe.id/" target="_blank" class="partner-link-wrapper">
                             <img src="{{ asset('assets/fe/images/partners/geutanyoe.png') }}" class="partner-logo"
                                 alt="Yayasan Geutanyoe">
                             <h6 class="mt-3">Yayasan Geutanyoe</h6>
@@ -120,22 +124,22 @@
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="partner-card">
                         <a href="https://www.ekoba.or.id/" target="_blank" class="partner-link-wrapper">
-                        <img src="{{ asset('assets/fe/images/partners/ekoba.jpg') }}" class="partner-logo"
-                            alt="Yayasan Ekoba">
-                        <h6 class="mt-3">Yayasan Ekoba</h6>
-                        <span class="partner-visit">Kunjungi Website</span>
-                    </a>
+                            <img src="{{ asset('assets/fe/images/partners/ekoba.jpg') }}" class="partner-logo"
+                                alt="Yayasan Ekoba">
+                            <h6 class="mt-3">Yayasan Ekoba</h6>
+                            <span class="partner-visit">Kunjungi Website</span>
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="partner-card">
                         <a href="https://www.leuser.org/" target="_blank" class="partner-link-wrapper">
-                        <img src="{{ asset('assets/fe/images/partners/YKL.jpeg') }}" class="partner-logo"
-                            alt="Forum Konservasi Leuser">
-                        <h6 class="mt-3">Forum Konservasi Leuser</h6>
-                        <span class="partner-visit">Kunjungi Website</span>
-                    </a>
+                            <img src="{{ asset('assets/fe/images/partners/YKL.jpeg') }}" class="partner-logo"
+                                alt="Forum Konservasi Leuser">
+                            <h6 class="mt-3">Forum Konservasi Leuser</h6>
+                            <span class="partner-visit">Kunjungi Website</span>
+                        </a>
                     </div>
                 </div>
 
@@ -150,7 +154,8 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="partner-card">
                         <a href="https://pln.co.id" target="_blank" class="partner-link-wrapper">
-                            <img src="{{ asset('assets/fe/images/partners/pln.jpg') }}" class="partner-logo" alt="PLN UID Aceh">
+                            <img src="{{ asset('assets/fe/images/partners/pln.jpg') }}" class="partner-logo"
+                                alt="PLN UID Aceh">
                             <h6 class="mt-3">PT PLN (Persero) UID Aceh</h6>
                             <span class="partner-visit">Kunjungi Website</span>
 

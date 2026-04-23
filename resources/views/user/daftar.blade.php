@@ -2,7 +2,7 @@
 
 <head>
     <?php
-$title = 'Register & Signup'; ?>
+    $title = 'Register & Signup'; ?>
 
     @include('layouts.partials.title-meta')
     <!-- Sweet Alert-->
@@ -25,13 +25,15 @@ $title = 'Register & Signup'; ?>
                                 <div class="auth-brand">
                                     <a href="index.php" class="logo logo-dark text-center">
                                         <span class="logo-lg">
-                                            <img src="{{ asset('assets/images/logo-dark.png') }}" alt="" height="40">
+                                            <img src="{{ asset('assets/images/logo-dark.png') }}"
+                                                alt="Yayasan Sains Nusantara logo" height="40">
                                         </span>
                                     </a>
 
                                     <a href="index.php" class="logo logo-light text-center">
                                         <span class="logo-lg">
-                                            <img src="{{ asset('assets/images/logo-dark.png') }}" alt="" height="40">
+                                            <img src="{{ asset('assets/images/logo-dark.png') }}"
+                                                alt="Yayasan Sains Nusantara logo" height="40">
                                         </span>
                                     </a>
                                 </div>
@@ -69,8 +71,8 @@ $title = 'Register & Signup'; ?>
                                 <div class="mb-3 position-relative">
                                     <label for="fullname" class="form-label">Nama Lengkap</label>
                                     <input class="form-control @error('name') is-invalid @enderror" type="text"
-                                        id="name" name="name" value="{{ old('name') }}" placeholder="Enter your name"
-                                        required>
+                                        id="name" name="name" value="{{ old('name') }}"
+                                        placeholder="Enter your name" required>
                                     @error('name')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -151,14 +153,16 @@ $title = 'Register & Signup'; ?>
                                 <div class="mb-3">
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="agreeCheckbox">
-                                        <label class="form-check-label" for="checkbox-signup">Saya setuju <a href="#"
-                                                class="text-dark" data-bs-toggle="#" data-bs-target="#termsModal">dengan
+                                        <label class="form-check-label" for="checkbox-signup">Saya setuju <a
+                                                href="#" class="text-dark" data-bs-toggle="#"
+                                                data-bs-target="#termsModal">dengan
                                                 ketentuan pengguna
                                                 Fintek Indonesia</a></label>
                                     </div>
                                 </div>
                                 <div class="text-center d-grid">
-                                    <button class="btn btn-success btn" type="submit" id="submitButton" disabled> Sign
+                                    <button class="btn btn-success btn" type="submit" id="submitButton" disabled>
+                                        Sign
                                         Up
                                     </button>
                                 </div>
@@ -252,11 +256,11 @@ $title = 'Register & Signup'; ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('roleForm');
             const submitButton = form.querySelector('button[type="submit"]');
 
-            form.addEventListener('submit', function (e) {
+            form.addEventListener('submit', function(e) {
                 e.preventDefault();
 
                 const formData = new FormData(form);
@@ -268,12 +272,12 @@ $title = 'Register & Signup'; ?>
                     '<span class="fas fa-spinner fa-spin me-2" role="status" aria-hidden="true"></span>Mengirim...';
 
                 fetch("{{ route('user.daftar') }}", {
-                    method: 'POST',
-                    headers: {
-                        'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
-                    },
-                    body: formData
-                })
+                        method: 'POST',
+                        headers: {
+                            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+                        },
+                        body: formData
+                    })
                     .then(res => res.json())
                     .then(data => {
                         if (data.success) {
@@ -332,23 +336,23 @@ $title = 'Register & Signup'; ?>
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const checkbox = document.getElementById('agreeCheckbox');
             const button = document.getElementById('submitButton');
 
-            checkbox.addEventListener('change', function () {
+            checkbox.addEventListener('change', function() {
                 button.disabled = !this.checked;
             });
         });
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             const toggle = document.querySelector('.input-group-text[data-password]');
             const passwordInput = document.getElementById('password');
             const eye = toggle.querySelector('.password-eye');
 
-            toggle.addEventListener('click', function () {
+            toggle.addEventListener('click', function() {
                 const isHidden = toggle.getAttribute('data-password') === 'false';
                 passwordInput.setAttribute('type', isHidden ? 'text' : 'password');
                 toggle.setAttribute('data-password', isHidden ? 'true' : 'false');

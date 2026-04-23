@@ -1,10 +1,13 @@
 @extends('layouts.frontend')
 
+@section('title', 'Struktur Pengurus | Yayasan Sains Nusantara')
+@section('meta_description', 'Lihat struktur pengurus Yayasan Sains Nusantara (YSN) dan tim pelaksana program kami.')
+@section('meta_keywords', 'pengurus, struktur organisasi, Yayasan Sains Nusantara')
+
 @section('content')
 
     <!-- page title -->
-    <section class="page-title-section overlay"
-        data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
+    <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">

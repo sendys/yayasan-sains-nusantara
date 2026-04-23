@@ -18,7 +18,7 @@
             <div class="col-lg-4 col-sm-6 mb-5">
                 <div class="card p-0 border-primary rounded-0 hover-shadow">
                     <img class="card-img-top rounded-0" src="{{ asset('assets/fe/images/courses/course-1.jpg') }}"
-                        alt="course thumb">
+                        alt="Photography course thumbnail">
                     <div class="card-body">
                         <ul class="list-inline mb-2">
                             <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018
@@ -39,7 +39,7 @@
             <div class="col-lg-4 col-sm-6 mb-5">
                 <div class="card p-0 border-primary rounded-0 hover-shadow">
                     <img class="card-img-top rounded-0" src="{{ asset('assets/fe/images/courses/course-2.jpg') }}"
-                        alt="course thumb">
+                        alt="Programming course thumbnail">
                     <div class="card-body">
                         <ul class="list-inline mb-2">
                             <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018
@@ -60,7 +60,7 @@
             <div class="col-lg-4 col-sm-6 mb-5">
                 <div class="card p-0 border-primary rounded-0 hover-shadow">
                     <img class="card-img-top rounded-0" src="{{ asset('assets/fe/images/courses/course-3.jpg') }}"
-                        alt="course thumb">
+                        alt="Lifestyle Archives course thumbnail">
                     <div class="card-body">
                         <ul class="list-inline mb-2">
                             <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018
@@ -81,7 +81,7 @@
             <div class="col-lg-4 col-sm-6 mb-5">
                 <div class="card p-0 border-primary rounded-0 hover-shadow">
                     <img class="card-img-top rounded-0" src="{{ asset('assets/fe/images/courses/course-4.jpg') }}"
-                        alt="course thumb">
+                        alt="Complete Freelancing course thumbnail">
                     <div class="card-body">
                         <ul class="list-inline mb-2">
                             <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018
@@ -102,7 +102,7 @@
             <div class="col-lg-4 col-sm-6 mb-5">
                 <div class="card p-0 border-primary rounded-0 hover-shadow">
                     <img class="card-img-top rounded-0" src="{{ asset('assets/fe/images/courses/course-5.jpg') }}"
-                        alt="course thumb">
+                        alt="Branding Design course thumbnail">
                     <div class="card-body">
                         <ul class="list-inline mb-2">
                             <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018
@@ -123,7 +123,7 @@
             <div class="col-lg-4 col-sm-6 mb-5">
                 <div class="card p-0 border-primary rounded-0 hover-shadow">
                     <img class="card-img-top rounded-0" src="{{ asset('assets/fe/images/courses/course-6.jpg') }}"
-                        alt="course thumb">
+                        alt="Art Design course thumbnail">
                     <div class="card-body">
                         <ul class="list-inline mb-2">
                             <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018

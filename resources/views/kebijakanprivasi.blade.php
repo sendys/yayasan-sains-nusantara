@@ -1,10 +1,14 @@
 @extends('layouts.frontend')
 
+@section('title', 'Kebijakan Privasi | Yayasan Sains Nusantara')
+@section('meta_description', 'Komitmen kami dalam melindungi privasi dan data pribadi Anda. Baca kebijakan privasi YSN
+    untuk memahami bagaimana data Anda dikumpulkan, digunakan, dan dilindungi.')
+@section('meta_keywords', 'kebijakan privasi, data pribadi, keamanan, Yayasan Sains Nusantara')
+
 @section('content')
 
     <!-- page title -->
-    <section class="page-title-section overlay"
-        data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
+    <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">

@@ -1,5 +1,10 @@
 @extends('layouts.frontend')
 
+@section('title', __('blog.title') . ' | Yayasan Sains Nusantara')
+@section('meta_description', __('blog.title') . ' - Kumpulan artikel, berita, dan informasi dari Yayasan Sains
+    Nusantara')
+@section('meta_keywords', 'artikel, berita, blog, Yayasan Sains Nusantara')
+
 @section('content')
     <!-- page title -->
     <section class="page-title-section overlay" data-background="{{ asset('assets/fe/images/backgrounds/page-title.jpg') }}"
@@ -9,12 +14,13 @@
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb">
                         <li class="list-inline-item">
-                            <a class="h3 text-white font-secondary" href="{{ route('frontend.blog.index') }}">{{ __('blog.title') }}</a>
+                            <a class="h3 text-white font-secondary"
+                                href="{{ route('frontend.blog.index') }}">{{ __('blog.title') }}</a>
                         </li>
                     </ul>
                     <p class="text-lighten">
-                       {{ __('blog.title') }} Yayasan Sains Nusantara (YSN).
-                    </p>    
+                        {{ __('blog.title') }} Yayasan Sains Nusantara (YSN).
+                    </p>
                 </div>
             </div>
         </div>
